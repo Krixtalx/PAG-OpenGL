@@ -3,7 +3,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled main.cpp)
+add_executable(untitled main.cpp Renderer.cpp Renderer.h)
 
 # El primer parámetro es el nombre del ejecutable. El resto son los nombres de
 # las bibliotecas adicionales a enlazar

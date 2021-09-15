@@ -2,52 +2,34 @@
 // IMPORTANTE: El include de GLEW debe estar siempre ANTES de el de GLFW
 #include <gl/glew.h>
 #include <GLFW/glfw3.h>
+#include "Renderer.h"
 
+float red = 0.6;
+float green = 0.6;
+float blue = 0.6;
 
-namespace PAG {
-    float red = 0.6;
-    float green = 0.6;
-    float blue = 0.6;
-
-    int color = 0;
-    std::string colores[3] = {"Rojo", "Verde", "Azul"};
-
-    class Renderer {
-    public:
-        static void refrescarVentana(GLFWwindow *window) {
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            // - GLFW usa un doble buffer para que no haya parpadeo. Esta orden
-            // intercambia el buffer back (que se ha estado dibujando) por el
-            // que se mostraba hasta ahora front. Debe ser la última orden de
-            // este callback
-            glfwSwapBuffers(window);
-            std::cout << "refrescarVentana llamado" << std::endl;
-        }
-    };
-}
+int color = 0;
+std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
 // - Esta función callback será llamada cada vez que el área de dibujo
 // OpenGL deba ser redibujada.
-void window_refresh_callback(GLFWwindow *window) {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    // - GLFW usa un doble buffer para que no haya parpadeo. Esta orden
-    // intercambia el buffer back (que se ha estado dibujando) por el
-    // que se mostraba hasta ahora front. Debe ser la última orden de
-    // este callback
-    glfwSwapBuffers(window);
-    std::cout << "Refresh callback called" << std::endl;
+void callbackRefrescoVentana(GLFWwindow *ventana) {
+    PAG::Renderer::getInstancia()->refrescar();
+    glfwSwapBuffers(ventana);
+    std::cout << "Finaliza el callback de refresco" << std::endl;
 }
+
 
 // - Esta función callback será llamada cada vez que se cambie el tamaño
 // del área de dibujo OpenGL.
-void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
-    glViewport(0, 0, width, height);
+void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
+    PAG::Renderer::getInstancia()->setViewport(0, 0, width, height);
     std::cout << "Resize callback called" << std::endl;
 }
 
 // - Esta función callback será llamada cada vez que se pulse una tecla
 // dirigida al área de dibujo OpenGL.
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mods) {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     }
@@ -56,11 +38,11 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
 
 // - Esta función callback será llamada cada vez que se pulse algún botón
 // del ratón sobre el área de dibujo OpenGL.
-void mouse_button_callback(GLFWwindow *window, int button, int action, int mods) {
+void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
     if (action == GLFW_PRESS) {
         std::cout << "Pulsado el boton: " << button << std::endl;
-        PAG::color = (PAG::color + 1) % 3;
-        std::cout << "Seleccionado el color " << PAG::colores[PAG::color] << std::endl;
+        color = (color + 1) % 3;
+        std::cout << "Seleccionado el color " << colores[color] << std::endl;
     } else if (action == GLFW_RELEASE) {
         std::cout << "Soltado el boton: " << button << std::endl;
     }
@@ -68,41 +50,38 @@ void mouse_button_callback(GLFWwindow *window, int button, int action, int mods)
 
 // - Esta función callback será llamada cada vez que se mueva la rueda
 // del ratón sobre el área de dibujo OpenGL.
-void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
+void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 //    std::cout << "Movida la rueda del raton " << xoffset << " Unidades en horizontal y "
 //              << yoffset << " unidades en vertical" << std::endl;
 
     //Cambio del color en función al color seleccionado. La selección se altera con el clic izquierdo del ratón
-    if (PAG::color == 0) {
-        PAG::red += (float) (yoffset * 0.05f);
-        if (PAG::red > 1) {
-            PAG::red = 1;
-            //PAG::color = (PAG::color + 1) % 3;
-        } else if (PAG::red < 0) {
-            PAG::red = 0;
+    if (color == 0) {
+        red += (float) (yoffset * 0.05f);
+        if (red > 1) {
+            red = 1;
+        } else if (red < 0) {
+            red = 0;
         }
-    } else if (PAG::color == 1) {
-        PAG::green += (float) (yoffset * 0.05f);
-        if (PAG::green > 1) {
-            PAG::green = 1;
-            //PAG::color = (PAG::color + 1) % 3;
-        } else if (PAG::green < 0) {
-            PAG::green = 0;
+    } else if (color == 1) {
+        green += (float) (yoffset * 0.05f);
+        if (green > 1) {
+            green = 1;
+        } else if (green < 0) {
+            green = 0;
         }
     } else {
-        PAG::blue += (float) (yoffset * 0.05f);
-        if (PAG::blue > 1) {
-            PAG::blue = 1;
-            //PAG::color = (PAG::color + 1) % 3;
-        } else if (PAG::blue < 0) {
-            PAG::blue = 0;
+        blue += (float) (yoffset * 0.05f);
+        if (blue > 1) {
+            blue = 1;
+        } else if (blue < 0) {
+            blue = 0;
         }
     }
 
 
-    std::cout << "Red: " << PAG::red << " green: " << PAG::green << " blue: " << PAG::blue << std::endl;
-    glClearColor(PAG::red, PAG::green, PAG::blue, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    std::cout << "Red: " << red << " green: " << green << " blue: " << blue << std::endl;
+    PAG::Renderer::getInstancia()->setColorFondo(red, green, blue, 1.0);
+    PAG::Renderer::getInstancia()->limpiarGL(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glfwSwapBuffers(window);
 }
 
@@ -150,24 +129,25 @@ int main() {
     }
     // - Interrogamos a OpenGL para que nos informe de las propiedades del contexto
     // 3D construido.
-    std::cout << glGetString(GL_RENDERER) << std::endl
-              << glGetString(GL_VENDOR) << std::endl
-              << glGetString(GL_VERSION) << std::endl
-              << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+    std::cout << PAG::Renderer::getInstancia()->getPropiedadGL(GL_RENDERER) << std::endl
+              << PAG::Renderer::getInstancia()->getPropiedadGL(GL_VENDOR) << std::endl
+              << PAG::Renderer::getInstancia()->getPropiedadGL(GL_VERSION) << std::endl
+              << PAG::Renderer::getInstancia()->getPropiedadGL(GL_SHADING_LANGUAGE_VERSION) << std::endl;
 
     // - Registramos los callbacks que responderán a los eventos principales
-    glfwSetWindowRefreshCallback(window, PAG::Renderer::refrescarVentana);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    glfwSetKeyCallback(window, key_callback);
-    glfwSetMouseButtonCallback(window, mouse_button_callback);
-    glfwSetScrollCallback(window, scroll_callback);
+    glfwSetWindowRefreshCallback(window, callbackRefrescoVentana);
+    glfwSetFramebufferSizeCallback(window, callbackFramebufferSize);
+    glfwSetKeyCallback(window, callbackTecla);
+    glfwSetMouseButtonCallback(window, callbackBotonRaton);
+    glfwSetScrollCallback(window, callbackScroll);
 
     // - Establecemos un gris medio como color con el que se borrará el frame buffer.
     // No tiene por qué ejecutarse en cada paso por el ciclo de eventos.
-    glClearColor(0.6, 0.6, 0.6, 1.0);
+    PAG::Renderer::getInstancia()->setColorFondo(0.6, 0.6, 0.6, 1.0);
+
     // - Le decimos a OpenGL que tenga en cuenta la profundidad a la hora de dibujar.
     // No tiene por qué ejecutarse en cada paso por el ciclo de eventos.
-    glEnable(GL_DEPTH_TEST);
+    PAG::Renderer::getInstancia()->activarUtilidadGL(GL_DEPTH_TEST);
     // - Ciclo de eventos de la aplicación. La condición de parada es que la
     // ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
     // botón de cerrar la ventana (la X).

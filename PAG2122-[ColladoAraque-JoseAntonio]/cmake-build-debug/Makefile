@@ -46,10 +46,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]
+CMAKE_SOURCE_DIR = C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -76,9 +76,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles E:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -118,6 +118,30 @@ untitled\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\build
 .PHONY : untitled\fast
 
+Renderer.obj: Renderer.cpp.obj
+.PHONY : Renderer.obj
+
+# target to build an object file
+Renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.obj
+.PHONY : Renderer.cpp.obj
+
+Renderer.i: Renderer.cpp.i
+.PHONY : Renderer.i
+
+# target to preprocess a source file
+Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.i
+.PHONY : Renderer.cpp.i
+
+Renderer.s: Renderer.cpp.s
+.PHONY : Renderer.s
+
+# target to generate assembly for a file
+Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.s
+.PHONY : Renderer.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -151,6 +175,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... untitled
+	@echo ... Renderer.obj
+	@echo ... Renderer.i
+	@echo ... Renderer.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

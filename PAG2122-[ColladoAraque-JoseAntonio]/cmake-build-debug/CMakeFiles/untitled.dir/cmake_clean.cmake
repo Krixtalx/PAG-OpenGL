@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/untitled.dir/Renderer.cpp.obj"
   "CMakeFiles/untitled.dir/main.cpp.obj"
   "untitled.exe"
   "untitled.exe.manifest"

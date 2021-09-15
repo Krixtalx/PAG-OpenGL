@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-C:/src/vcpkg/installed/x86-windows/include/GLFW/glfw3.h
+C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+xstring
+-
+gl/glew.h
+-
+
+C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
+iostream
+-
+gl/glew.h
+-
+GLFW/glfw3.h
+-
+Renderer.h
+C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+
+C:/vcpkg/installed/x86-windows/include/GLFW/glfw3.h
 stddef.h
 -
 stdint.h
@@ -50,17 +66,17 @@ GL/gl.h
 GL/glext.h
 -
 
-C:/src/vcpkg/installed/x86-windows/include/gl/GL.h
+C:/vcpkg/installed/x86-windows/include/gl/GL.h
 winapifamily.h
 -
 
-C:/src/vcpkg/installed/x86-windows/include/gl/GLU.h
+C:/vcpkg/installed/x86-windows/include/gl/GLU.h
 winapifamily.h
 -
 GL/gl.h
 -
 
-C:/src/vcpkg/installed/x86-windows/include/gl/glew.h
+C:/vcpkg/installed/x86-windows/include/gl/glew.h
 stddef.h
 -
 inttypes.h
@@ -74,13 +90,5 @@ Availability.h
 OpenGL/glu.h
 -
 GL/glu.h
--
-
-E:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
-iostream
--
-gl/glew.h
--
-GLFW/glfw3.h
 -
 

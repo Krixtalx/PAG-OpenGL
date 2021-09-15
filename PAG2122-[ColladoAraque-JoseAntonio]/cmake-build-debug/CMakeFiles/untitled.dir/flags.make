@@ -4,7 +4,7 @@
 # compile CXX with C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe
 CXX_DEFINES = -DGLFW_DLL
 
-CXX_INCLUDES = -IC:\src\vcpkg\installed\x86-windows\include
+CXX_INCLUDES = -IC:\vcpkg\installed\x86-windows\include
 
 CXX_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++latest
 
