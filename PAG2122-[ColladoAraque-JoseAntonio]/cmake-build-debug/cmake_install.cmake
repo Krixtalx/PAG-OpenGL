@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Niskp/CLionProjects/PAG2122-[ColladoAraque-JoseAntonio]
+# Install script for directory: E:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/untitled")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/PAG2122-[ColladoAraque-JoseAntonio]")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Niskp/CLionProjects/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

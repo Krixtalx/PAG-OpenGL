@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="untitled"/>
+		<Option title="PAG2122-[ColladoAraque-JoseAntonio]"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\vcpkg\;CMake Files\src\vcpkg\scripts\;CMake Files\src\vcpkg\scripts\buildsystems\;CMake Files\src\vcpkg\installed\;CMake Files\src\vcpkg\installed\x86-windows\;CMake Files\src\vcpkg\installed\x86-windows\share\;CMake Files\src\vcpkg\installed\x86-windows\share\glew\;CMake Files\src\vcpkg\installed\x86-windows\share\glfw3\;"/>

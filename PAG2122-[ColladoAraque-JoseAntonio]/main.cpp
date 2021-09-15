@@ -6,9 +6,11 @@
 
 namespace PAG {
     float red = 0.6;
-    float blue = 0.6;
     float green = 0.6;
+    float blue = 0.6;
+
     int color = 0;
+    std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
     class Renderer {
     public:
@@ -58,6 +60,7 @@ void mouse_button_callback(GLFWwindow *window, int button, int action, int mods)
     if (action == GLFW_PRESS) {
         std::cout << "Pulsado el boton: " << button << std::endl;
         PAG::color = (PAG::color + 1) % 3;
+        std::cout << "Seleccionado el color " << PAG::colores[PAG::color] << std::endl;
     } else if (action == GLFW_RELEASE) {
         std::cout << "Soltado el boton: " << button << std::endl;
     }
@@ -73,26 +76,26 @@ void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
     if (PAG::color == 0) {
         PAG::red += (float) (yoffset * 0.05f);
         if (PAG::red > 1) {
-            PAG::red -= 1;
+            PAG::red = 1;
             //PAG::color = (PAG::color + 1) % 3;
         } else if (PAG::red < 0) {
-            PAG::red = 1;
+            PAG::red = 0;
         }
     } else if (PAG::color == 1) {
         PAG::green += (float) (yoffset * 0.05f);
         if (PAG::green > 1) {
-            PAG::green -= 1;
+            PAG::green = 1;
             //PAG::color = (PAG::color + 1) % 3;
         } else if (PAG::green < 0) {
-            PAG::green = 1;
+            PAG::green = 0;
         }
     } else {
         PAG::blue += (float) (yoffset * 0.05f);
         if (PAG::blue > 1) {
-            PAG::blue -= 1;
+            PAG::blue = 1;
             //PAG::color = (PAG::color + 1) % 3;
         } else if (PAG::blue < 0) {
-            PAG::blue = 1;
+            PAG::blue = 0;
         }
     }
 

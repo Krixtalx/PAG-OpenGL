@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Niskp/CLionProjects/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
-iostream
--
-gl/glew.h
--
-GLFW/glfw3.h
--
-
 C:/src/vcpkg/installed/x86-windows/include/GLFW/glfw3.h
 stddef.h
 -
@@ -82,5 +74,13 @@ Availability.h
 OpenGL/glu.h
 -
 GL/glu.h
+-
+
+E:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
+iostream
+-
+gl/glew.h
+-
+GLFW/glfw3.h
 -
 
