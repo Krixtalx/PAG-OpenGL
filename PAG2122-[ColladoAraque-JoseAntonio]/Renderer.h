@@ -5,7 +5,6 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <xstring>
 #include <gl/glew.h>
 
 namespace PAG {

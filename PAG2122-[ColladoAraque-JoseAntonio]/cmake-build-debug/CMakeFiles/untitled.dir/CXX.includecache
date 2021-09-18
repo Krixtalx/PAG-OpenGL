@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
-xstring
--
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp
+Renderer.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
 gl/glew.h
 -
 
-C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp
 iostream
 -
 gl/glew.h
@@ -20,7 +22,7 @@ gl/glew.h
 GLFW/glfw3.h
 -
 Renderer.h
-C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
 
 C:/vcpkg/installed/x86-windows/include/GLFW/glfw3.h
 stddef.h

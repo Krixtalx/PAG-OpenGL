@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]
+# Install script for directory: C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp" "C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/untitled.dir/Renderer.cpp.obj"
-  "C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp" "C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/untitled.dir/Renderer.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

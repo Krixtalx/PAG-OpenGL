@@ -5,31 +5,31 @@
 		<Option title="untitled"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\vcpkg\;CMake Files\..\..\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\..\..\vcpkg\installed\;CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\;CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\vcpkg\;CMake Files\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\vcpkg\installed\;CMake Files\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
+				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
+				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled">
-				<Option output="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
+				<Option output="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -45,15 +45,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 untitled"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 untitled"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled/fast">
-				<Option output="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
+				<Option output="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -69,70 +69,70 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 untitled/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 untitled/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
+				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Niskp\Documents\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp">
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h">
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp">
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/CMakeLists.txt">
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\scripts\buildsystems\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\scripts\buildsystems\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/CopyImportedTargetProperties.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/CopyImportedTargetProperties.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/glew-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/glew-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/glew-targets-debug.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/glew-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/glew-targets-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/glew-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/glew-targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/glew-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glew/vcpkg-cmake-wrapper.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glew/vcpkg-cmake-wrapper.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-debug.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
 		</Unit>
-		<Unit filename="C:/Users/Niskp/Documents/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

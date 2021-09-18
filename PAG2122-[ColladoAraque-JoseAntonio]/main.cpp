@@ -151,6 +151,9 @@ int main() {
     // - Ciclo de eventos de la aplicación. La condición de parada es que la
     // ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
     // botón de cerrar la ventana (la X).
+    std::cout
+            << "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
+            << std::endl;
     while (!glfwWindowShouldClose(window)) {
         // - Obtiene y organiza los eventos pendientes, tales como pulsaciones de
         // teclas o de ratón, etc. Siempre al final de cada iteración del ciclo

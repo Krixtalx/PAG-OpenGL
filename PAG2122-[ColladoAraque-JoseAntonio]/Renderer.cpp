@@ -4,9 +4,6 @@
 
 #include "Renderer.h"
 
-#include <gl/glew.h>
-#include <gl/GL.h>
-#include "Renderer.h"
 
 PAG::Renderer *PAG::Renderer::instancia = nullptr;
 
