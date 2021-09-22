@@ -106,24 +106,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named PAG
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) untitled
-.PHONY : untitled
+PAG: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) PAG
+.PHONY : PAG
 
 # fast build rule for target.
-untitled\fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\build
-.PHONY : untitled\fast
+PAG\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\build
+.PHONY : PAG\fast
 
 Renderer.obj: Renderer.cpp.obj
 .PHONY : Renderer.obj
 
 # target to build an object file
 Renderer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Renderer.cpp.obj
 .PHONY : Renderer.cpp.obj
 
 Renderer.i: Renderer.cpp.i
@@ -131,7 +131,7 @@ Renderer.i: Renderer.cpp.i
 
 # target to preprocess a source file
 Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Renderer.cpp.i
 .PHONY : Renderer.cpp.i
 
 Renderer.s: Renderer.cpp.s
@@ -139,7 +139,7 @@ Renderer.s: Renderer.cpp.s
 
 # target to generate assembly for a file
 Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\Renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Renderer.cpp.s
 .PHONY : Renderer.cpp.s
 
 main.obj: main.cpp.obj
@@ -147,7 +147,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -155,7 +155,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -163,7 +163,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\untitled.dir\main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -174,7 +174,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... untitled
+	@echo ... PAG
 	@echo ... Renderer.obj
 	@echo ... Renderer.i
 	@echo ... Renderer.s

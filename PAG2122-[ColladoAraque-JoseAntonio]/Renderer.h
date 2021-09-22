@@ -6,6 +6,7 @@
 #define RENDERER_H
 
 #include <gl/glew.h>
+#include <xstring>
 
 namespace PAG {
     /**
@@ -19,21 +20,28 @@ namespace PAG {
 
     class Renderer {
     private:
-        static Renderer *instancia; ///< Puntero al único objeto de la clase
-        Renderer();
+	    static Renderer *instancia; ///< Puntero al único objeto de la clase
+	    Renderer();
 
     public:
-        virtual ~Renderer();
 
-        static Renderer *getInstancia();
+	    float rojoFondo = 0.6;
+	    float verdeFondo = 0.6;
+	    float azulFondo = 0.6;
+	    int colorSeleccionado = 0;
+	    std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
-        void refrescar();
+	    virtual ~Renderer();
 
-        void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+	    static Renderer *getInstancia();
 
-        const GLubyte* getPropiedadGL(GLenum propiedad);
+	    void refrescar();
 
-        void activarUtilidadGL(GLenum utility);
+	    void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+
+	    const GLubyte *getPropiedadGL(GLenum propiedad);
+
+	    void activarUtilidadGL(GLenum utility);
 
         void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 

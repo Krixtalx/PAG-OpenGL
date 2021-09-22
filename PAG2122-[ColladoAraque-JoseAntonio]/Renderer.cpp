@@ -36,7 +36,7 @@ void PAG::Renderer::refrescar() {
 }
 
 /**
- * Método para cambiar el color de fondo de la escena
+ * Método para cambiar el colorSeleccionado de fondo de la escena
  * @param red
  * @param green
  * @param blue
