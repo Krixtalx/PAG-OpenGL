@@ -116,6 +116,7 @@ int main() {
 	// - Hace que el contexto OpenGL asociado a la ventana que acabamos de crear pase a
 	// ser el contexto actual de OpenGL para las siguientes llamadas a la biblioteca
 	glfwMakeContextCurrent(window);
+
 	// - Ahora inicializamos GLEW.
 	// IMPORTANTE: GLEW debe inicializarse siempre DESPUÉS de que se haya
 	// inicializado GLFW y creado la ventana
@@ -140,13 +141,9 @@ int main() {
 	glfwSetMouseButtonCallback(window, callbackBotonRaton);
 	glfwSetScrollCallback(window, callbackScroll);
 
-	// - Establecemos un gris medio como colorSeleccionado con el que se borrará el frame buffer.
-	// No tiene por qué ejecutarse en cada paso por el ciclo de eventos.
-	PAG::Renderer::getInstancia()->setColorFondo(0.6, 0.6, 0.6, 1.0);
 
-	// - Le decimos a OpenGL que tenga en cuenta la profundidad a la hora de dibujar.
-	// No tiene por qué ejecutarse en cada paso por el ciclo de eventos.
-	PAG::Renderer::getInstancia()->activarUtilidadGL(GL_DEPTH_TEST);
+	PAG::Renderer::getInstancia()->inicializaOpenGL();
+
 	// - Ciclo de eventos de la aplicación. La condición de parada es que la
 	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
 	// botón de cerrar la ventana (la X).
