@@ -44,7 +44,7 @@ namespace PAG {
 
 		void inicializaOpenGL();
 
-	    void refrescar();
+	    void refrescar() const;
 
 	    void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
@@ -52,13 +52,17 @@ namespace PAG {
 
 	    void activarUtilidadGL(GLenum utility);
 
-        void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
+	    void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
-        void limpiarGL(GLbitfield mascara);
+	    void limpiarGL(GLbitfield mascara);
 
-		void creaShaderProgram();
+	    void creaShaderProgram();
 
-		void creaModelo();
+	    void creaModelo();
+
+	    void comprobarErroresShader(GLuint idShader);
+
+	    void cargaShader(GLenum shaderType, const std::string &ruta);
 
     };
 }
