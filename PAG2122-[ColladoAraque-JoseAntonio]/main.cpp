@@ -16,31 +16,31 @@ void callbackRefrescoVentana(GLFWwindow *ventana) {
 // - Esta función callback será llamada cada vez que se cambie el tamaño
 // del área de dibujo OpenGL.
 void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
-    PAG::Renderer::getInstancia()->setViewport(0, 0, width, height);
-    std::cout << "Resize callback called" << std::endl;
+	PAG::Renderer::getInstancia()->setViewport(0, 0, width, height);
+	std::cout << "Resize callback called" << std::endl;
 }
 
 // - Esta función callback será llamada cada vez que se pulse una tecla
 // dirigida al área de dibujo OpenGL.
 void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mods) {
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window, GLFW_TRUE);
-    }
-    std::cout << "Key callback called" << std::endl;
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+		glfwSetWindowShouldClose(window, GLFW_TRUE);
+	}
+	std::cout << "Key callback called" << std::endl;
 }
 
 // - Esta función callback será llamada cada vez que se pulse algún botón
 // del ratón sobre el área de dibujo OpenGL.
 void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
-    if (action == GLFW_PRESS) {
-	    std::cout << "Pulsado el boton: " << button << std::endl;
-	    PAG::Renderer::getInstancia()->colorSeleccionado = (PAG::Renderer::getInstancia()->colorSeleccionado + 1) % 3;
-	    std::cout << "Seleccionado el colorSeleccionado "
-	              << PAG::Renderer::getInstancia()->colores[PAG::Renderer::getInstancia()->colorSeleccionado]
-	              << std::endl;
-    } else if (action == GLFW_RELEASE) {
-        std::cout << "Soltado el boton: " << button << std::endl;
-    }
+	if (action == GLFW_PRESS) {
+		std::cout << "Pulsado el boton: " << button << std::endl;
+		PAG::Renderer::getInstancia()->colorSeleccionado = (PAG::Renderer::getInstancia()->colorSeleccionado + 1) % 3;
+		std::cout << "Seleccionado el colorSeleccionado "
+		          << PAG::Renderer::getInstancia()->colores[PAG::Renderer::getInstancia()->colorSeleccionado]
+		          << std::endl;
+	} else if (action == GLFW_RELEASE) {
+		std::cout << "Soltado el boton: " << button << std::endl;
+	}
 }
 
 // - Esta función callback será llamada cada vez que se mueva la rueda
@@ -148,7 +148,7 @@ int main() {
 	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
 	// botón de cerrar la ventana (la X).
 	std::cout
-			<< "Con el clic izquierdo del raton se selecciona el colorSeleccionado a cambiar. Por defecto se encuentra el colorSeleccionado rojo seleccionado."
+			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
 	while (!glfwWindowShouldClose(window)) {
 		// - Obtiene y organiza los eventos pendientes, tales como pulsaciones de

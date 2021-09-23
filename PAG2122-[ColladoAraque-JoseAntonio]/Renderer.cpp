@@ -139,9 +139,24 @@ void PAG::Renderer::creaModelo() {
 	GLfloat vertices[] = {-.5, -.5, 0,
 	                      .5, -.5, 0,
 	                      .0, .5, 0};
+	GLfloat localColores[] = {1, 0, 0,
+	                          0, 1, 0,
+	                          0, 0, 1};
+
+	//Para VBOs entrelazados
+	GLfloat verticesColores[] = {-.5, -.5, 0,
+	                             .5, -.5, 0,
+	                             .0, .5, 0,
+	                             1, 0, 0,
+	                             0, 1, 0,
+	                             0, 0, 1};
 	GLuint indices[] = {0, 1, 2};
+
+	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
+
+	//Creamos el primer VBO para los vertices del triángulo
 	glGenBuffers(1, &idVBO);
 	glBindBuffer(GL_ARRAY_BUFFER, idVBO);
 	glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), vertices,
@@ -149,6 +164,16 @@ void PAG::Renderer::creaModelo() {
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
 	                      nullptr);
 	glEnableVertexAttribArray(0);
+
+	//Creamos el segundo VBO para los colores del triángulo
+	glGenBuffers(1, &idVBO2);
+	glBindBuffer(GL_ARRAY_BUFFER, idVBO2);
+	glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), localColores,
+	             GL_STATIC_DRAW);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
+	                      nullptr);
+	glEnableVertexAttribArray(1);
+
 	glGenBuffers(1, &idIBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof(GLuint), indices,
