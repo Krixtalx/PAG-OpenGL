@@ -1,15 +1,18 @@
 #include <iostream>
 // IMPORTANTE: El include de GLEW debe estar siempre ANTES de el de GLFW
-#include <gl/glew.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Renderer.h"
+
+int colorSeleccionado = 0;
+std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
 // - Esta función callback será llamada cada vez que el área de dibujo
 // OpenGL deba ser redibujada.
 void callbackRefrescoVentana(GLFWwindow *ventana) {
 	PAG::Renderer::getInstancia()->refrescar();
 	glfwSwapBuffers(ventana);
-	std::cout << "Finaliza el callback de refresco" << std::endl;
+	//std::cout << "Finaliza el callback de refresco" << std::endl;
 }
 
 
@@ -17,7 +20,7 @@ void callbackRefrescoVentana(GLFWwindow *ventana) {
 // del área de dibujo OpenGL.
 void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
 	PAG::Renderer::getInstancia()->setViewport(0, 0, width, height);
-	std::cout << "Resize callback called" << std::endl;
+	//std::cout << "Resize callback called" << std::endl;
 }
 
 // - Esta función callback será llamada cada vez que se pulse una tecla
@@ -26,20 +29,20 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
-	std::cout << "Key callback called" << std::endl;
+	//std::cout << "Key callback called" << std::endl;
 }
 
 // - Esta función callback será llamada cada vez que se pulse algún botón
 // del ratón sobre el área de dibujo OpenGL.
 void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
 	if (action == GLFW_PRESS) {
-		std::cout << "Pulsado el boton: " << button << std::endl;
-		PAG::Renderer::getInstancia()->colorSeleccionado = (PAG::Renderer::getInstancia()->colorSeleccionado + 1) % 3;
+		//std::cout << "Pulsado el boton: " << button << std::endl;
+		colorSeleccionado = (colorSeleccionado + 1) % 3;
 		std::cout << "Seleccionado el colorSeleccionado "
-		          << PAG::Renderer::getInstancia()->colores[PAG::Renderer::getInstancia()->colorSeleccionado]
+		          << colores[colorSeleccionado]
 		          << std::endl;
 	} else if (action == GLFW_RELEASE) {
-		std::cout << "Soltado el boton: " << button << std::endl;
+		//std::cout << "Soltado el boton: " << button << std::endl;
 	}
 }
 
@@ -50,36 +53,38 @@ void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 //              << yoffset << " unidades en vertical" << std::endl;
 
 	//Cambio del colorSeleccionado en función al colorSeleccionado seleccionado. La selección se altera con el clic izquierdo del ratón
-	if (PAG::Renderer::getInstancia()->colorSeleccionado == 0) {
-		PAG::Renderer::getInstancia()->rojoFondo += (float) (yoffset * 0.05f);
-		if (PAG::Renderer::getInstancia()->rojoFondo > 1) {
-			PAG::Renderer::getInstancia()->rojoFondo = 1;
-		} else if (PAG::Renderer::getInstancia()->rojoFondo < 0) {
-			PAG::Renderer::getInstancia()->rojoFondo = 0;
+	if (colorSeleccionado == 0) {
+		PAG::Renderer::getInstancia()->setRojoFondo(
+				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getRojoFondo());
+		if (PAG::Renderer::getInstancia()->getRojoFondo() > 1) {
+			PAG::Renderer::getInstancia()->setRojoFondo(1);
+		} else if (PAG::Renderer::getInstancia()->getRojoFondo() < 0) {
+			PAG::Renderer::getInstancia()->setRojoFondo(0);
 		}
-	} else if (PAG::Renderer::getInstancia()->colorSeleccionado == 1) {
-		PAG::Renderer::getInstancia()->verdeFondo += (float) (yoffset * 0.05f);
-		if (PAG::Renderer::getInstancia()->verdeFondo > 1) {
-			PAG::Renderer::getInstancia()->verdeFondo = 1;
-		} else if (PAG::Renderer::getInstancia()->verdeFondo < 0) {
-			PAG::Renderer::getInstancia()->verdeFondo = 0;
+	} else if (colorSeleccionado == 1) {
+		PAG::Renderer::getInstancia()->setVerdeFondo(
+				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getVerdeFondo());
+		if (PAG::Renderer::getInstancia()->getVerdeFondo() > 1) {
+			PAG::Renderer::getInstancia()->setVerdeFondo(1);
+		} else if (PAG::Renderer::getInstancia()->getVerdeFondo() < 0) {
+			PAG::Renderer::getInstancia()->setVerdeFondo(0);
 		}
 	} else {
-		PAG::Renderer::getInstancia()->azulFondo += (float) (yoffset * 0.05f);
-		if (PAG::Renderer::getInstancia()->azulFondo > 1) {
-			PAG::Renderer::getInstancia()->azulFondo = 1;
-		} else if (PAG::Renderer::getInstancia()->azulFondo < 0) {
-			PAG::Renderer::getInstancia()->azulFondo = 0;
+		PAG::Renderer::getInstancia()->setAzulFondo(
+				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getAzulFondo());
+		if (PAG::Renderer::getInstancia()->getAzulFondo() > 1) {
+			PAG::Renderer::getInstancia()->setAzulFondo(1);
+		} else if (PAG::Renderer::getInstancia()->getAzulFondo() < 0) {
+			PAG::Renderer::getInstancia()->setAzulFondo(0);
 		}
 	}
 
 
-	std::cout << "rojoFondo: " << PAG::Renderer::getInstancia()->rojoFondo << " verdeFondo: "
-	          << PAG::Renderer::getInstancia()->verdeFondo << " azulFondo: " << PAG::Renderer::getInstancia()->azulFondo
+	std::cout << "rojoFondo: " << PAG::Renderer::getInstancia()->getRojoFondo() << " verdeFondo: "
+	          << PAG::Renderer::getInstancia()->getVerdeFondo() << " azulFondo: "
+	          << PAG::Renderer::getInstancia()->getAzulFondo()
 	          << std::endl;
-	PAG::Renderer::getInstancia()->setColorFondo(PAG::Renderer::getInstancia()->rojoFondo,
-	                                             PAG::Renderer::getInstancia()->verdeFondo,
-	                                             PAG::Renderer::getInstancia()->azulFondo, 1.0);
+	PAG::Renderer::getInstancia()->actualizarColorFondo();
 	callbackRefrescoVentana(window);
 	PAG::Renderer::getInstancia()->limpiarGL(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }

@@ -73,6 +73,13 @@ void PAG::Renderer::setColorFondo(GLclampf red, GLclampf green, GLclampf blue, G
 }
 
 /**
+ * Método que actualiza el color de fondo de la escena al indicado por los atributos
+ */
+void PAG::Renderer::actualizarColorFondo() {
+	glClearColor(rojoFondo, verdeFondo, azulFondo, 1);
+}
+
+/**
  * Método que nos permite obtener las propiedades del contexto OpenGL construido
  * @param propiedad a obtener
  * @return GLubyte con la propiedad requerida
@@ -250,3 +257,33 @@ void PAG::Renderer::cargaShader(GLenum shaderType, const std::string &ruta) {
 		throw e;
 	}
 }
+
+
+/**
+ * ------------------- Getters y Setters ------------------------------------
+ */
+
+float PAG::Renderer::getRojoFondo() const {
+	return rojoFondo;
+}
+
+void PAG::Renderer::setRojoFondo(float rojoFondo) {
+	Renderer::rojoFondo = rojoFondo;
+}
+
+float PAG::Renderer::getVerdeFondo() const {
+	return verdeFondo;
+}
+
+void PAG::Renderer::setVerdeFondo(float verdeFondo) {
+	Renderer::verdeFondo = verdeFondo;
+}
+
+float PAG::Renderer::getAzulFondo() const {
+	return azulFondo;
+}
+
+void PAG::Renderer::setAzulFondo(float azulFondo) {
+	Renderer::azulFondo = azulFondo;
+}
+
