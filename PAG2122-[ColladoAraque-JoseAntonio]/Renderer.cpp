@@ -69,13 +69,16 @@ void PAG::Renderer::refrescar() const {
  * @param alpha
  */
 void PAG::Renderer::setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+	rojoFondo = red;
+	verdeFondo = green;
+	azulFondo = blue;
 	glClearColor(red, green, blue, alpha);
 }
 
 /**
  * Método que actualiza el color de fondo de la escena al indicado por los atributos
  */
-void PAG::Renderer::actualizarColorFondo() {
+void PAG::Renderer::actualizarColorFondo() const {
 	glClearColor(rojoFondo, verdeFondo, azulFondo, 1);
 }
 
@@ -268,7 +271,7 @@ float PAG::Renderer::getRojoFondo() const {
 }
 
 void PAG::Renderer::setRojoFondo(float rojoFondo) {
-	Renderer::rojoFondo = rojoFondo;
+	this->rojoFondo = rojoFondo;
 }
 
 float PAG::Renderer::getVerdeFondo() const {
@@ -276,7 +279,7 @@ float PAG::Renderer::getVerdeFondo() const {
 }
 
 void PAG::Renderer::setVerdeFondo(float verdeFondo) {
-	Renderer::verdeFondo = verdeFondo;
+	this->verdeFondo = verdeFondo;
 }
 
 float PAG::Renderer::getAzulFondo() const {
@@ -284,6 +287,6 @@ float PAG::Renderer::getAzulFondo() const {
 }
 
 void PAG::Renderer::setAzulFondo(float azulFondo) {
-	Renderer::azulFondo = azulFondo;
+	this->azulFondo = azulFondo;
 }
 

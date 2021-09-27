@@ -46,7 +46,7 @@ namespace PAG {
 
 		void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
-		void actualizarColorFondo();
+		void actualizarColorFondo() const;
 
 		const GLubyte *getPropiedadGL(GLenum propiedad);
 

@@ -52,39 +52,36 @@ void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 //    std::cout << "Movida la rueda del raton " << xoffset << " Unidades en horizontal y "
 //              << yoffset << " unidades en vertical" << std::endl;
 
+	float rojo = PAG::Renderer::getInstancia()->getRojoFondo();
+	float verde = PAG::Renderer::getInstancia()->getVerdeFondo();
+	float azul = PAG::Renderer::getInstancia()->getAzulFondo();
 	//Cambio del colorSeleccionado en función al colorSeleccionado seleccionado. La selección se altera con el clic izquierdo del ratón
 	if (colorSeleccionado == 0) {
-		PAG::Renderer::getInstancia()->setRojoFondo(
-				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getRojoFondo());
-		if (PAG::Renderer::getInstancia()->getRojoFondo() > 1) {
-			PAG::Renderer::getInstancia()->setRojoFondo(1);
-		} else if (PAG::Renderer::getInstancia()->getRojoFondo() < 0) {
-			PAG::Renderer::getInstancia()->setRojoFondo(0);
+		rojo += (float) (yoffset * 0.05f);
+		if (rojo > 1) {
+			rojo = 1;
+		} else if (rojo < 0) {
+			rojo = 0;
 		}
 	} else if (colorSeleccionado == 1) {
-		PAG::Renderer::getInstancia()->setVerdeFondo(
-				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getVerdeFondo());
-		if (PAG::Renderer::getInstancia()->getVerdeFondo() > 1) {
-			PAG::Renderer::getInstancia()->setVerdeFondo(1);
-		} else if (PAG::Renderer::getInstancia()->getVerdeFondo() < 0) {
-			PAG::Renderer::getInstancia()->setVerdeFondo(0);
+		verde += (float) (yoffset * 0.05f);
+		if (verde > 1) {
+			verde = 1;
+		} else if (verde < 0) {
+			verde = 0;
 		}
 	} else {
-		PAG::Renderer::getInstancia()->setAzulFondo(
-				(float) (yoffset * 0.05f) + PAG::Renderer::getInstancia()->getAzulFondo());
-		if (PAG::Renderer::getInstancia()->getAzulFondo() > 1) {
-			PAG::Renderer::getInstancia()->setAzulFondo(1);
-		} else if (PAG::Renderer::getInstancia()->getAzulFondo() < 0) {
-			PAG::Renderer::getInstancia()->setAzulFondo(0);
+		azul += (float) (yoffset * 0.05f);
+		if (azul > 1) {
+			azul = 1;
+		} else if (azul < 0) {
+			azul = 0;
 		}
 	}
 
 
-	std::cout << "rojoFondo: " << PAG::Renderer::getInstancia()->getRojoFondo() << " verdeFondo: "
-	          << PAG::Renderer::getInstancia()->getVerdeFondo() << " azulFondo: "
-	          << PAG::Renderer::getInstancia()->getAzulFondo()
-	          << std::endl;
-	PAG::Renderer::getInstancia()->actualizarColorFondo();
+	std::cout << "rojoFondo: " << rojo << " verdeFondo: " << verde << " azulFondo: " << azul << std::endl;
+	PAG::Renderer::getInstancia()->setColorFondo(rojo, verde, azul, 1);
 	callbackRefrescoVentana(window);
 	PAG::Renderer::getInstancia()->limpiarGL(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
