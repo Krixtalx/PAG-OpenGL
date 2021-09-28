@@ -15,7 +15,11 @@ PAG::Renderer *PAG::Renderer::instancia = nullptr;
  * Constructor por defecto
  */
 PAG::Renderer::Renderer() {
-	creaShaderProgram();
+	try {
+		creaShaderProgram();
+	}catch (std::runtime_error &e) {
+		throw e;
+	}
 	creaModelo();
 }
 
@@ -30,7 +34,11 @@ PAG::Renderer::~Renderer() {}
  */
 PAG::Renderer *PAG::Renderer::getInstancia() {
 	if (!instancia) {
-		instancia = new Renderer;
+		try {
+			instancia = new Renderer;
+		}catch (std::runtime_error &e) {
+			throw e;
+		}
 	}
 	return instancia;
 }
@@ -132,7 +140,8 @@ void PAG::Renderer::creaShaderProgram() {
 		cargaShader(GL_VERTEX_SHADER, "../pag03-vs.glsl");
 		cargaShader(GL_FRAGMENT_SHADER, "../pag03-fs.glsl");
 	} catch (std::runtime_error &e) {
-		std::cerr << e.what() << std::endl;
+		throw e;
+		//std::cerr << e.what() << std::endl;
 	}
 
 	idSP = glCreateProgram();
@@ -155,10 +164,10 @@ void PAG::Renderer::creaModelo() {
 
 	//Para VBOs entrelazados
 	GLfloat verticesColores[] = {-.5, -.5, 0,
-	                             .5, -.5, 0,
-	                             .0, .5, 0,
 	                             1, 0, 0,
+	                             .5, -.5, 0,
 	                             0, 1, 0,
+	                             .0, .5, 0,
 	                             0, 0, 1};
 	GLuint indices[] = {0, 1, 2};
 
@@ -166,23 +175,41 @@ void PAG::Renderer::creaModelo() {
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
 
+	//Versión no entrelazada
 	//Creamos el primer VBO para los vertices del triángulo
 	glGenBuffers(1, &idVBO);
 	glBindBuffer(GL_ARRAY_BUFFER, idVBO);
-	glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), vertices,
-	             GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
-	                      nullptr);
-	glEnableVertexAttribArray(0);
+	if (!entrelazado) {
+		//Versión no entrelazada
+		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), vertices,
+		             GL_STATIC_DRAW);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
+		                      nullptr);
+		glEnableVertexAttribArray(0);
 
-	//Creamos el segundo VBO para los colores del triángulo
-	glGenBuffers(1, &idVBO2);
-	glBindBuffer(GL_ARRAY_BUFFER, idVBO2);
-	glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), localColores,
-	             GL_STATIC_DRAW);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
-	                      nullptr);
-	glEnableVertexAttribArray(1);
+		//Creamos el segundo VBO para los colores del triángulo
+		glGenBuffers(1, &idVBO2);
+		glBindBuffer(GL_ARRAY_BUFFER, idVBO2);
+		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), localColores,
+		             GL_STATIC_DRAW);
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
+		                      nullptr);
+		glEnableVertexAttribArray(1);
+	} else {
+		//Versión entrelazada
+		glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(GLfloat), verticesColores,
+		             GL_STATIC_DRAW);
+		//Especificamos como acceder al atributo 0 (posición)
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat),
+		                      nullptr);
+		glEnableVertexAttribArray(0);
+
+		//Especificamos como acceder al atributo 1 (Color)
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat),
+		                      (GLubyte *) (3 * sizeof(GLfloat)));
+		glEnableVertexAttribArray(1);
+
+	}
 
 	glGenBuffers(1, &idIBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);

@@ -129,6 +129,14 @@ int main() {
 		glfwTerminate(); // - Liberamos los recursos que ocupaba GLFW.
 		return -3;
 	}
+
+	//Realizamos esta llamada para forzar la creación del Renderer y asi poder capturar el posible error sin problema
+	try {
+		PAG::Renderer::getInstancia();
+	} catch (std::runtime_error &e) {
+		std::cerr << e.what() << std::endl;
+		return -1; //Forzamos el cierre si ha ocurrido alguna excepción en el shader
+	}
 	// - Interrogamos a OpenGL para que nos informe de las propiedades del contexto
 	// 3D construido.
 	std::cout << PAG::Renderer::getInstancia()->getPropiedadGL(GL_RENDERER) << std::endl

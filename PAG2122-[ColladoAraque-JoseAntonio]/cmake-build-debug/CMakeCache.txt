@@ -96,7 +96,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/untitled
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/PAG
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/link.exe
@@ -201,8 +201,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 // during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\vcpkg\scripts\buildsystems\vcpkg.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -212,12 +212,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //The directory containing a CMake configuration file for GLEW.
 GLEW_DIR:PATH=C:/vcpkg/installed/x86-windows/share/glew
-
-//Value Computed by CMake
-PAG2122-[ColladoAraque-JoseAntonio]_BINARY_DIR:STATIC=C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug
-
-//Value Computed by CMake
-PAG2122-[ColladoAraque-JoseAntonio]_SOURCE_DIR:STATIC=C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]
 
 //Value Computed by CMake
 PAG_BINARY_DIR:STATIC=C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug
@@ -264,12 +258,6 @@ _VCPKG_INSTALLED_DIR:PATH=C:/vcpkg/installed
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=C:/vcpkg/installed/x86-windows/share/glfw3
-
-//Value Computed by CMake
-untitled_BINARY_DIR:STATIC=C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug
-
-//Value Computed by CMake
-untitled_SOURCE_DIR:STATIC=C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]
 
 
 ########################

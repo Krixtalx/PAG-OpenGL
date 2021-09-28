@@ -35,8 +35,9 @@ namespace PAG {
 		GLuint idVBO2 = 1;
 		GLuint idIBO = 0; // Identificador del index buffer object
 	public:
-
 		virtual ~Renderer();
+		
+		const bool entrelazado = false;
 
 		static Renderer *getInstancia();
 
