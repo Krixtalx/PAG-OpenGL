@@ -27,17 +27,17 @@ namespace PAG {
 		float verdeFondo = 0.6;
 		float azulFondo = 0.6;
 
-		GLuint idVS = 0; // Identificador del vertex shader
-		GLuint idFS = 0; // Identificador del fragment shader
-		GLuint idSP = 0; // Identificador del shader program
+		const bool entrelazado = false;
+
 		GLuint idVAO = 0; // Identificador del vertex array object
 		GLuint idVBO = 0; // Identificador de los vertex buffer object
 		GLuint idVBO2 = 1;
 		GLuint idIBO = 0; // Identificador del index buffer object
+
+		void creaModelo();
+
 	public:
 		virtual ~Renderer();
-		
-		const bool entrelazado = false;
 
 		static Renderer *getInstancia();
 
@@ -56,14 +56,6 @@ namespace PAG {
 		void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
 		void limpiarGL(GLbitfield mascara);
-
-		void creaShaderProgram();
-
-		void creaModelo();
-
-		void comprobarErroresShader(GLuint idShader);
-
-		void cargaShader(GLenum shaderType, const std::string &ruta);
 
 		float getRojoFondo() const;
 

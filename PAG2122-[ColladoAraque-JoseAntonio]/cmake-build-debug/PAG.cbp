@@ -92,6 +92,24 @@
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h">
 			<Option target="PAG"/>
 		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h">
+			<Option target="PAG"/>
+		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp">
 			<Option target="PAG"/>
 		</Unit>

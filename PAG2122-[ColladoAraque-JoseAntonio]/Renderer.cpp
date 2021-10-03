@@ -3,10 +3,8 @@
 //
 
 #include "Renderer.h"
+#include "ShaderManager.h"
 #include <stdexcept>
-#include <iostream>
-#include <fstream>
-#include <sstream>
 
 
 PAG::Renderer *PAG::Renderer::instancia = nullptr;
@@ -16,8 +14,12 @@ PAG::Renderer *PAG::Renderer::instancia = nullptr;
  */
 PAG::Renderer::Renderer() {
 	try {
-		creaShaderProgram();
-	}catch (std::runtime_error &e) {
+		PAG::ShaderManager::getInstancia()->nuevoShader("VertexShader", GL_VERTEX_SHADER, "../pag03-vs.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShader("FragmentShader", GL_FRAGMENT_SHADER, "../pag03-fs.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShaderProgram("DefaultSP");
+		PAG::ShaderManager::getInstancia()->addShaderToSP("VertexShader", "DefaultSP");
+		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
+	} catch (std::runtime_error &e) {
 		throw e;
 	}
 	creaModelo();
@@ -26,17 +28,23 @@ PAG::Renderer::Renderer() {
 /**
  * Destructor
  */
-PAG::Renderer::~Renderer() {}
+PAG::Renderer::~Renderer() {
+	glDeleteBuffers(1, &idIBO);
+	glDeleteBuffers(1, &idVBO);
+	glDeleteBuffers(1, &idVBO2);
+
+	glDeleteVertexArrays(1, &idVAO);
+};
 
 /**
  * Consulta del objeto único de la clase
- * @return La dirección de memoria del objeto
+ * @return Puntero al Renderer
  */
 PAG::Renderer *PAG::Renderer::getInstancia() {
 	if (!instancia) {
 		try {
 			instancia = new Renderer;
-		}catch (std::runtime_error &e) {
+		} catch (std::runtime_error &e) {
 			throw e;
 		}
 	}
@@ -62,7 +70,7 @@ void PAG::Renderer::inicializaOpenGL() {
 void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glUseProgram(idSP);
+	PAG::ShaderManager::getInstancia()->activarSP("DefaultSP");
 	glBindVertexArray(idVAO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);
 	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
@@ -128,28 +136,8 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
 
 
 /**
- * --------------------------------SHADERS-------------------------------------------
+ * --------------------------------Modelo-------------------------------------------
  */
-
-
-/**
- * Método encargado de crear un Shader program
- */
-void PAG::Renderer::creaShaderProgram() {
-	try {
-		cargaShader(GL_VERTEX_SHADER, "../pag03-vs.glsl");
-		cargaShader(GL_FRAGMENT_SHADER, "../pag03-fs.glsl");
-	} catch (std::runtime_error &e) {
-		throw e;
-		//std::cerr << e.what() << std::endl;
-	}
-
-	idSP = glCreateProgram();
-	glAttachShader(idSP, idVS);
-	glAttachShader(idSP, idFS);
-	glLinkProgram(idSP);
-
-}
 
 /**
  * Método encargado de crear un modelo. Actualmente solo crea un triangulo.
@@ -215,77 +203,6 @@ void PAG::Renderer::creaModelo() {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof(GLuint), indices,
 	             GL_STATIC_DRAW);
-}
-
-
-/**
- * Comprueba si ha ocurrido algún error en la compilación del shader
- * @param idShader a comprobar
- * @throw runtime_error en caso de que se encuentre algún error
- */
-void PAG::Renderer::comprobarErroresShader(GLuint idShader) {
-	GLint resultadoCompilacion;
-	glGetShaderiv(idShader, GL_COMPILE_STATUS, &resultadoCompilacion);
-
-	if (resultadoCompilacion == GL_FALSE) {
-		// Ha habido un error en la compilación.
-		// Para saber qué ha pasado, tenemos que recuperar el mensaje de error de OpenGL
-		GLint tamMsj = 0;
-		std::string mensaje;
-		glGetShaderiv(idShader, GL_INFO_LOG_LENGTH, &tamMsj);
-		if (tamMsj > 0) {
-			auto *mensajeFormatoC = new GLchar[tamMsj];
-			GLint datosEscritos = 0;
-			glGetShaderInfoLog(idShader, tamMsj, &datosEscritos, mensajeFormatoC);
-			mensaje.assign(mensajeFormatoC);
-			delete[] mensajeFormatoC;
-			throw std::runtime_error(mensaje);
-		}
-	}
-}
-
-/**
- *
- * @param shaderType
- * @param ruta
- */
-void PAG::Renderer::cargaShader(GLenum shaderType, const std::string &ruta) {
-	GLuint idShader;
-
-	idShader = glCreateShader(shaderType);
-	if (shaderType == GL_VERTEX_SHADER)
-		idVS = idShader;
-	else if (shaderType == GL_FRAGMENT_SHADER)
-		idFS = idShader;
-
-	if (idShader == 0) {
-		// Ha ocurrido un error al intentar crear el shader
-		throw std::runtime_error("Error desconocido al intentar crear el shader.");
-	}
-
-	std::ifstream archivoShader;
-	archivoShader.open(ruta, std::ifstream::in);
-
-	if (!archivoShader.is_open()) {
-		// Error abriendo el archivo
-		throw std::runtime_error("Ha ocurrido un error al intentar abrir el fichero " + ruta);
-	}
-
-	std::stringstream streamShader;
-	streamShader << archivoShader.rdbuf();
-	std::string codigoFuenteShader = streamShader.str();
-
-	archivoShader.close();
-
-	const GLchar *codigoFuenteFormatoC = codigoFuenteShader.c_str();
-	glShaderSource(idShader, 1, &codigoFuenteFormatoC, nullptr);
-	glCompileShader(idShader);
-
-	try {
-		comprobarErroresShader(idShader);
-	} catch (std::runtime_error &e) {
-		throw e;
-	}
 }
 
 

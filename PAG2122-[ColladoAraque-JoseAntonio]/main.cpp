@@ -83,7 +83,6 @@ void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 	std::cout << "rojoFondo: " << rojo << " verdeFondo: " << verde << " azulFondo: " << azul << std::endl;
 	PAG::Renderer::getInstancia()->setColorFondo(rojo, verde, azul, 1);
 	callbackRefrescoVentana(window);
-	PAG::Renderer::getInstancia()->limpiarGL(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 int main() {
@@ -135,6 +134,9 @@ int main() {
 		PAG::Renderer::getInstancia();
 	} catch (std::runtime_error &e) {
 		std::cerr << e.what() << std::endl;
+		std::cout << "Finishing application pag prueba" << std::endl;
+		glfwDestroyWindow(window); // - Cerramos y destruimos la ventana de la aplicación.
+		glfwTerminate(); // - Liberamos los recursos que ocupaba GLFW.
 		return -1; //Forzamos el cierre si ha ocurrido alguna excepción en el shader
 	}
 	// - Interrogamos a OpenGL para que nos informe de las propiedades del contexto

@@ -142,6 +142,78 @@ Renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Renderer.cpp.s
 .PHONY : Renderer.cpp.s
 
+Shader.obj: Shader.cpp.obj
+.PHONY : Shader.obj
+
+# target to build an object file
+Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Shader.cpp.obj
+.PHONY : Shader.cpp.obj
+
+Shader.i: Shader.cpp.i
+.PHONY : Shader.i
+
+# target to preprocess a source file
+Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Shader.cpp.i
+.PHONY : Shader.cpp.i
+
+Shader.s: Shader.cpp.s
+.PHONY : Shader.s
+
+# target to generate assembly for a file
+Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Shader.cpp.s
+.PHONY : Shader.cpp.s
+
+ShaderManager.obj: ShaderManager.cpp.obj
+.PHONY : ShaderManager.obj
+
+# target to build an object file
+ShaderManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderManager.cpp.obj
+.PHONY : ShaderManager.cpp.obj
+
+ShaderManager.i: ShaderManager.cpp.i
+.PHONY : ShaderManager.i
+
+# target to preprocess a source file
+ShaderManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderManager.cpp.i
+.PHONY : ShaderManager.cpp.i
+
+ShaderManager.s: ShaderManager.cpp.s
+.PHONY : ShaderManager.s
+
+# target to generate assembly for a file
+ShaderManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderManager.cpp.s
+.PHONY : ShaderManager.cpp.s
+
+ShaderProgram.obj: ShaderProgram.cpp.obj
+.PHONY : ShaderProgram.obj
+
+# target to build an object file
+ShaderProgram.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderProgram.cpp.obj
+.PHONY : ShaderProgram.cpp.obj
+
+ShaderProgram.i: ShaderProgram.cpp.i
+.PHONY : ShaderProgram.i
+
+# target to preprocess a source file
+ShaderProgram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderProgram.cpp.i
+.PHONY : ShaderProgram.cpp.i
+
+ShaderProgram.s: ShaderProgram.cpp.s
+.PHONY : ShaderProgram.s
+
+# target to generate assembly for a file
+ShaderProgram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ShaderProgram.cpp.s
+.PHONY : ShaderProgram.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -178,6 +250,15 @@ help:
 	@echo ... Renderer.obj
 	@echo ... Renderer.i
 	@echo ... Renderer.s
+	@echo ... Shader.obj
+	@echo ... Shader.i
+	@echo ... Shader.s
+	@echo ... ShaderManager.obj
+	@echo ... ShaderManager.i
+	@echo ... ShaderManager.s
+	@echo ... ShaderProgram.obj
+	@echo ... ShaderProgram.i
+	@echo ... ShaderProgram.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

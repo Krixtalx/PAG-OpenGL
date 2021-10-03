@@ -3,7 +3,7 @@ project(PAG)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(PAG main.cpp Renderer.cpp Renderer.h)
+add_executable(PAG main.cpp Renderer.cpp Renderer.h ShaderProgram.cpp ShaderProgram.h Shader.cpp Shader.h ShaderManager.cpp ShaderManager.h)
 
 # El primer parámetro es el nombre del ejecutable. El resto son los nombres de
 # las bibliotecas adicionales a enlazar

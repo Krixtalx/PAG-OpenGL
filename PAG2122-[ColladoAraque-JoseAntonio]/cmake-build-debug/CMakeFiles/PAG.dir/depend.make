@@ -3,9 +3,33 @@
 
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Renderer.cpp
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Renderer.h
+CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Shader.h
+CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\ShaderManager.h
+CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\ShaderProgram.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GL.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GLU.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\glew.h
+
+CMakeFiles\PAG.dir\Shader.cpp.obj: ..\Shader.cpp
+CMakeFiles\PAG.dir\Shader.cpp.obj: ..\Shader.h
+CMakeFiles\PAG.dir\Shader.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GL.h
+CMakeFiles\PAG.dir\Shader.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GLU.h
+CMakeFiles\PAG.dir\Shader.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\glew.h
+
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: ..\Shader.h
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: ..\ShaderManager.cpp
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: ..\ShaderManager.h
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: ..\ShaderProgram.h
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GL.h
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GLU.h
+CMakeFiles\PAG.dir\ShaderManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\glew.h
+
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: ..\Shader.h
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: ..\ShaderProgram.cpp
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: ..\ShaderProgram.h
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GL.h
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GLU.h
+CMakeFiles\PAG.dir\ShaderProgram.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\glew.h
 
 CMakeFiles\PAG.dir\main.cpp.obj: ..\Renderer.h
 CMakeFiles\PAG.dir\main.cpp.obj: ..\main.cpp

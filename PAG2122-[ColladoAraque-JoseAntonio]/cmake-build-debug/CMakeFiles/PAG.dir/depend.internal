@@ -4,6 +4,30 @@
 CMakeFiles/PAG.dir/Renderer.cpp.obj
  C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp
  C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
+ C:/vcpkg/installed/x86-windows/include/gl/GL.h
+ C:/vcpkg/installed/x86-windows/include/gl/GLU.h
+ C:/vcpkg/installed/x86-windows/include/gl/glew.h
+CMakeFiles/PAG.dir/Shader.cpp.obj
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.cpp
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
+ C:/vcpkg/installed/x86-windows/include/gl/GL.h
+ C:/vcpkg/installed/x86-windows/include/gl/GLU.h
+ C:/vcpkg/installed/x86-windows/include/gl/glew.h
+CMakeFiles/PAG.dir/ShaderManager.cpp.obj
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.cpp
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
+ C:/vcpkg/installed/x86-windows/include/gl/GL.h
+ C:/vcpkg/installed/x86-windows/include/gl/GLU.h
+ C:/vcpkg/installed/x86-windows/include/gl/glew.h
+CMakeFiles/PAG.dir/ShaderProgram.cpp.obj
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.cpp
+ C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
  C:/vcpkg/installed/x86-windows/include/gl/GL.h
  C:/vcpkg/installed/x86-windows/include/gl/GLU.h
  C:/vcpkg/installed/x86-windows/include/gl/glew.h

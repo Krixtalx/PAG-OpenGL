@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Renderer.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Shader.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/ShaderManager.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/ShaderProgram.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
