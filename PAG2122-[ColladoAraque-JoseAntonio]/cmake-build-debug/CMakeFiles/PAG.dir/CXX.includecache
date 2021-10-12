@@ -6,51 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
-GL/glew.h
--
-vector
--
-string
--
-RenderOptions.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
-
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
-
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp
-Renderer.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
-ShaderManager.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
-stdexcept
--
-iostream
--
-
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
-GL/glew.h
--
-string
--
-vector
--
-Modelo.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
-
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
 GL/glew.h
 -
 string
 -
 
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
-map
--
-string
--
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.cpp
 ShaderProgram.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
+utility
+-
+stdexcept
+-
 
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
 GL/glew.h

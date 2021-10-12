@@ -58,7 +58,7 @@ PAG::Modelo::Modelo(PAG::Modelo &orig) : numVertices(orig.numVertices), shaderPr
 }
 
 /**
- * Destructor. Libera todos los recursos reservados a OpenGL. Por esa razón, no tiene sentido que se copien dichos atributos
+ * Destructor. Libera todos los recursos reservados a OpenGL.
  */
 PAG::Modelo::~Modelo() {
 	for (unsigned int &vbo: idVBO) {

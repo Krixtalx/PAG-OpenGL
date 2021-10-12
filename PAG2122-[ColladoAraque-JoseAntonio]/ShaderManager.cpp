@@ -7,8 +7,6 @@
 
 PAG::ShaderManager *PAG::ShaderManager::instancia = nullptr;
 
-PAG::ShaderManager::ShaderManager() = default;
-
 /**
  * Consulta del objeto único de la clase
  * @return Puntero al Renderer
@@ -45,7 +43,7 @@ PAG::ShaderManager::~ShaderManager() {
  */
 void PAG::ShaderManager::nuevoShader(const std::string &nombreShader, GLenum tipoShader, const std::string &ruta) {
 	PAG::Shader nuevoShader(nombreShader, tipoShader, ruta);
-	shaders.insert(std::pair<std::string, PAG::Shader>(nombreShader, nuevoShader));
+	shaders.insert(std::make_pair(nombreShader, nuevoShader));
 }
 
 /**
@@ -54,7 +52,7 @@ void PAG::ShaderManager::nuevoShader(const std::string &nombreShader, GLenum tip
  */
 void PAG::ShaderManager::nuevoShaderProgram(const std::string &nombreSP) {
 	PAG::ShaderProgram nuevoSP;
-	shaderPrograms.insert(std::pair<std::string, PAG::ShaderProgram>(nombreSP, nuevoSP));
+	shaderPrograms.insert(std::make_pair(nombreSP, nuevoSP));
 }
 
 /**

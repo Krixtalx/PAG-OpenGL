@@ -12,6 +12,8 @@
 
 namespace PAG {
 	class ShaderProgram {
+		friend class ShaderManager;
+
 	private:
 		GLuint idSP;
 		std::vector<Shader *> shaders;
@@ -19,10 +21,16 @@ namespace PAG {
 
 		void compruebaErroresSP() const;
 
-	public:
+	protected:
 		ShaderProgram();
 
-		ShaderProgram(std::vector<Shader *> shaders);
+		explicit ShaderProgram(std::vector<Shader *> shaders);
+
+	public:
+
+		ShaderProgram(const ShaderProgram &orig);
+
+		~ShaderProgram();
 
 		void addShader(Shader *shader);
 

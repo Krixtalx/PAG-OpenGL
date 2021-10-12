@@ -14,12 +14,14 @@ namespace PAG {
 	private:
 		static ShaderManager *instancia;
 
-		ShaderManager();
+		ShaderManager() = default;
 
 		std::map<std::string, PAG::ShaderProgram> shaderPrograms;
 		std::map<std::string, PAG::Shader> shaders;
 	public:
 		static ShaderManager *getInstancia();
+
+		ShaderManager(const ShaderManager &orig) = delete;
 
 		~ShaderManager();
 

@@ -14,12 +14,12 @@
  * @param ruta donde se encuentra el código GLSL del shader
  * @throw runtime_error en caso de que ocurra algún error durante la carga o compilación
  */
-PAG::Shader::Shader(const std::string &nombreShader, GLenum tipoShader, const std::string &ruta) : nombreShader(
-		nombreShader), tipoShader(tipoShader) {
+PAG::Shader::Shader(std::string nombreShader, GLenum tipoShader, const std::string &ruta) : nombreShader(std::move(
+		nombreShader)), tipoShader(tipoShader) {
 	idShader = glCreateShader(tipoShader);
 	if (idShader == 0) {
 		// Ha ocurrido un error al intentar crear el shader
-		throw std::runtime_error("[Shader]: Error desconocido al intentar crear el shader.");
+		throw std::runtime_error("[Shader]: Error desconocido al intentar construir el shader.");
 	} else {
 		try {
 			cargaShader(ruta);
@@ -29,6 +29,21 @@ PAG::Shader::Shader(const std::string &nombreShader, GLenum tipoShader, const st
 		}
 	}
 }
+
+/**
+ * Constructor copia. Funciona igual que el constructor por defecto,
+ * ya que el destructor no libera los recursos de OpenGL, de eso se encargará el ShaderManager
+ * @param orig Shader del que se realizará la copia
+ */
+PAG::Shader::Shader(const Shader &orig) : nombreShader(orig.nombreShader), idShader(orig.idShader),
+                                          tipoShader(orig.tipoShader) {
+}
+
+/**
+ * Destructor. No libera los recursos porque el ShaderManager ya se encarga de ello.
+ * El =default se podría poner en el .h, pero he decidido ponerlo aqui para poner el comentario.
+ */
+PAG::Shader::~Shader() = default;
 
 /**
  * Carga el código del shader
@@ -41,7 +56,7 @@ void PAG::Shader::cargaShader(const std::string &ruta) const {
 
 	if (!archivoShader.is_open()) {
 		// Error abriendo el archivo
-		throw std::runtime_error("[Shader]: Ha ocurrido un error al intentar abrir el fichero " + ruta);
+		throw std::runtime_error("[Shader::cargaShader]: Ha ocurrido un error al intentar abrir el fichero " + ruta);
 	}
 
 	std::stringstream streamShader;
@@ -73,7 +88,7 @@ void PAG::Shader::compruebaErroresShader() const {
 			GLint datosEscritos = 0;
 			glGetShaderInfoLog(idShader, tamMsj, &datosEscritos, mensajeFormatoC);
 			mensaje.assign(mensajeFormatoC);
-			mensaje = nombreShader + "->" + mensaje;
+			mensaje = "[Shader::compruebaErroresShader]: " + nombreShader + "->" + mensaje;
 			delete[] mensajeFormatoC;
 			throw std::runtime_error(mensaje);
 		}
@@ -103,3 +118,4 @@ GLuint PAG::Shader::getShaderId() const {
 GLenum PAG::Shader::getTipoShader() const {
 	return tipoShader;
 }
+

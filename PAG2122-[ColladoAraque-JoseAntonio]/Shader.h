@@ -11,10 +11,12 @@
 
 namespace PAG {
 	class Shader {
+		friend class ShaderManager;
+
 	private:
-		const std::string nombreShader;
-		GLuint idShader;
-		GLenum tipoShader;
+		std::string nombreShader;
+		GLuint idShader{};
+		GLenum tipoShader{};
 
 		void cargaShader(const std::string &ruta) const;
 
@@ -22,8 +24,14 @@ namespace PAG {
 
 		void compruebaErroresShader() const;
 
+	protected:
+		Shader(std::string nombreShader, GLenum tipoShader, const std::string &ruta);
+		
 	public:
-		Shader(const std::string &nombreShader, GLenum tipoShader, const std::string &ruta);
+
+		Shader(const Shader &orig);
+
+		~Shader();
 
 		GLuint getShaderId() const;
 
