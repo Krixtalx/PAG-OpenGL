@@ -19,7 +19,7 @@ PAG::Shader::Shader(const std::string &nombreShader, GLenum tipoShader, const st
 	idShader = glCreateShader(tipoShader);
 	if (idShader == 0) {
 		// Ha ocurrido un error al intentar crear el shader
-		throw std::runtime_error("Error desconocido al intentar crear el shader.");
+		throw std::runtime_error("[Shader]: Error desconocido al intentar crear el shader.");
 	} else {
 		try {
 			cargaShader(ruta);
@@ -41,7 +41,7 @@ void PAG::Shader::cargaShader(const std::string &ruta) const {
 
 	if (!archivoShader.is_open()) {
 		// Error abriendo el archivo
-		throw std::runtime_error("Ha ocurrido un error al intentar abrir el fichero " + ruta);
+		throw std::runtime_error("[Shader]: Ha ocurrido un error al intentar abrir el fichero " + ruta);
 	}
 
 	std::stringstream streamShader;

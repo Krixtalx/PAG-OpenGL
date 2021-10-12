@@ -7,10 +7,27 @@
 int colorSeleccionado = 0;
 std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
+void GLAPIENTRY MessageCallback(GLenum source,
+                                GLenum type,
+                                GLuint id,
+                                GLenum severity,
+                                GLsizei length,
+                                const GLchar *message,
+                                const void *userParam) {
+	if (type == 0x824C) {
+		fprintf(stderr, "GL DEBUG CALLBACK: ** GL ERROR ** type = 0x%x, severity = 0x%x, message = %s\n",
+		        type, severity, message);
+	}
+}
+
 // - Esta función callback será llamada cada vez que el área de dibujo
 // OpenGL deba ser redibujada.
 void callbackRefrescoVentana(GLFWwindow *ventana) {
-	PAG::Renderer::getInstancia()->refrescar();
+	try {
+		PAG::Renderer::getInstancia()->refrescar();
+	} catch (std::runtime_error &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	glfwSwapBuffers(ventana);
 	//std::cout << "Finaliza el callback de refresco" << std::endl;
 }
@@ -28,6 +45,12 @@ void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
 void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mods) {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
+	} else if (key == GLFW_KEY_A && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->creaModelo();
+		callbackRefrescoVentana(window);
+	} else if (key == GLFW_KEY_E && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->eliminaModelo();
+		callbackRefrescoVentana(window);
 	}
 	//std::cout << "Key callback called" << std::endl;
 }
@@ -152,16 +175,20 @@ int main() {
 	glfwSetKeyCallback(window, callbackTecla);
 	glfwSetMouseButtonCallback(window, callbackBotonRaton);
 	glfwSetScrollCallback(window, callbackScroll);
+	glDebugMessageCallback(MessageCallback, 0);
 
 
 	PAG::Renderer::getInstancia()->inicializaOpenGL();
 
-	// - Ciclo de eventos de la aplicación. La condición de parada es que la
-	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
-	// botón de cerrar la ventana (la X).
 	std::cout
 			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
+	std::cout << "Con la tecla A se añade un nuevo modelo si no hay ninguno creado" << std::endl;
+	std::cout << "Con la tecla E se elimina el modelo que se encuentre creado" << std::endl;
+	
+	// - Ciclo de eventos de la aplicación. La condición de parada es que la
+	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
+	// botón de cerrar la ventana (la X).
 	while (!glfwWindowShouldClose(window)) {
 		// - Obtiene y organiza los eventos pendientes, tales como pulsaciones de
 		// teclas o de ratón, etc. Siempre al final de cada iteración del ciclo

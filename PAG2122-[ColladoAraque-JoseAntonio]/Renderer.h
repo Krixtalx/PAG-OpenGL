@@ -7,6 +7,8 @@
 
 #include <GL/glew.h>
 #include <string>
+#include <vector>
+#include "Modelo.h"
 
 namespace PAG {
 	/**
@@ -27,14 +29,7 @@ namespace PAG {
 		float verdeFondo = 0.6;
 		float azulFondo = 0.6;
 
-		const bool entrelazado = false;
-
-		GLuint idVAO = 0; // Identificador del vertex array object
-		GLuint idVBO = 0; // Identificador de los vertex buffer object
-		GLuint idVBO2 = 1;
-		GLuint idIBO = 0; // Identificador del index buffer object
-
-		void creaModelo();
+		std::vector<PAG::Modelo *> modelos;
 
 	public:
 		virtual ~Renderer();
@@ -48,6 +43,10 @@ namespace PAG {
 		void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
 		void actualizarColorFondo() const;
+
+		void creaModelo();
+
+		void eliminaModelo();
 
 		const GLubyte *getPropiedadGL(GLenum propiedad);
 

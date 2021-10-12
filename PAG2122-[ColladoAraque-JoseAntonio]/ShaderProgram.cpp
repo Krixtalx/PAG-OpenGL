@@ -28,7 +28,7 @@ void PAG::ShaderProgram::addShader(PAG::Shader *shader) {
 		glAttachShader(idSP, shader->getShaderId());
 		linked = false;
 	} else {
-		throw std::runtime_error("El shader que se ha pasado como parámetro es un puntero nulo");
+		throw std::runtime_error("[ShaderProgram]: El shader que se ha pasado como parámetro es un puntero nulo");
 	}
 }
 
@@ -55,7 +55,7 @@ void PAG::ShaderProgram::activateShaderProgram() {
 void PAG::ShaderProgram::compruebaErroresSP() const {
 
 	GLint resultadoCompilacion;
-	glGetProgramiv(idSP, GL_COMPILE_STATUS, &resultadoCompilacion);
+	glGetProgramiv(idSP, GL_LINK_STATUS, &resultadoCompilacion);
 
 	if (resultadoCompilacion == GL_FALSE) {
 		// Ha habido un error en la compilación.
@@ -68,6 +68,7 @@ void PAG::ShaderProgram::compruebaErroresSP() const {
 			GLint datosEscritos = 0;
 			glGetShaderInfoLog(idSP, tamMsj, &datosEscritos, mensajeFormatoC);
 			mensaje.assign(mensajeFormatoC);
+			mensaje = "[ShaderProgram]:" + mensaje;
 			delete[] mensajeFormatoC;
 			throw std::runtime_error(mensaje);
 		}

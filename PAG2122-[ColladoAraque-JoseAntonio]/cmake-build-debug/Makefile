@@ -118,6 +118,30 @@ PAG\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\build
 .PHONY : PAG\fast
 
+Modelo.obj: Modelo.cpp.obj
+.PHONY : Modelo.obj
+
+# target to build an object file
+Modelo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Modelo.cpp.obj
+.PHONY : Modelo.cpp.obj
+
+Modelo.i: Modelo.cpp.i
+.PHONY : Modelo.i
+
+# target to preprocess a source file
+Modelo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Modelo.cpp.i
+.PHONY : Modelo.cpp.i
+
+Modelo.s: Modelo.cpp.s
+.PHONY : Modelo.s
+
+# target to generate assembly for a file
+Modelo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Modelo.cpp.s
+.PHONY : Modelo.cpp.s
+
 Renderer.obj: Renderer.cpp.obj
 .PHONY : Renderer.obj
 
@@ -247,6 +271,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PAG
+	@echo ... Modelo.obj
+	@echo ... Modelo.i
+	@echo ... Modelo.s
 	@echo ... Renderer.obj
 	@echo ... Renderer.i
 	@echo ... Renderer.s

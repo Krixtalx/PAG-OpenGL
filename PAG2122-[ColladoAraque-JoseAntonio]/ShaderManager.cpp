@@ -63,7 +63,13 @@ void PAG::ShaderManager::nuevoShaderProgram(const std::string &nombreSP) {
  * @param nombreSP al que se le añadirá
  */
 void PAG::ShaderManager::addShaderToSP(const std::string &nombreShader, const std::string &nombreSP) {
-	shaderPrograms.find(nombreSP)->second.addShader(&shaders.find(nombreShader)->second);
+	auto SP = shaderPrograms.find(nombreSP);
+	if (SP != shaderPrograms.end()) {
+		SP->second.addShader(&shaders.find(nombreShader)->second);
+	} else {
+		throw std::runtime_error(
+				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+	}
 }
 
 /**
@@ -71,5 +77,11 @@ void PAG::ShaderManager::addShaderToSP(const std::string &nombreShader, const st
  * @param nombreSP a activar
  */
 void PAG::ShaderManager::activarSP(const std::string &nombreSP) {
-	shaderPrograms.find(nombreSP)->second.activateShaderProgram();
+	auto SP = shaderPrograms.find(nombreSP);
+	if (SP != shaderPrograms.end()) {
+		SP->second.activateShaderProgram();
+	} else {
+		throw std::runtime_error(
+				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+	}
 }

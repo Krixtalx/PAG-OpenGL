@@ -86,6 +86,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h">
+			<Option target="PAG"/>
+		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp">
 			<Option target="PAG"/>
 		</Unit>

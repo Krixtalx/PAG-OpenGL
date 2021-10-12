@@ -29,12 +29,10 @@ PAG::Renderer::Renderer() {
  * Destructor
  */
 PAG::Renderer::~Renderer() {
-	glDeleteBuffers(1, &idIBO);
-	glDeleteBuffers(1, &idVBO);
-	glDeleteBuffers(1, &idVBO2);
-
-	glDeleteVertexArrays(1, &idVAO);
-};
+	for (auto modelo: modelos) {
+		delete modelo;
+	}
+}
 
 /**
  * Consulta del objeto único de la clase
@@ -62,6 +60,7 @@ void PAG::Renderer::inicializaOpenGL() {
 	glClearColor(rojoFondo, verdeFondo, azulFondo, 1);
 	activarUtilidadGL(GL_DEPTH_TEST);
 	activarUtilidadGL(GL_MULTISAMPLE);
+	activarUtilidadGL(GL_DEBUG_OUTPUT);
 }
 
 /**
@@ -70,11 +69,13 @@ void PAG::Renderer::inicializaOpenGL() {
 void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	PAG::ShaderManager::getInstancia()->activarSP("DefaultSP");
-	glBindVertexArray(idVAO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);
-	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
-
+	for (auto modelo: modelos) {
+		try {
+			modelo->dibujarModelo(PAG::mallaTriangulos);
+		} catch (std::runtime_error &e) {
+			throw e;
+		}
+	}
 }
 
 /**
@@ -143,66 +144,28 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  * Método encargado de crear un modelo. Actualmente solo crea un triangulo.
  */
 void PAG::Renderer::creaModelo() {
-	GLfloat vertices[] = {-.5, -.5, 0,
-	                      .5, -.5, 0,
-	                      .0, .5, 0};
-	GLfloat localColores[] = {1, 0, 0,
-	                          0, 1, 0,
-	                          0, 0, 1};
+	if (modelos.empty()) {
+		std::vector<GLfloat> vertices = {-.5, -.5, 0,
+		                                 .5, -.5, 0,
+		                                 .0, .5, 0};
+		std::vector<GLfloat> localColores = {1, 0, 0,
+		                                     0, 1, 0,
+		                                     0, 0, 1};
+		std::vector<GLuint> indices = {0, 1, 2};
 
-	//Para VBOs entrelazados
-	GLfloat verticesColores[] = {-.5, -.5, 0,
-	                             1, 0, 0,
-	                             .5, -.5, 0,
-	                             0, 1, 0,
-	                             .0, .5, 0,
-	                             0, 0, 1};
-	GLuint indices[] = {0, 1, 2};
-
-	//Creamos nuestro VAO
-	glGenVertexArrays(1, &idVAO);
-	glBindVertexArray(idVAO);
-
-	//Versión no entrelazada
-	//Creamos el primer VBO para los vertices del triángulo
-	glGenBuffers(1, &idVBO);
-	glBindBuffer(GL_ARRAY_BUFFER, idVBO);
-	if (!entrelazado) {
-		//Versión no entrelazada
-		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), vertices,
-		             GL_STATIC_DRAW);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
-		                      nullptr);
-		glEnableVertexAttribArray(0);
-
-		//Creamos el segundo VBO para los colores del triángulo
-		glGenBuffers(1, &idVBO2);
-		glBindBuffer(GL_ARRAY_BUFFER, idVBO2);
-		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), localColores,
-		             GL_STATIC_DRAW);
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
-		                      nullptr);
-		glEnableVertexAttribArray(1);
-	} else {
-		//Versión entrelazada
-		glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(GLfloat), verticesColores,
-		             GL_STATIC_DRAW);
-		//Especificamos como acceder al atributo 0 (posición)
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat),
-		                      nullptr);
-		glEnableVertexAttribArray(0);
-
-		//Especificamos como acceder al atributo 1 (Color)
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat),
-		                      (GLubyte *) (3 * sizeof(GLfloat)));
-		glEnableVertexAttribArray(1);
-
+		auto *modelo = new PAG::Modelo("DefaultSP", 3);
+		modelo->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
+		modelo->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
+		modelo->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
+		modelos.push_back(modelo);
 	}
+}
 
-	glGenBuffers(1, &idIBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof(GLuint), indices,
-	             GL_STATIC_DRAW);
+void PAG::Renderer::eliminaModelo() {
+	if (!modelos.empty()) {
+		delete modelos[modelos.size() - 1];
+		modelos.pop_back();
+	}
 }
 
 
@@ -233,4 +196,3 @@ float PAG::Renderer::getAzulFondo() const {
 void PAG::Renderer::setAzulFondo(float azulFondo) {
 	this->azulFondo = azulFondo;
 }
-
