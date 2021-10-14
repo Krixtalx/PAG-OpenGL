@@ -16,8 +16,8 @@ namespace PAG {
 
 		ShaderManager() = default;
 
-		std::map<std::string, PAG::ShaderProgram> shaderPrograms;
-		std::map<std::string, PAG::Shader> shaders;
+		std::map<std::string, PAG::ShaderProgram*> shaderPrograms;
+		std::map<std::string, PAG::Shader*> shaders;
 	public:
 		static ShaderManager *getInstancia();
 

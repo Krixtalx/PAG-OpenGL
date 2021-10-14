@@ -29,7 +29,7 @@ namespace PAG {
 		
 	public:
 
-		Shader(const Shader &orig);
+		Shader(const Shader &orig)=delete;
 
 		~Shader();
 

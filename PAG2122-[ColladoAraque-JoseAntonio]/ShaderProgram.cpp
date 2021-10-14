@@ -21,19 +21,10 @@ PAG::ShaderProgram::ShaderProgram(std::vector<Shader *> shaders) : shaders(std::
 }
 
 /**
- * Constructor copia. Funciona igual que el constructor por defecto,
- * ya que el destructor no libera los recursos de OpenGL, de eso se encargará el ShaderManager
- * @param orig ShaderProgram del que se realizará la copia
- */
-PAG::ShaderProgram::ShaderProgram(const PAG::ShaderProgram &orig) : idSP(orig.idSP), shaders(orig.shaders),
-                                                                    linked(orig.linked) {
-}
-
-/**
- * Destructor. No libera los recursos porque el ShaderManager ya se encarga de ello.
- * El =default se podría poner en el .h, pero he decidido ponerlo aqui para poner el comentario.
+ * Destructor.
  */
 PAG::ShaderProgram::~ShaderProgram() {
+	glDeleteProgram(idSP);
 }
 
 /**

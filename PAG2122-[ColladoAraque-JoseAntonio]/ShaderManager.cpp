@@ -27,11 +27,11 @@ PAG::ShaderManager *PAG::ShaderManager::getInstancia() {
  */
 PAG::ShaderManager::~ShaderManager() {
 	for (auto &shader: shaders) {
-		glDeleteShader(shader.second.getShaderId());
+		delete shader.second;
 	}
 
 	for (auto &shaderProgram: shaderPrograms) {
-		glDeleteProgram(shaderProgram.second.getIdSP());
+		delete shaderProgram.second;
 	}
 }
 
@@ -42,7 +42,7 @@ PAG::ShaderManager::~ShaderManager() {
  * @param ruta en la que se encuentra el código fuente
  */
 void PAG::ShaderManager::nuevoShader(const std::string &nombreShader, GLenum tipoShader, const std::string &ruta) {
-	PAG::Shader nuevoShader(nombreShader, tipoShader, ruta);
+	auto nuevoShader = new Shader(nombreShader, tipoShader, ruta);
 	shaders.insert(std::make_pair(nombreShader, nuevoShader));
 }
 
@@ -51,7 +51,7 @@ void PAG::ShaderManager::nuevoShader(const std::string &nombreShader, GLenum tip
  * @param nombreSP nombre con el que se incluirá en el mapa
  */
 void PAG::ShaderManager::nuevoShaderProgram(const std::string &nombreSP) {
-	PAG::ShaderProgram nuevoSP;
+	auto nuevoSP = new ShaderProgram();
 	shaderPrograms.insert(std::make_pair(nombreSP, nuevoSP));
 }
 
@@ -63,7 +63,7 @@ void PAG::ShaderManager::nuevoShaderProgram(const std::string &nombreSP) {
 void PAG::ShaderManager::addShaderToSP(const std::string &nombreShader, const std::string &nombreSP) {
 	auto SP = shaderPrograms.find(nombreSP);
 	if (SP != shaderPrograms.end()) {
-		SP->second.addShader(&shaders.find(nombreShader)->second);
+		SP->second->addShader(shaders.find(nombreShader)->second);
 	} else {
 		throw std::runtime_error(
 				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
@@ -77,7 +77,7 @@ void PAG::ShaderManager::addShaderToSP(const std::string &nombreShader, const st
 void PAG::ShaderManager::activarSP(const std::string &nombreSP) {
 	auto SP = shaderPrograms.find(nombreSP);
 	if (SP != shaderPrograms.end()) {
-		SP->second.activateShaderProgram();
+		SP->second->activateShaderProgram();
 	} else {
 		throw std::runtime_error(
 				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);

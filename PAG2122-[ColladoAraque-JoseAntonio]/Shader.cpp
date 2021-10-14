@@ -31,19 +31,11 @@ PAG::Shader::Shader(std::string nombreShader, GLenum tipoShader, const std::stri
 }
 
 /**
- * Constructor copia. Funciona igual que el constructor por defecto,
- * ya que el destructor no libera los recursos de OpenGL, de eso se encargará el ShaderManager
- * @param orig Shader del que se realizará la copia
+ * Destructor.
  */
-PAG::Shader::Shader(const Shader &orig) : nombreShader(orig.nombreShader), idShader(orig.idShader),
-                                          tipoShader(orig.tipoShader) {
+PAG::Shader::~Shader() {
+	glDeleteShader(idShader);
 }
-
-/**
- * Destructor. No libera los recursos porque el ShaderManager ya se encarga de ello.
- * El =default se podría poner en el .h, pero he decidido ponerlo aqui para poner el comentario.
- */
-PAG::Shader::~Shader() = default;
 
 /**
  * Carga el código del shader
