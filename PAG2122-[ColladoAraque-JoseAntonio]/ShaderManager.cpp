@@ -13,11 +13,7 @@ PAG::ShaderManager *PAG::ShaderManager::instancia = nullptr;
  */
 PAG::ShaderManager *PAG::ShaderManager::getInstancia() {
 	if (!instancia) {
-		try {
-			instancia = new ShaderManager;
-		} catch (std::runtime_error &e) {
-			throw e;
-		}
+		instancia = new ShaderManager;
 	}
 	return instancia;
 }

@@ -145,12 +145,12 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  */
 void PAG::Renderer::creaModelo() {
 	if (modelos.empty()) {
-		std::vector<GLfloat> vertices = {-.5, -.5, 0,
-		                                 .5, -.5, 0,
-		                                 .0, .5, 0};
-		std::vector<GLfloat> localColores = {1, 0, 0,
-		                                     0, 1, 0,
-		                                     0, 0, 1};
+		std::vector<glm::vec3> vertices = {{-.5, -.5, 0},
+		                                   {.5,  -.5, 0},
+		                                   {.0,  .5,  0}};
+		std::vector<glm::vec3> localColores = {{1, 0, 0},
+		                                       {0, 1, 0},
+		                                       {0, 0, 1}};
 		std::vector<GLuint> indices = {0, 1, 2};
 
 		auto *modelo = new PAG::Modelo("DefaultSP", 3);

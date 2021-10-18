@@ -8,6 +8,7 @@
 
 #include <utility>
 #include <stdexcept>
+#include <climits>
 
 /**
  * Constructor parametrizado
@@ -78,7 +79,7 @@ PAG::Modelo::~Modelo() {
  * @param datos a instanciar
  * @param freqAct GLenum que indica con que frecuencia se van a modificar los vertices. GL_STATIC_DRAW siempre por ahora
  */
-void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, std::vector<GLfloat> datos, GLenum freqAct) {
+void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, std::vector<glm::vec3> datos, GLenum freqAct) {
 	//Si hay un buffer de este tipo instanciado, lo eliminamos
 	if (idVBO[tipoDato] != UINT_MAX) {
 		glDeleteBuffers(1, &idVBO[tipoDato]);
@@ -87,8 +88,8 @@ void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, std::vector<GLfloat> datos
 	glBindVertexArray(idVAO);
 	glGenBuffers(1, &idVBO[tipoDato]);
 	glBindBuffer(GL_ARRAY_BUFFER, idVBO[tipoDato]);
-	glBufferData(GL_ARRAY_BUFFER, datos.size() * sizeof(GLfloat), datos.data(), freqAct);
-	glVertexAttribPointer(tipoDato, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat),
+	glBufferData(GL_ARRAY_BUFFER, datos.size() * sizeof(glm::vec3), datos.data(), freqAct);
+	glVertexAttribPointer(tipoDato, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3),
 	                      nullptr);
 	glEnableVertexAttribArray(tipoDato);
 }

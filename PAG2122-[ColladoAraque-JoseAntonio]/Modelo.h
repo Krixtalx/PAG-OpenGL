@@ -7,6 +7,7 @@
 
 
 #include <GL/glew.h>
+#include <glm/glm.hpp>
 #include <vector>
 #include <string>
 #include "RenderOptions.h"
@@ -17,7 +18,7 @@ namespace PAG {
 		GLuint idVAO{};
 		std::vector<GLuint> idVBO;
 		std::vector<GLuint> idIBO;
-		std::vector<std::vector<GLfloat>> vbos;
+		std::vector<std::vector<glm::vec3>> vbos;
 		std::vector<std::vector<GLuint>> ibos;
 		std::string shaderProgram;
 		GLuint numVertices;
@@ -32,7 +33,7 @@ namespace PAG {
 
 		~Modelo();
 
-		void nuevoVBO(PAG::paramShader tipoDato, std::vector<GLfloat> datos, GLenum freqAct);
+		void nuevoVBO(PAG::paramShader tipoDato, std::vector<glm::vec3> datos, GLenum freqAct);
 
 		void nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GLenum freqAct);
 
