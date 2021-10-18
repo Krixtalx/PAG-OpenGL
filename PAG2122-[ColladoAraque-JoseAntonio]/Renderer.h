@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include "Modelo.h"
+#include "Camara.h"
 
 namespace PAG {
 	/**
@@ -25,11 +26,13 @@ namespace PAG {
 		static Renderer *instancia; ///< Puntero al único objeto de la clase
 		Renderer();
 
-		float rojoFondo = 0.6;
-		float verdeFondo = 0.6;
-		float azulFondo = 0.6;
+		float rojoFondo = 0.15;
+		float verdeFondo = 0.15;
+		float azulFondo = 0.2;
 
 		std::vector<PAG::Modelo *> modelos;
+
+		PAG::Camara camara;
 
 	public:
 		virtual ~Renderer();
@@ -67,6 +70,8 @@ namespace PAG {
 		float getAzulFondo() const;
 
 		void setAzulFondo(float azulFondo);
+
+		Camara &getCamara();
 
 	};
 }

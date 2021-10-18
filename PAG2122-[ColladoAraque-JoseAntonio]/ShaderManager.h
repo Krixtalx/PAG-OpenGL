@@ -33,6 +33,7 @@ namespace PAG {
 
 		void activarSP(const std::string &nombreSP);
 
+		GLuint getUniformLocation(const std::string &nombreSP, const std::string &variable);
 	};
 }
 

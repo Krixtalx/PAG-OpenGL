@@ -118,6 +118,30 @@ PAG\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\build
 .PHONY : PAG\fast
 
+Camara.obj: Camara.cpp.obj
+.PHONY : Camara.obj
+
+# target to build an object file
+Camara.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Camara.cpp.obj
+.PHONY : Camara.cpp.obj
+
+Camara.i: Camara.cpp.i
+.PHONY : Camara.i
+
+# target to preprocess a source file
+Camara.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Camara.cpp.i
+.PHONY : Camara.cpp.i
+
+Camara.s: Camara.cpp.s
+.PHONY : Camara.s
+
+# target to generate assembly for a file
+Camara.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Camara.cpp.s
+.PHONY : Camara.cpp.s
+
 Modelo.obj: Modelo.cpp.obj
 .PHONY : Modelo.obj
 
@@ -271,6 +295,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PAG
+	@echo ... Camara.obj
+	@echo ... Camara.i
+	@echo ... Camara.s
 	@echo ... Modelo.obj
 	@echo ... Modelo.i
 	@echo ... Modelo.s

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Camara.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Modelo.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Renderer.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Shader.cpp.obj"

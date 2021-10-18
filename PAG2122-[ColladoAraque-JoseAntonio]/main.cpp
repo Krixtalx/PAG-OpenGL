@@ -1,8 +1,8 @@
-#include <iostream>
 // IMPORTANTE: El include de GLEW debe estar siempre ANTES de el de GLFW
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Renderer.h"
+#include <iostream>
 
 int colorSeleccionado = 0;
 std::string colores[3] = {"Rojo", "Verde", "Azul"};
@@ -45,13 +45,30 @@ void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
 void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mods) {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
-	} else if (key == GLFW_KEY_A && action == GLFW_PRESS) {
+	} else if (key == GLFW_KEY_C && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->creaModelo();
-		callbackRefrescoVentana(window);
 	} else if (key == GLFW_KEY_E && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->eliminaModelo();
-		callbackRefrescoVentana(window);
+	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().truck(-0.1f);
+	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().truck(0.1f);
+	} else if (key == GLFW_KEY_A && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().dolly(-0.1f);
+	} else if (key == GLFW_KEY_D && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().dolly(0.1f);
+	} else if (key == GLFW_KEY_Z && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().boom(0.1f);
+	} else if (key == GLFW_KEY_X && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().crane(0.1f);
+	} else if (key == GLFW_KEY_I && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().zoom(-1);
+	} else if (key == GLFW_KEY_O && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().zoom(1);
 	}
+
+
+	callbackRefrescoVentana(window);
 	//std::cout << "Key callback called" << std::endl;
 }
 
@@ -130,7 +147,8 @@ int main() {
 
 	// - Tamaño, título de la ventana, en ventana y no en pantalla completa,
 	// sin compartir recursos con otras ventanas.
-	window = glfwCreateWindow(1024, 576, "PAG2122-[ColladoAraque-JoseAntonio]", nullptr, nullptr);
+	window = glfwCreateWindow(PAG::anchoVentanaPorDefecto, PAG::altoVentanaPorDefecto,
+	                          "PAG2122-[ColladoAraque-JoseAntonio]", nullptr, nullptr);
 	// - Comprobamos si la creación de la ventana ha tenido éxito.
 	if (window == nullptr) {
 		std::cerr << "Failed to open GLFW window" << std::endl;
@@ -183,9 +201,9 @@ int main() {
 	std::cout
 			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
-	std::cout << "Con la tecla A se añade un nuevo modelo si no hay ninguno creado" << std::endl;
+	std::cout << "Con la tecla C se crea un nuevo modelo si no hay ninguno creado" << std::endl;
 	std::cout << "Con la tecla E se elimina el modelo que se encuentre creado" << std::endl;
-	
+
 	// - Ciclo de eventos de la aplicación. La condición de parada es que la
 	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
 	// botón de cerrar la ventana (la X).

@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
 
-add_executable(PAG main.cpp Renderer.cpp Renderer.h ShaderProgram.cpp ShaderProgram.h Shader.cpp Shader.h ShaderManager.cpp ShaderManager.h Modelo.cpp Modelo.h RenderOptions.h)
+add_executable(PAG main.cpp Renderer.cpp Renderer.h ShaderProgram.cpp ShaderProgram.h Shader.cpp Shader.h ShaderManager.cpp ShaderManager.h Modelo.cpp Modelo.h RenderOptions.h Camara.cpp Camara.h)
 
 # El primer parámetro es el nombre del ejecutable. El resto son los nombres de
 # las bibliotecas adicionales a enlazar

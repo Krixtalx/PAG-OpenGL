@@ -25,7 +25,6 @@ namespace PAG {
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);
 
-
 	public:
 		Modelo(std::string shaderProgram, GLuint numVertices);
 
@@ -37,7 +36,7 @@ namespace PAG {
 
 		void nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GLenum freqAct);
 
-		void dibujarModelo(PAG::modoDibujado modo);
+		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP);
 	};
 }
 

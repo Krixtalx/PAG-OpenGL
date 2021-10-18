@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.h">
+			<Option target="PAG"/>
+		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp">
 			<Option target="PAG"/>
 		</Unit>

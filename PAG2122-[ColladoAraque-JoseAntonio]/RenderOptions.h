@@ -25,6 +25,9 @@ namespace PAG {
 		return color + 1;
 	};
 
+	static unsigned anchoVentanaPorDefecto = 1024;
+	static unsigned altoVentanaPorDefecto = 576;
+
 };
 
 #endif //PAG_RENDEROPTIONS_H

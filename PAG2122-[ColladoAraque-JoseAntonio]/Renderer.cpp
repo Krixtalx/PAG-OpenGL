@@ -71,7 +71,7 @@ void PAG::Renderer::refrescar() const {
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	for (auto modelo: modelos) {
 		try {
-			modelo->dibujarModelo(PAG::mallaTriangulos);
+			modelo->dibujarModelo(PAG::mallaTriangulos, camara.matrizMVP());
 		} catch (std::runtime_error &e) {
 			throw e;
 		}
@@ -125,6 +125,8 @@ void PAG::Renderer::activarUtilidadGL(GLenum utility) {
  */
 void PAG::Renderer::setViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
 	glViewport(x, y, width, height);
+	camara.setAlto(height);
+	camara.setAncho(width);
 }
 
 /**
@@ -195,4 +197,8 @@ float PAG::Renderer::getAzulFondo() const {
 
 void PAG::Renderer::setAzulFondo(float azulFondo) {
 	this->azulFondo = azulFondo;
+}
+
+PAG::Camara &PAG::Renderer::getCamara() {
+	return camara;
 }
