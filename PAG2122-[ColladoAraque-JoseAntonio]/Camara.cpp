@@ -7,6 +7,10 @@
 #include "RenderOptions.h"
 #include <glm/gtx/transform.hpp>
 #include <glm/ext/vector_relational.hpp>
+#include <iostream>
+#include "glm/gtx/string_cast.hpp"
+
+#define GLM_ENABLE_EXPERIMENTAL
 
 
 /**
@@ -101,13 +105,44 @@ void PAG::Camara::crane(float mov) {
 	boom(-mov);
 }
 
+void PAG::Camara::pan(float mov) {
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), v);
+	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 0)) + posicion;
+	calcularEjes();
+}
+
+void PAG::Camara::tilt(float mov) {
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), u);
+	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 0)) + posicion;
+	calcularEjes();
+}
+
+void PAG::Camara::orbitX(float mov) {
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov), v);
+	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 0)) + puntoMira;
+	//posicion = glm::vec3(rotacion * glm::vec4(posicion, 0));
+	calcularEjes();
+	std::cout << "n: " + glm::to_string(n) << std::endl;
+	std::cout << "v: " + glm::to_string(v) << std::endl;
+	std::cout << "u: " + glm::to_string(u) << std::endl;
+}
+
+
+void PAG::Camara::orbitY(float mov) {
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov), u);
+	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 0)) + puntoMira;
+	//posicion = glm::vec3(rotacion * glm::vec4(posicion, 0));
+	calcularEjes();
+}
+
+
 void PAG::Camara::zoom(float mov) {
 	fovX += glm::radians(mov);
 	if (fovX < 0)
 		fovX = 0;
 	if (fovX > glm::pi<float>())
 		fovX = glm::pi<float>();
-	
+
 	calcularFovY();
 }
 

@@ -53,6 +53,14 @@ namespace PAG {
 
 		void zoom(float mov);
 
+		void pan(float mov);
+
+		void tilt(float mov);
+
+		void orbitX(float mov);
+
+		void orbitY(float mov);
+
 		glm::mat4 matrizMVP() const;
 
 		GLfloat aspecto() const;

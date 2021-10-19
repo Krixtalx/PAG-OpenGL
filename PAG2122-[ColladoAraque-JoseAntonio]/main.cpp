@@ -5,6 +5,8 @@
 #include <iostream>
 
 int colorSeleccionado = 0;
+double prevXPos = 0, prevYPos = 0;
+bool botonIzquierdoPulsado;
 std::string colores[3] = {"Rojo", "Verde", "Azul"};
 
 void GLAPIENTRY MessageCallback(GLenum source,
@@ -47,7 +49,7 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	} else if (key == GLFW_KEY_C && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->creaModelo();
-	} else if (key == GLFW_KEY_E && action == GLFW_PRESS) {
+	} else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->eliminaModelo();
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().truck(-0.1f);
@@ -65,8 +67,15 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 		PAG::Renderer::getInstancia()->getCamara().zoom(-1);
 	} else if (key == GLFW_KEY_O && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().zoom(1);
+	}else if (key == GLFW_KEY_Q && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitX(5);
+	}else if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitX(-5);
+	}else if (key == GLFW_KEY_T && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitY(5);
+	}else if (key == GLFW_KEY_G && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitY(-5);
 	}
-
 
 	callbackRefrescoVentana(window);
 	//std::cout << "Key callback called" << std::endl;
@@ -76,14 +85,29 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 // del ratón sobre el área de dibujo OpenGL.
 void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
 	if (action == GLFW_PRESS) {
-		//std::cout << "Pulsado el boton: " << button << std::endl;
-		colorSeleccionado = (colorSeleccionado + 1) % 3;
-		std::cout << "Seleccionado el colorSeleccionado "
-		          << colores[colorSeleccionado]
-		          << std::endl;
+		if (button == 0) {
+			colorSeleccionado = (colorSeleccionado + 1) % 3;
+			std::cout << "Seleccionado el colorSeleccionado "
+			          << colores[colorSeleccionado]
+			          << std::endl;
+		} else if (button == 1) {
+			botonIzquierdoPulsado = true;
+		}
 	} else if (action == GLFW_RELEASE) {
-		//std::cout << "Soltado el boton: " << button << std::endl;
+		if (button == 1) {
+			botonIzquierdoPulsado = false;
+		}
 	}
+}
+
+void cursor_position_callback(GLFWwindow *window, double xpos, double ypos) {
+	if(botonIzquierdoPulsado) {
+		PAG::Renderer::getInstancia()->getCamara().pan(xpos - prevXPos);
+		PAG::Renderer::getInstancia()->getCamara().tilt(ypos - prevYPos);
+		callbackRefrescoVentana(window);
+	}
+	prevXPos = xpos;
+	prevYPos = ypos;
 }
 
 // - Esta función callback será llamada cada vez que se mueva la rueda
@@ -193,6 +217,8 @@ int main() {
 	glfwSetKeyCallback(window, callbackTecla);
 	glfwSetMouseButtonCallback(window, callbackBotonRaton);
 	glfwSetScrollCallback(window, callbackScroll);
+	glfwSetCursorPosCallback(window, cursor_position_callback);
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	glDebugMessageCallback(MessageCallback, 0);
 
 
@@ -202,7 +228,7 @@ int main() {
 			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
 	std::cout << "Con la tecla C se crea un nuevo modelo si no hay ninguno creado" << std::endl;
-	std::cout << "Con la tecla E se elimina el modelo que se encuentre creado" << std::endl;
+	std::cout << "Con la tecla B se borra el modelo que se encuentre creado" << std::endl;
 
 	// - Ciclo de eventos de la aplicación. La condición de parada es que la
 	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
