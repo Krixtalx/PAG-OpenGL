@@ -51,7 +51,7 @@ namespace PAG {
 
 		void crane(float mov);
 
-		void zoom(float mov);
+		void zoom(float angulo);
 
 		void pan(float mov);
 
@@ -60,6 +60,8 @@ namespace PAG {
 		void orbitX(float mov);
 
 		void orbitY(float mov);
+
+		void reset();
 
 		glm::mat4 matrizMVP() const;
 

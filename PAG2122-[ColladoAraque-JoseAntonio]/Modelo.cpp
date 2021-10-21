@@ -9,7 +9,6 @@
 #include <utility>
 #include <stdexcept>
 #include <climits>
-#include <glm/gtc/type_ptr.hpp>
 
 /**
  * Constructor parametrizado
@@ -120,9 +119,7 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GL
 void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
 	try {
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
-		GLuint matrixLocation = PAG::ShaderManager::getInstancia()->getUniformLocation(this->shaderProgram,
-		                                                                               "matrizMVP");
-		glUniformMatrix4fv(matrixLocation, 1, false, glm::value_ptr(matrizMVP));
+		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
 		glBindVertexArray(idVAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
 		glDrawElements(getGLDrawMode(modo), numVertices, GL_UNSIGNED_INT, nullptr);

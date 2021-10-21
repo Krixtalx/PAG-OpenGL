@@ -81,16 +81,16 @@ void PAG::ShaderManager::activarSP(const std::string &nombreSP) {
 }
 
 /**
- * Método para obtener la localización de una variable uniform dentro de un Shader Program
- * @param nombreSP nombre del ShaderProgram en el que buscar la variable
- * @param variable nombre de la variable a buscar
- * @return GLuint con la localización
+ * Método para establecer una variable uniform dentro de un Shader Program
+ * @param nombreSP nombre del ShaderProgram en el que establecer el uniform
+ * @param variable nombre de la variable a establecer
  */
-GLuint PAG::ShaderManager::getUniformLocation(const std::string &nombreSP, const std::string &variable) {
+void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matrizMVP) {
 	GLint location = glGetUniformLocation(this->shaderPrograms.find(nombreSP)->second->getIdSP(), variable.c_str());
-	if (location >= 0)
-		return location;
-	throw std::runtime_error(
-			"[ShaderManager]: No se ha encontrado ninguna variable con el nombre " + variable +
-			" en el shaderProgram " + nombreSP);
+	if (location >= 0) {
+		glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrizMVP));
+	} else
+		throw std::runtime_error(
+				"[ShaderManager]: No se ha encontrado ninguna variable con el nombre " + variable +
+				" en el shaderProgram " + nombreSP);
 }

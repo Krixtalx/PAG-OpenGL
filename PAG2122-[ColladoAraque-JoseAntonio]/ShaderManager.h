@@ -9,6 +9,8 @@
 #include <string>
 #include "ShaderProgram.h"
 
+#include <glm/gtc/type_ptr.hpp>
+
 namespace PAG {
 	class ShaderManager {
 	private:
@@ -33,7 +35,7 @@ namespace PAG {
 
 		void activarSP(const std::string &nombreSP);
 
-		GLuint getUniformLocation(const std::string &nombreSP, const std::string &variable);
+		void setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matrizMVP);
 	};
 }
 

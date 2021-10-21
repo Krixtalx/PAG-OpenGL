@@ -46,23 +46,28 @@ PAG::Camara::Camara(const glm::vec3 &posicion, const glm::vec3 &puntoMira, const
 }
 
 /**
- * Calcula la matriz de modelado visión y proyección y la devuelve
+ * Calcula la matriz de modelado visión y proyección y la devuelve.
  * @return matrizMVP
  */
 glm::mat4 PAG::Camara::matrizMVP() const {
 	glm::mat4 vision = glm::lookAt(posicion, puntoMira, up);
 	glm::mat4 proyeccion = glm::perspective(fovY, aspecto(), zNear, zFar);
 	//Multiplicamos de manera inversa: Modelado-Vision-Proyeccion -> Proyeccion-Vision-Modelado
-	return proyeccion * vision;
+	return proyeccion * vision; //Devuelve solo proyección*vision. El modelado lo aplicará el modelo
 }
 
+/**
+ * Actualiza los ejes locales de la cámara recalculando su valor. También actualiza el vector up.
+ */
 void PAG::Camara::calcularEjes() {
 	n = glm::normalize(posicion - puntoMira);
 
 	if (glm::all(glm::equal(n, up, 0.001f))) {
 		u = glm::normalize(glm::cross(glm::vec3(0.0f, 0.0f, 1.0f), n));
+		up = -up;
 	} else if (glm::all(glm::equal(n, -up, 0.001f))) {
 		u = glm::normalize(glm::cross(glm::vec3(0.0f, 0.0f, -1.0f), n));
+		up = -up;
 	} else {
 		u = glm::normalize(glm::cross(up, n));
 	}
@@ -70,6 +75,9 @@ void PAG::Camara::calcularEjes() {
 	v = glm::normalize(glm::cross(n, u));
 }
 
+/**
+ * Calcula el fovY equivalente al fovX actual
+ */
 void PAG::Camara::calcularFovY() {
 	this->fovY = 2 * glm::atan(tan(this->fovX / 2) / aspecto());
 }
@@ -81,7 +89,7 @@ void PAG::Camara::calcularFovY() {
 
 /**
  * Movimiento truck de la camara. Mueve la camara hacia delante o hacia atrás
- * @param mov
+ * @param mov magnitud del movimiento
  */
 void PAG::Camara::truck(float mov) {
 	glm::mat4 translacion = glm::translate(n * mov);
@@ -89,60 +97,97 @@ void PAG::Camara::truck(float mov) {
 	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
 }
 
+/**
+ * Movimiento dolly de la camara. Mueve la camara hacia la izquierda o hacia la derecha
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::dolly(float mov) {
 	glm::mat4 translacion = glm::translate(u * mov);
 	posicion = glm::vec3(translacion * glm::vec4(posicion, 1));
 	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
 }
 
+/**
+ * Movimiento boom de la cámara. Mueve la cámara hacia arriba
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::boom(float mov) {
 	glm::mat4 translacion = glm::translate(v * mov);
 	posicion = glm::vec3(translacion * glm::vec4(posicion, 1));
 	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
 }
 
+/**
+ * Movimiento boom de la cámara. Mueve la cámara hacia abajo
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::crane(float mov) {
 	boom(-mov);
 }
 
+/**
+ * Movimiento pan de la cámara. Rota la cámara horizontalmente
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::pan(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), v);
-	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 0)) + posicion;
+	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 1)) + posicion;
 	calcularEjes();
 }
 
+/**
+ * Movimiento tilt de la cámara. Rota la cámara verticalmente
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::tilt(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), u);
-	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 0)) + posicion;
+	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 1)) + posicion;
 	calcularEjes();
 }
 
+/**
+ * Orbita en longitud alrededor del punto al que se mira.
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::orbitX(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov), v);
-	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 0)) + puntoMira;
-	//posicion = glm::vec3(rotacion * glm::vec4(posicion, 0));
+	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 1)) + puntoMira;
 	calcularEjes();
-	std::cout << "n: " + glm::to_string(n) << std::endl;
-	std::cout << "v: " + glm::to_string(v) << std::endl;
-	std::cout << "u: " + glm::to_string(u) << std::endl;
 }
 
-
+/**
+ * Orbita en latitud alrededor del punto al que se mira.
+ * @param mov magnitud del movimiento
+ */
 void PAG::Camara::orbitY(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov), u);
-	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 0)) + puntoMira;
-	//posicion = glm::vec3(rotacion * glm::vec4(posicion, 0));
+	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 1)) + puntoMira;
 	calcularEjes();
 }
 
-
-void PAG::Camara::zoom(float mov) {
-	fovX += glm::radians(mov);
+/**
+ * Realiza el zoom modificando el fov
+ * @param angulo variación del ángulo
+ */
+void PAG::Camara::zoom(float angulo) {
+	fovX += glm::radians(angulo);
 	if (fovX < 0)
 		fovX = 0;
 	if (fovX > glm::pi<float>())
 		fovX = glm::pi<float>();
 
+	calcularFovY();
+}
+
+/**
+ * Situa la cámara en la posición por defecto.
+ */
+void PAG::Camara::reset() {
+	posicion = glm::vec3(0, 0, 2.5);
+	puntoMira = glm::vec3(0, 0, 0);
+	up = glm::vec3(0, 1, 0);
+	fovX = glm::radians(80.0f);
+	calcularEjes();
 	calcularFovY();
 }
 

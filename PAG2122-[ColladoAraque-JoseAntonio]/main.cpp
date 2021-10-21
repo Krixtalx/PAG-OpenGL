@@ -75,6 +75,8 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 		PAG::Renderer::getInstancia()->getCamara().orbitY(5);
 	}else if (key == GLFW_KEY_G && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().orbitY(-5);
+	}else if (key == GLFW_KEY_R && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().reset();
 	}
 
 	callbackRefrescoVentana(window);
@@ -113,9 +115,6 @@ void cursor_position_callback(GLFWwindow *window, double xpos, double ypos) {
 // - Esta función callback será llamada cada vez que se mueva la rueda
 // del ratón sobre el área de dibujo OpenGL.
 void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
-//    std::cout << "Movida la rueda del raton " << xoffset << " Unidades en horizontal y "
-//              << yoffset << " unidades en vertical" << std::endl;
-
 	float rojo = PAG::Renderer::getInstancia()->getRojoFondo();
 	float verde = PAG::Renderer::getInstancia()->getVerdeFondo();
 	float azul = PAG::Renderer::getInstancia()->getAzulFondo();
@@ -142,8 +141,7 @@ void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 			azul = 0;
 		}
 	}
-
-
+	
 	std::cout << "rojoFondo: " << rojo << " verdeFondo: " << verde << " azulFondo: " << azul << std::endl;
 	PAG::Renderer::getInstancia()->setColorFondo(rojo, verde, azul, 1);
 	callbackRefrescoVentana(window);
