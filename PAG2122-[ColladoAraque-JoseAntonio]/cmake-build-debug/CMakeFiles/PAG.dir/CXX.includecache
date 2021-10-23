@@ -12,20 +12,6 @@ GL/glew.h
 glm/glm.hpp
 -
 
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp
-Modelo.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
-RenderOptions.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
-ShaderManager.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
-utility
--
-stdexcept
--
-climits
--
-
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
 GL/glew.h
 -
@@ -65,12 +51,6 @@ GL/glew.h
 -
 string
 -
-
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.cpp
-stdexcept
--
-ShaderManager.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
 
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
 map

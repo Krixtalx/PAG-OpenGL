@@ -8,6 +8,18 @@ int colorSeleccionado = 0;
 double prevXPos = 0, prevYPos = 0;
 bool botonIzquierdoPulsado;
 std::string colores[3] = {"Rojo", "Verde", "Azul"};
+float deltaTime = 0.1f;
+float ultimoFrame = 0.0f;
+
+void actualizarDeltaTime() {
+	static clock_t ultimaEjecucion = clock(); // Solo se ejecuta la primera vez
+	if ((clock() - ultimaEjecucion) > 25) {
+		float frameActual = glfwGetTime();
+		deltaTime = frameActual - ultimoFrame;
+		ultimoFrame = frameActual;
+		ultimaEjecucion = clock();
+	}
+}
 
 void GLAPIENTRY MessageCallback(GLenum source,
                                 GLenum type,
@@ -52,30 +64,30 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 	} else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->eliminaModelo();
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().truck(-0.1f);
+		PAG::Renderer::getInstancia()->getCamara().truck(-1.0f * deltaTime);
 	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().truck(0.1f);
+		PAG::Renderer::getInstancia()->getCamara().truck(1.0f * deltaTime);
 	} else if (key == GLFW_KEY_A && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().dolly(-0.1f);
+		PAG::Renderer::getInstancia()->getCamara().dolly(-1.0f * deltaTime);
 	} else if (key == GLFW_KEY_D && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().dolly(0.1f);
+		PAG::Renderer::getInstancia()->getCamara().dolly(1.0f * deltaTime);
 	} else if (key == GLFW_KEY_Z && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().boom(0.1f);
+		PAG::Renderer::getInstancia()->getCamara().boom(1.0f * deltaTime);
 	} else if (key == GLFW_KEY_X && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().crane(0.1f);
+		PAG::Renderer::getInstancia()->getCamara().crane(1.0f * deltaTime);
 	} else if (key == GLFW_KEY_I && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().zoom(-1);
+		PAG::Renderer::getInstancia()->getCamara().zoom(-4 * deltaTime);
 	} else if (key == GLFW_KEY_O && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().zoom(1);
-	}else if (key == GLFW_KEY_Q && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitX(5);
-	}else if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitX(-5);
-	}else if (key == GLFW_KEY_T && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitY(5);
-	}else if (key == GLFW_KEY_G && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitY(-5);
-	}else if (key == GLFW_KEY_R && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().zoom(4 * deltaTime);
+	} else if (key == GLFW_KEY_Q && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitX(50 * deltaTime);
+	} else if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitX(-50 * deltaTime);
+	} else if (key == GLFW_KEY_T && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitY(50 * deltaTime);
+	} else if (key == GLFW_KEY_G && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+		PAG::Renderer::getInstancia()->getCamara().orbitY(-50 * deltaTime);
+	} else if (key == GLFW_KEY_R && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().reset();
 	}
 
@@ -102,10 +114,10 @@ void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
 	}
 }
 
-void cursor_position_callback(GLFWwindow *window, double xpos, double ypos) {
-	if(botonIzquierdoPulsado) {
-		PAG::Renderer::getInstancia()->getCamara().pan(xpos - prevXPos);
-		PAG::Renderer::getInstancia()->getCamara().tilt(ypos - prevYPos);
+void callbackMovimientoRaton(GLFWwindow *window, double xpos, double ypos) {
+	if (botonIzquierdoPulsado) {
+		PAG::Renderer::getInstancia()->getCamara().pan((xpos - prevXPos) * deltaTime * 10);
+		PAG::Renderer::getInstancia()->getCamara().tilt((ypos - prevYPos) * deltaTime * 10);
 		callbackRefrescoVentana(window);
 	}
 	prevXPos = xpos;
@@ -141,7 +153,7 @@ void callbackScroll(GLFWwindow *window, double xoffset, double yoffset) {
 			azul = 0;
 		}
 	}
-	
+
 	std::cout << "rojoFondo: " << rojo << " verdeFondo: " << verde << " azulFondo: " << azul << std::endl;
 	PAG::Renderer::getInstancia()->setColorFondo(rojo, verde, azul, 1);
 	callbackRefrescoVentana(window);
@@ -215,7 +227,7 @@ int main() {
 	glfwSetKeyCallback(window, callbackTecla);
 	glfwSetMouseButtonCallback(window, callbackBotonRaton);
 	glfwSetScrollCallback(window, callbackScroll);
-	glfwSetCursorPosCallback(window, cursor_position_callback);
+	glfwSetCursorPosCallback(window, callbackMovimientoRaton);
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	glDebugMessageCallback(MessageCallback, 0);
 
@@ -236,6 +248,7 @@ int main() {
 		// teclas o de ratón, etc. Siempre al final de cada iteración del ciclo
 		// de eventos y después de glfwSwapBuffers(window);
 		glfwPollEvents();
+		//actualizarDeltaTime();
 	}
 	// - Una vez terminado el ciclo de eventos, liberar recursos, etc.
 	std::cout << "Finishing application pag prueba" << std::endl;

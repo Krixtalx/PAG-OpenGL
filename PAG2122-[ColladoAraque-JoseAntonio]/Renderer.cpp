@@ -69,9 +69,10 @@ void PAG::Renderer::inicializaOpenGL() {
 void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glm::mat4 matrizMVP = camara.matrizMVP();
 	for (auto modelo: modelos) {
 		try {
-			modelo->dibujarModelo(PAG::mallaTriangulos, camara.matrizMVP());
+			modelo->dibujarModelo(PAG::mallaTriangulos, matrizMVP);
 		} catch (std::runtime_error &e) {
 			throw e;
 		}
@@ -147,18 +148,8 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  */
 void PAG::Renderer::creaModelo() {
 	if (modelos.empty()) {
-		std::vector<glm::vec3> vertices = {{-.5, -.5, 0},
-		                                   {.5,  -.5, 0},
-		                                   {.0,  .5,  0}};
-		std::vector<glm::vec3> localColores = {{1, 0, 0},
-		                                       {0, 1, 0},
-		                                       {0, 0, 1}};
-		std::vector<GLuint> indices = {0, 1, 2};
-
 		auto *modelo = new PAG::Modelo("DefaultSP", 3);
-		modelo->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
-		modelo->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
-		modelo->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
+		modelo->cargaModeloTriangulo();
 		modelos.push_back(modelo);
 	}
 }

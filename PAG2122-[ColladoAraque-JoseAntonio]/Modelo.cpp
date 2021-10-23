@@ -129,6 +129,23 @@ void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
 }
 
 /**
+ * Crea el modelo de un triangulo
+ */
+void PAG::Modelo::cargaModeloTriangulo() {
+	std::vector<glm::vec3> vertices = {{-.5, -.5, 0},
+	                                   {.5,  -.5, 0},
+	                                   {.0,  .5,  0}};
+	std::vector<glm::vec3> localColores = {{1, 0, 0},
+	                                       {0, 1, 0},
+	                                       {0, 0, 1}};
+	std::vector<GLuint> indices = {0, 1, 2};
+
+	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
+	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
+}
+
+/**
  * Traduce de modoDibujado a los modos de dibujado de OpenGL
  * @param modo de modoDibujado
  * @return GLenum que indica como debe de dibujarse

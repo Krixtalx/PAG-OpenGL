@@ -57,21 +57,18 @@ glm::mat4 PAG::Camara::matrizMVP() const {
 }
 
 /**
- * Actualiza los ejes locales de la cámara recalculando su valor. También actualiza el vector up.
+ * Actualiza los ejes locales de la cámara recalculando su valor.
  */
 void PAG::Camara::calcularEjes() {
 	n = glm::normalize(posicion - puntoMira);
 
 	if (glm::all(glm::equal(n, up, 0.001f))) {
 		u = glm::normalize(glm::cross(glm::vec3(0.0f, 0.0f, 1.0f), n));
-		up = -up;
 	} else if (glm::all(glm::equal(n, -up, 0.001f))) {
 		u = glm::normalize(glm::cross(glm::vec3(0.0f, 0.0f, -1.0f), n));
-		up = -up;
 	} else {
 		u = glm::normalize(glm::cross(up, n));
 	}
-
 	v = glm::normalize(glm::cross(n, u));
 }
 
@@ -130,7 +127,7 @@ void PAG::Camara::crane(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::pan(float mov) {
-	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), v);
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.02f), v);
 	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 1)) + posicion;
 	calcularEjes();
 }
@@ -140,9 +137,10 @@ void PAG::Camara::pan(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::tilt(float mov) {
-	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.01f), u);
+	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.02f), u);
 	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 1)) + posicion;
 	calcularEjes();
+	up = v; // Este movimiento puede hacer cambiar el vector UP, por lo que lo igualamos a v para evitar problemas
 }
 
 /**
@@ -163,6 +161,7 @@ void PAG::Camara::orbitY(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov), u);
 	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 1)) + puntoMira;
 	calcularEjes();
+	up = v; // Este movimiento puede hacer cambiar el vector UP, por lo que lo igualamos a v para evitar problemas
 }
 
 /**

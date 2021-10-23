@@ -37,6 +37,8 @@ namespace PAG {
 		void nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GLenum freqAct);
 
 		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP);
+
+		void cargaModeloTriangulo();
 	};
 }
 
