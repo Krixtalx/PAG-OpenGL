@@ -140,7 +140,7 @@ void PAG::Camara::tilt(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov * 0.02f), u);
 	puntoMira = glm::vec3(rotacion * glm::vec4(puntoMira - posicion, 1)) + posicion;
 	calcularEjes();
-	up = v; // Este movimiento puede hacer cambiar el vector UP, por lo que lo igualamos a v para evitar problemas
+	up = v; // Igualamos up a v para evitar que n pueda ser igual a up. Ver explicación en la documentación
 }
 
 /**
@@ -161,7 +161,7 @@ void PAG::Camara::orbitY(float mov) {
 	glm::mat4 rotacion = glm::rotate(glm::radians(mov), u);
 	posicion = glm::vec3(rotacion * glm::vec4(posicion - puntoMira, 1)) + puntoMira;
 	calcularEjes();
-	up = v; // Este movimiento puede hacer cambiar el vector UP, por lo que lo igualamos a v para evitar problemas
+	up = v; // Igualamos up a v para evitar que n pueda ser igual a up. Ver explicación en la documentación
 }
 
 /**
