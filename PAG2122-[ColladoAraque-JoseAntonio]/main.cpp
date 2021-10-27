@@ -239,6 +239,14 @@ int main() {
 			<< std::endl;
 	std::cout << "Con la tecla C se crea un nuevo modelo si no hay ninguno creado" << std::endl;
 	std::cout << "Con la tecla B se borra el modelo que se encuentre creado" << std::endl;
+	std::cout << "Con la tecla W/S se realiza el movimiento truck" << std::endl;
+	std::cout << "Con la tecla A/D se realiza el movimiento dolly" << std::endl;
+	std::cout << "Con la tecla Z/X se realiza el movimiento boom/crane" << std::endl;
+	std::cout << "Con la tecla I/O se realiza el zoom" << std::endl;
+	std::cout << "Con la tecla Q/E se realiza el movimiento orbit horizontal" << std::endl;
+	std::cout << "Con la tecla T/G se realiza el movimiento orbit vertical" << std::endl;
+	std::cout << "Con los ejes del raton mientras se pulsa el boton derecho se realiza el movimiento pan y tilt" << std::endl;
+	std::cout << "Con la tecla R se resetea la camara a su posicion original" << std::endl;
 
 	// - Ciclo de eventos de la aplicación. La condición de parada es que la
 	// ventana principal deba cerrarse. Por ejemplo, si el usuario pulsa el
