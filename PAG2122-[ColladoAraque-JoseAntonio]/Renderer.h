@@ -30,6 +30,7 @@ namespace PAG {
 		float verdeFondo = 0.15;
 		float azulFondo = 0.2;
 
+		bool triangulo = false, tetraedro = false;
 		std::vector<PAG::Modelo *> modelos;
 
 		PAG::Camara camara;
@@ -47,9 +48,13 @@ namespace PAG {
 
 		void actualizarColorFondo() const;
 
-		void creaModelo();
+		void creaModeloTriangulo();
 
-		void eliminaModelo();
+		void creaModeloTetraedro();
+
+		void eliminaModeloTriangulo();
+
+		void eliminaModeloTetraedro();
 
 		const GLubyte *getPropiedadGL(GLenum propiedad);
 

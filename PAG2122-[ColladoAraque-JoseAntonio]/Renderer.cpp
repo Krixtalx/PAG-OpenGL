@@ -14,15 +14,17 @@ PAG::Renderer *PAG::Renderer::instancia = nullptr;
  */
 PAG::Renderer::Renderer() {
 	try {
-		PAG::ShaderManager::getInstancia()->nuevoShader("VertexShader", GL_VERTEX_SHADER, "../pag03-vs.glsl");
-		PAG::ShaderManager::getInstancia()->nuevoShader("FragmentShader", GL_FRAGMENT_SHADER, "../pag03-fs.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShader("VertexShader", GL_VERTEX_SHADER, "../pag-vs.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShader("FragmentShader", GL_FRAGMENT_SHADER, "../pag-fs.glsl");
 		PAG::ShaderManager::getInstancia()->nuevoShaderProgram("DefaultSP");
 		PAG::ShaderManager::getInstancia()->addShaderToSP("VertexShader", "DefaultSP");
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
-	creaModelo();
+	modelos.resize(2);
+	creaModeloTriangulo();
+	creaModeloTetraedro();
 }
 
 /**
@@ -68,14 +70,15 @@ void PAG::Renderer::inicializaOpenGL() {
  */
 void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
 	glm::mat4 matrizMVP = camara.matrizMVP();
 	for (auto modelo: modelos) {
-		try {
-			modelo->dibujarModelo(PAG::mallaTriangulos, matrizMVP);
-		} catch (std::runtime_error &e) {
-			throw e;
-		}
+		if (modelo)
+			try {
+				modelo->dibujarModelo(PAG::wireframe, matrizMVP);
+			} catch (std::runtime_error &e) {
+				throw e;
+			}
 	}
 }
 
@@ -146,18 +149,40 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
 /**
  * Método encargado de crear un modelo. Actualmente solo crea un triangulo.
  */
-void PAG::Renderer::creaModelo() {
-	if (modelos.empty()) {
-		auto *modelo = new PAG::Modelo("DefaultSP", 3);
+void PAG::Renderer::creaModeloTriangulo() {
+	if (!triangulo) {
+		auto *modelo = new PAG::Modelo("DefaultSP", 3, {-2, 0, 2});
 		modelo->cargaModeloTriangulo();
-		modelos.push_back(modelo);
+		modelos[0] = modelo;
+		triangulo = true;
 	}
 }
 
-void PAG::Renderer::eliminaModelo() {
-	if (!modelos.empty()) {
-		delete modelos[modelos.size() - 1];
-		modelos.pop_back();
+/**
+ * Método encargado de crear un modelo. Actualmente solo crea un tetraedro.
+ */
+void PAG::Renderer::creaModeloTetraedro() {
+	if (!tetraedro) {
+		auto *modelo = new PAG::Modelo("DefaultSP", 4);
+		modelo->cargaModeloTetraedro();
+		modelos[1] = modelo;
+		tetraedro = true;
+	}
+}
+
+void PAG::Renderer::eliminaModeloTriangulo() {
+	if (triangulo) {
+		delete modelos[0];
+		modelos[0] = 0;
+		triangulo = false;
+	}
+}
+
+void PAG::Renderer::eliminaModeloTetraedro() {
+	if (tetraedro) {
+		delete modelos[1];
+		modelos[1] = 0;
+		tetraedro = false;
 	}
 }
 

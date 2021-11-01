@@ -60,9 +60,13 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	} else if (key == GLFW_KEY_C && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->creaModelo();
+		PAG::Renderer::getInstancia()->creaModeloTriangulo();
 	} else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->eliminaModelo();
+		PAG::Renderer::getInstancia()->eliminaModeloTriangulo();
+	} else if (key == GLFW_KEY_K && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->creaModeloTetraedro();
+	} else if (key == GLFW_KEY_L && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->eliminaModeloTetraedro();
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().truck(-1.0f * deltaTime);
 	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
@@ -237,15 +241,18 @@ int main() {
 	std::cout
 			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
-	std::cout << "Con la tecla C se crea un nuevo modelo si no hay ninguno creado" << std::endl;
-	std::cout << "Con la tecla B se borra el modelo que se encuentre creado" << std::endl;
+	std::cout << "Con la tecla C se crea un nuevo modelo triangulo si no hay ninguno creado" << std::endl;
+	std::cout << "Con la tecla B se borra el modelo triangulo que se encuentre creado" << std::endl;
+	std::cout << "Con la tecla K se crea un nuevo modelo tetraedro si no hay ninguno creado" << std::endl;
+	std::cout << "Con la tecla L se borra el modelo tetraedro que se encuentre creado" << std::endl;
 	std::cout << "Con la tecla W/S se realiza el movimiento truck" << std::endl;
 	std::cout << "Con la tecla A/D se realiza el movimiento dolly" << std::endl;
 	std::cout << "Con la tecla Z/X se realiza el movimiento boom/crane" << std::endl;
 	std::cout << "Con la tecla I/O se realiza el zoom" << std::endl;
 	std::cout << "Con la tecla Q/E se realiza el movimiento orbit horizontal" << std::endl;
 	std::cout << "Con la tecla T/G se realiza el movimiento orbit vertical" << std::endl;
-	std::cout << "Con los ejes del raton mientras se pulsa el boton derecho se realiza el movimiento pan y tilt" << std::endl;
+	std::cout << "Con los ejes del raton mientras se pulsa el boton derecho se realiza el movimiento pan y tilt"
+	          << std::endl;
 	std::cout << "Con la tecla R se resetea la camara a su posicion original" << std::endl;
 
 	// - Ciclo de eventos de la aplicación. La condición de parada es que la

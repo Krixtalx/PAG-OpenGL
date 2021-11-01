@@ -3,20 +3,22 @@
 //
 
 #include "Modelo.h"
-#include "RenderOptions.h"
 #include "ShaderManager.h"
 
 #include <utility>
 #include <stdexcept>
 #include <climits>
+#include <glm/gtx/transform.hpp>
 
 /**
  * Constructor parametrizado
  * @param shaderProgram que se usará para renderizar el modelo
  * @param numVertices que contiene el modelo
  */
-PAG::Modelo::Modelo(std::string shaderProgram, GLuint numVertices) : numVertices(numVertices),
-                                                                     shaderProgram(std::move(shaderProgram)) {
+PAG::Modelo::Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos) : numVertices(numVertices),
+                                                                                    shaderProgram(
+		                                                                                    std::move(shaderProgram)),
+                                                                                    posicion(pos) {
 	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
@@ -118,11 +120,15 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GL
  */
 void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
 	try {
+		matrizMVP = matrizMVP * glm::translate(posicion);
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
+
 		glBindVertexArray(idVAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
-		glDrawElements(getGLDrawMode(modo), numVertices, GL_UNSIGNED_INT, nullptr);
+		glPolygonMode(GL_FRONT_AND_BACK, getGLDrawMode(modo));
+		glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
+
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
@@ -143,7 +149,32 @@ void PAG::Modelo::cargaModeloTriangulo() {
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
+	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
 }
+
+/**
+ * Crea el modelo de un tetraedro
+ */
+void PAG::Modelo::cargaModeloTetraedro() {
+	std::vector<glm::vec3> vertices = {{0, 1, 0},
+	                                   {0, 0, 1},
+	                                   {1, 0, 0},
+	                                   {0, 0, 0}};
+	std::vector<glm::vec3> localColores = {{1, 1, 1},
+	                                       {1, 0, 0},
+	                                       {0, 1, 0},
+	                                       {0, 0, 1}};
+
+	std::vector<GLuint> indices = {0, 1, 2,
+	                               0, 2, 3,
+	                               0, 3, 1,
+	                               1, 3, 2};
+	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
+	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
+	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
+}
+
 
 /**
  * Traduce de modoDibujado a los modos de dibujado de OpenGL
@@ -153,13 +184,13 @@ void PAG::Modelo::cargaModeloTriangulo() {
 GLenum PAG::Modelo::getGLDrawMode(PAG::modoDibujado modo) {
 	switch (modo) {
 		case PAG::nubePuntos:
-			return GL_POINTS;
+			return GL_POINT;
 			break;
 		case PAG::wireframe:
-			return GL_LINES;
+			return GL_LINE;
 			break;
 		default:
-			return GL_TRIANGLES;
+			return GL_FILL;
 			break;
 	}
 }

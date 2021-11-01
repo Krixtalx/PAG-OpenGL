@@ -21,12 +21,14 @@ namespace PAG {
 		std::vector<std::vector<glm::vec3>> vbos;
 		std::vector<std::vector<GLuint>> ibos;
 		std::string shaderProgram;
+		std::string material;
+		glm::vec3 posicion;
 		GLuint numVertices;
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);
 
 	public:
-		Modelo(std::string shaderProgram, GLuint numVertices);
+		Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos = {0, 0, 0});
 
 		Modelo(Modelo &orig);
 
@@ -39,6 +41,8 @@ namespace PAG {
 		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP);
 
 		void cargaModeloTriangulo();
+
+		void cargaModeloTetraedro();
 	};
 }
 

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PAG.dir/Camara.cpp.obj"
+  "CMakeFiles/PAG.dir/Material.cpp.obj"
+  "CMakeFiles/PAG.dir/MaterialManager.cpp.obj"
   "CMakeFiles/PAG.dir/Modelo.cpp.obj"
   "CMakeFiles/PAG.dir/Renderer.cpp.obj"
   "CMakeFiles/PAG.dir/Shader.cpp.obj"

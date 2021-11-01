@@ -188,6 +188,44 @@ CMakeFiles\PAG.dir\Camara.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\PAG.dir\Camara.cpp.s /c C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\Camara.cpp
 <<
 
+CMakeFiles\PAG.dir\Material.cpp.obj: CMakeFiles\PAG.dir\flags.make
+CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PAG.dir/Material.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\PAG.dir\Material.cpp.obj /FdCMakeFiles\PAG.dir\ /FS -c C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\Material.cpp
+<<
+
+CMakeFiles\PAG.dir\Material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PAG.dir/Material.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\PAG.dir\Material.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\Material.cpp
+<<
+
+CMakeFiles\PAG.dir\Material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PAG.dir/Material.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\PAG.dir\Material.cpp.s /c C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\Material.cpp
+<<
+
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: CMakeFiles\PAG.dir\flags.make
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: ..\MaterialManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PAG.dir/MaterialManager.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\PAG.dir\MaterialManager.cpp.obj /FdCMakeFiles\PAG.dir\ /FS -c C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\MaterialManager.cpp
+<<
+
+CMakeFiles\PAG.dir\MaterialManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PAG.dir/MaterialManager.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\PAG.dir\MaterialManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\MaterialManager.cpp
+<<
+
+CMakeFiles\PAG.dir\MaterialManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PAG.dir/MaterialManager.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\PAG.dir\MaterialManager.cpp.s /c C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\MaterialManager.cpp
+<<
+
 # Object files for target PAG
 PAG_OBJECTS = \
 "CMakeFiles\PAG.dir\main.cpp.obj" \
@@ -196,7 +234,9 @@ PAG_OBJECTS = \
 "CMakeFiles\PAG.dir\Shader.cpp.obj" \
 "CMakeFiles\PAG.dir\ShaderManager.cpp.obj" \
 "CMakeFiles\PAG.dir\Modelo.cpp.obj" \
-"CMakeFiles\PAG.dir\Camara.cpp.obj"
+"CMakeFiles\PAG.dir\Camara.cpp.obj" \
+"CMakeFiles\PAG.dir\Material.cpp.obj" \
+"CMakeFiles\PAG.dir\MaterialManager.cpp.obj"
 
 # External object files for target PAG
 PAG_EXTERNAL_OBJECTS =
@@ -208,11 +248,13 @@ PAG.exe: CMakeFiles\PAG.dir\Shader.cpp.obj
 PAG.exe: CMakeFiles\PAG.dir\ShaderManager.cpp.obj
 PAG.exe: CMakeFiles\PAG.dir\Modelo.cpp.obj
 PAG.exe: CMakeFiles\PAG.dir\Camara.cpp.obj
+PAG.exe: CMakeFiles\PAG.dir\Material.cpp.obj
+PAG.exe: CMakeFiles\PAG.dir\MaterialManager.cpp.obj
 PAG.exe: CMakeFiles\PAG.dir\build.make
 PAG.exe: C:\vcpkg\installed\x86-windows\debug\lib\glew32d.lib
 PAG.exe: C:\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib
 PAG.exe: CMakeFiles\PAG.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable PAG.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable PAG.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\PAG.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\PAG.dir\objects1.rsp @<<
  /out:PAG.exe /implib:PAG.lib /pdb:C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\PAG.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  C:\vcpkg\installed\x86-windows\debug\lib\glew32d.lib C:\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

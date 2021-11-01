@@ -142,6 +142,54 @@ Camara.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Camara.cpp.s
 .PHONY : Camara.cpp.s
 
+Material.obj: Material.cpp.obj
+.PHONY : Material.obj
+
+# target to build an object file
+Material.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Material.cpp.obj
+.PHONY : Material.cpp.obj
+
+Material.i: Material.cpp.i
+.PHONY : Material.i
+
+# target to preprocess a source file
+Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Material.cpp.i
+.PHONY : Material.cpp.i
+
+Material.s: Material.cpp.s
+.PHONY : Material.s
+
+# target to generate assembly for a file
+Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Material.cpp.s
+.PHONY : Material.cpp.s
+
+MaterialManager.obj: MaterialManager.cpp.obj
+.PHONY : MaterialManager.obj
+
+# target to build an object file
+MaterialManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\MaterialManager.cpp.obj
+.PHONY : MaterialManager.cpp.obj
+
+MaterialManager.i: MaterialManager.cpp.i
+.PHONY : MaterialManager.i
+
+# target to preprocess a source file
+MaterialManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\MaterialManager.cpp.i
+.PHONY : MaterialManager.cpp.i
+
+MaterialManager.s: MaterialManager.cpp.s
+.PHONY : MaterialManager.s
+
+# target to generate assembly for a file
+MaterialManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\MaterialManager.cpp.s
+.PHONY : MaterialManager.cpp.s
+
 Modelo.obj: Modelo.cpp.obj
 .PHONY : Modelo.obj
 
@@ -298,6 +346,12 @@ help:
 	@echo ... Camara.obj
 	@echo ... Camara.i
 	@echo ... Camara.s
+	@echo ... Material.obj
+	@echo ... Material.i
+	@echo ... Material.s
+	@echo ... MaterialManager.obj
+	@echo ... MaterialManager.i
+	@echo ... MaterialManager.s
 	@echo ... Modelo.obj
 	@echo ... Modelo.i
 	@echo ... Modelo.s
