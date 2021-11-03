@@ -4,6 +4,7 @@
 
 #include "Modelo.h"
 #include "ShaderManager.h"
+#include "MaterialManager.h"
 
 #include <utility>
 #include <stdexcept>
@@ -42,7 +43,7 @@ PAG::Modelo::Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos
  * @param orig
  */
 PAG::Modelo::Modelo(PAG::Modelo &orig) : numVertices(orig.numVertices), shaderProgram(orig.shaderProgram),
-                                         vbos(orig.vbos), ibos(orig.ibos) {
+                                         vbos(orig.vbos), ibos(orig.ibos), material(orig.material) {
 	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
@@ -123,6 +124,16 @@ void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
 		matrizMVP = matrizMVP * glm::translate(posicion);
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
+		if (modo == PAG::wireframe) {
+			PAG::ShaderManager::getInstancia()->activarSubrutina(this->shaderProgram, GL_FRAGMENT_SHADER,
+			                                                     "colorDefecto");
+		} else {
+			PAG::ShaderManager::getInstancia()->activarSubrutina(this->shaderProgram, GL_FRAGMENT_SHADER,
+			                                                     "colorMaterial");
+			glm::vec3 ambiente = PAG::MaterialManager::getInstancia()->getMaterial(
+					this->material)->getAmbiente();
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ka", ambiente);
+		}
 
 		glBindVertexArray(idVAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
@@ -150,6 +161,7 @@ void PAG::Modelo::cargaModeloTriangulo() {
 	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
+	this->setMaterial("DefaultMat");
 }
 
 /**
@@ -173,6 +185,7 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
+	this->setMaterial("DefaultMat");
 }
 
 
@@ -193,4 +206,8 @@ GLenum PAG::Modelo::getGLDrawMode(PAG::modoDibujado modo) {
 			return GL_FILL;
 			break;
 	}
+}
+
+void PAG::Modelo::setMaterial(const std::string &material) {
+	Modelo::material = material;
 }

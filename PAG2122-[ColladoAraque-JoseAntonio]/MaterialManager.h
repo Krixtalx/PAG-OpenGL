@@ -15,7 +15,7 @@ namespace PAG {
 		static MaterialManager *instancia;
 		std::map<std::string, Material *> materiales;
 
-		MaterialManager() = default;
+		MaterialManager();
 
 	public:
 		static MaterialManager *getInstancia();

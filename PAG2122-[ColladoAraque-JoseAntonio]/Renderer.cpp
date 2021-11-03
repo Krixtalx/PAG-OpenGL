@@ -4,6 +4,7 @@
 
 #include "Renderer.h"
 #include "ShaderManager.h"
+#include "MaterialManager.h"
 #include <stdexcept>
 
 
@@ -19,6 +20,9 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->nuevoShaderProgram("DefaultSP");
 		PAG::ShaderManager::getInstancia()->addShaderToSP("VertexShader", "DefaultSP");
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
+
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
+		                                                    new Material({1, 0, 1}, {0, 0, 0}, {0, 0, 0}, 1));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
@@ -75,7 +79,7 @@ void PAG::Renderer::refrescar() const {
 	for (auto modelo: modelos) {
 		if (modelo)
 			try {
-				modelo->dibujarModelo(PAG::wireframe, matrizMVP);
+				modelo->dibujarModelo(modo, matrizMVP);
 			} catch (std::runtime_error &e) {
 				throw e;
 			}
@@ -217,4 +221,8 @@ void PAG::Renderer::setAzulFondo(float azulFondo) {
 
 PAG::Camara &PAG::Renderer::getCamara() {
 	return camara;
+}
+
+void PAG::Renderer::setModo(PAG::modoDibujado modo) {
+	Renderer::modo = modo;
 }

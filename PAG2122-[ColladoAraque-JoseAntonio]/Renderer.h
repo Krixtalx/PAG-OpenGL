@@ -33,6 +33,7 @@ namespace PAG {
 		bool triangulo = false, tetraedro = false;
 		std::vector<PAG::Modelo *> modelos;
 
+		PAG::modoDibujado modo = PAG::mallaTriangulos;
 		PAG::Camara camara;
 
 	public:
@@ -77,6 +78,8 @@ namespace PAG {
 		void setAzulFondo(float azulFondo);
 
 		Camara &getCamara();
+
+		void setModo(modoDibujado modo);
 
 	};
 }

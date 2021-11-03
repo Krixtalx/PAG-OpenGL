@@ -67,6 +67,10 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 		PAG::Renderer::getInstancia()->creaModeloTetraedro();
 	} else if (key == GLFW_KEY_L && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->eliminaModeloTetraedro();
+	} else if (key == GLFW_KEY_N && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->setModo(PAG::wireframe);
+	} else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->setModo(PAG::mallaTriangulos);
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->getCamara().truck(-1.0f * deltaTime);
 	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
@@ -245,6 +249,8 @@ int main() {
 	std::cout << "Con la tecla B se borra el modelo triangulo que se encuentre creado" << std::endl;
 	std::cout << "Con la tecla K se crea un nuevo modelo tetraedro si no hay ninguno creado" << std::endl;
 	std::cout << "Con la tecla L se borra el modelo tetraedro que se encuentre creado" << std::endl;
+	std::cout << "Con la tecla N establece el modo de dibujado Wireframe" << std::endl;
+	std::cout << "Con la tecla M establece el modo de dibujado Malla de Triangulos" << std::endl;
 	std::cout << "Con la tecla W/S se realiza el movimiento truck" << std::endl;
 	std::cout << "Con la tecla A/D se realiza el movimiento dolly" << std::endl;
 	std::cout << "Con la tecla Z/X se realiza el movimiento boom/crane" << std::endl;

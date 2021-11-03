@@ -5,11 +5,17 @@
 #include <stdexcept>
 #include "MaterialManager.h"
 
+PAG::MaterialManager *PAG::MaterialManager::instancia = nullptr;
+
 PAG::MaterialManager *PAG::MaterialManager::getInstancia() {
 	if (!instancia) {
 		instancia = new MaterialManager;
 	}
 	return instancia;
+}
+
+PAG::MaterialManager::MaterialManager() {
+
 }
 
 PAG::MaterialManager::~MaterialManager() {
@@ -31,3 +37,5 @@ PAG::Material *PAG::MaterialManager::getMaterial(const std::string &nombreMateri
 				"[MaterialManager]: No se ha encontrado ningun material con el nombre " + nombreMaterial);
 	}
 }
+
+

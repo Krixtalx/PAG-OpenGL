@@ -36,6 +36,10 @@ namespace PAG {
 		void activarSP(const std::string &nombreSP);
 
 		void setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matrizMVP);
+
+		void setUniform(const std::string &nombreSP, const std::string &variable, glm::vec3 vec);
+
+		void activarSubrutina(const std::string &nombreSP, GLenum tipoShader, const std::string &nombreSubrutina);
 	};
 }
 
