@@ -13,7 +13,7 @@ subroutine uniform calcularColor colorElegido;
 subroutine (calcularColor)
 vec4 colorDefecto ()
 {
-    return (vec4 (1, 0, 0, 1));
+    return outColor;
 }
 subroutine (calcularColor)
 vec4 colorMaterial ()

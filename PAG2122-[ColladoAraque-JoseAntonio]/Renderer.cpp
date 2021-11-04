@@ -22,7 +22,7 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
-		                                                    new Material({1, 0, 1}, {0, 0, 0}, {0, 0, 0}, 1));
+		                                                    new Material({0.5, 0.2, 1}, {0, 0, 0}, {0, 0, 0}, 1));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}

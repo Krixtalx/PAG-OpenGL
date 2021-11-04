@@ -172,10 +172,10 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	                                   {0, 0, 1},
 	                                   {1, 0, 0},
 	                                   {0, 0, 0}};
-	std::vector<glm::vec3> localColores = {{1, 1, 1},
+	std::vector<glm::vec3> localColores = {{0, 0, 1},
 	                                       {1, 0, 0},
 	                                       {0, 1, 0},
-	                                       {0, 0, 1}};
+	                                       {0.5, 0.5, 0.5}};
 
 	std::vector<GLuint> indices = {0, 1, 2,
 	                               0, 2, 3,

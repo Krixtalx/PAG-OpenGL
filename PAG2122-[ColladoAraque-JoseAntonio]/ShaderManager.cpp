@@ -9,7 +9,7 @@ PAG::ShaderManager *PAG::ShaderManager::instancia = nullptr;
 
 /**
  * Consulta del objeto único de la clase
- * @return Puntero al Renderer
+ * @return Puntero al ShaderManager
  */
 PAG::ShaderManager *PAG::ShaderManager::getInstancia() {
 	if (!instancia) {
@@ -123,6 +123,12 @@ void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::stri
 	}
 }
 
+/**
+ * Método que permite activar una subrutina en determinado ShaderProgram
+ * @param nombreSP nombre del ShaderProgram al que se le activará la subrutina
+ * @param tipoShader en que shader se encuentra la subrutina (GL_VERTEX_SHADER o GL_FRAGMENT_SHADER)
+ * @param nombreSubrutina nombre de la subrutina a activar
+ */
 void PAG::ShaderManager::activarSubrutina(const std::string &nombreSP, GLenum tipoShader,
                                           const std::string &nombreSubrutina) {
 	auto SP = shaderPrograms.find(nombreSP);
