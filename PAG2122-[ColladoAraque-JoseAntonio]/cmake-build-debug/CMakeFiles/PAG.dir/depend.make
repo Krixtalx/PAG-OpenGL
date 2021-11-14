@@ -215,6 +215,32 @@ CMakeFiles\PAG.dir\Camara.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ve
 CMakeFiles\PAG.dir\Camara.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec4.hpp
 CMakeFiles\PAG.dir\Camara.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vector_relational.hpp
 
+CMakeFiles\PAG.dir\Luz.cpp.obj: ..\Luz.cpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: ..\Luz.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: ..\RenderOptions.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_swizzle.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_swizzle_func.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\scalar_int_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_bool3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_double3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_double3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_float3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_float3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_int3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_int3_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_uint3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_uint3_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\simd\neon.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\simd\platform.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+
 CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.cpp
 CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.h
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\GL.h

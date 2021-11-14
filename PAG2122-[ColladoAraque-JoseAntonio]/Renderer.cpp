@@ -67,6 +67,7 @@ void PAG::Renderer::inicializaOpenGL() {
 	activarUtilidadGL(GL_DEPTH_TEST);
 	activarUtilidadGL(GL_MULTISAMPLE);
 	activarUtilidadGL(GL_DEBUG_OUTPUT);
+	activarUtilidadGL(GL_BLEND);
 }
 
 /**
@@ -76,7 +77,7 @@ void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glm::mat4 matrizMVP = camara.matrizMVP();
-	for (auto modelo: modelos) {
+	for (Modelo *modelo: modelos) {
 		if (modelo)
 			try {
 				modelo->dibujarModelo(modo, matrizMVP);

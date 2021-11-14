@@ -18,11 +18,18 @@ namespace PAG {
 
 	enum paramShader {
 		posicion,
-		color
+		normal
 	};
 
 	static unsigned numParamShader() {
-		return color + 1;
+		return normal + 1;
+	};
+
+	enum class tipoLuz {
+		ambiente,
+		puntual,
+		direccional,
+		foco
 	};
 
 	static unsigned anchoVentanaPorDefecto = 1024;

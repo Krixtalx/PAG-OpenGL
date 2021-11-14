@@ -124,6 +124,27 @@ void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::stri
 }
 
 /**
+ * Método para establecer una variable uniform dentro de un Shader Program
+ * @param nombreSP nombre del ShaderProgram en el que establecer el uniform
+ * @param variable nombre de la variable a establecer
+ */
+void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, float valor) {
+	auto SP = shaderPrograms.find(nombreSP);
+	if (SP != shaderPrograms.end()) {
+		GLint location = glGetUniformLocation(SP->second->getIdSP(), variable.c_str());
+		if (location >= 0) {
+			glUniform1f(location, valor);
+		} else
+			throw std::runtime_error(
+					"[ShaderManager]: No se ha encontrado ninguna variable con el nombre " + variable +
+					" en el shaderProgram " + nombreSP);
+	} else {
+		throw std::runtime_error(
+				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+	}
+}
+
+/**
  * Método que permite activar una subrutina en determinado ShaderProgram
  * @param nombreSP nombre del ShaderProgram al que se le activará la subrutina
  * @param tipoShader en que shader se encuentra la subrutina (GL_VERTEX_SHADER o GL_FRAGMENT_SHADER)

@@ -132,7 +132,16 @@ void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
 			                                                     "colorMaterial");
 			glm::vec3 ambiente = PAG::MaterialManager::getInstancia()->getMaterial(
 					this->material)->getAmbiente();
+			glm::vec3 difusa = PAG::MaterialManager::getInstancia()->getMaterial(
+					this->material)->getDifuso();
+			glm::vec3 especular = PAG::MaterialManager::getInstancia()->getMaterial(
+					this->material)->getEspecular();
+			float phong = PAG::MaterialManager::getInstancia()->getMaterial(
+					this->material)->getPhong();
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ka", ambiente);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Kd", difusa);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ks", especular);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Phong", phong);
 		}
 
 		glBindVertexArray(idVAO);
@@ -156,10 +165,10 @@ void PAG::Modelo::cargaModeloTriangulo() {
 	                                       {0, 1, 0},
 	                                       {0, 0, 1}};
 	std::vector<GLuint> indices = {0, 1, 2};
-	
+
 
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
-	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::normal, localColores, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
 	this->setMaterial("DefaultMat");
@@ -170,20 +179,37 @@ void PAG::Modelo::cargaModeloTriangulo() {
  */
 void PAG::Modelo::cargaModeloTetraedro() {
 	std::vector<glm::vec3> vertices = {{0, 1, 0},
+	                                   {0, 1, 0},
+	                                   {0, 1, 0},
+	                                   {0, 0, 1},
+	                                   {0, 0, 1},
 	                                   {0, 0, 1},
 	                                   {1, 0, 0},
+	                                   {1, 0, 0},
+	                                   {1, 0, 0},
+	                                   {0, 0, 0},
+	                                   {0, 0, 0},
 	                                   {0, 0, 0}};
-	std::vector<glm::vec3> localColores = {{0, 0, 1},
-	                                       {1, 0, 0},
-	                                       {0, 1, 0},
-	                                       {0.5, 0.5, 0.5}};
 
-	std::vector<GLuint> indices = {0, 1, 2,
-	                               0, 2, 3,
-	                               0, 3, 1,
-	                               1, 3, 2};
+	std::vector<glm::vec3> normales = {{-1,     0,      0}, // 0, 1, 0
+	                                   {0,      0,      -1},
+	                                   {0.5777, 0.5777, 0.5777},
+	                                   {-1,     0,      0}, // 0, 0, 1
+	                                   {0,      -1,     0},
+	                                   {0.5777, 0.5777, 0.5777},
+	                                   {0,      0,      -1}, // 1, 0, 0
+	                                   {0,      -1,     0},
+	                                   {0.5777, 0.5777, 0.5777},
+	                                   {-1,     0,      0}, // 0, 0, 0
+	                                   {0,      -1,     0},
+	                                   {0,      0,      -1}};
+
+	std::vector<GLuint> indices = {0, 9, 3,
+	                               1, 6, 11,
+	                               4, 10, 7,
+	                               2, 5, 8};
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
-	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::normal, normales, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::wireframe, indices, GL_STATIC_DRAW);
 	this->setMaterial("DefaultMat");

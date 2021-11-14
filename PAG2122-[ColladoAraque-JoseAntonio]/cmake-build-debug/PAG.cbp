@@ -92,6 +92,12 @@
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.h">
 			<Option target="PAG"/>
 		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.h">
+			<Option target="PAG"/>
+		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Material.cpp">
 			<Option target="PAG"/>
 		</Unit>

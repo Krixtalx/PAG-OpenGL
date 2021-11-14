@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Camara.cpp.obj"
+  "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Luz.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Material.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Material.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/MaterialManager.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/MaterialManager.cpp.obj"
   "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp" "C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug/CMakeFiles/PAG.dir/Modelo.cpp.obj"
