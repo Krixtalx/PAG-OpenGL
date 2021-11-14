@@ -156,6 +156,7 @@ void PAG::Modelo::cargaModeloTriangulo() {
 	                                       {0, 1, 0},
 	                                       {0, 0, 1}};
 	std::vector<GLuint> indices = {0, 1, 2};
+	
 
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::color, localColores, GL_STATIC_DRAW);

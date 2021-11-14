@@ -65,6 +65,8 @@ namespace PAG {
 
 		glm::mat4 matrizMVP() const;
 
+		glm::mat4 matrizMV() const;
+
 		GLfloat aspecto() const;
 
 		void setAlto(GLuint alto);

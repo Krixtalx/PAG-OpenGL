@@ -6,7 +6,7 @@
 
 int colorSeleccionado = 0;
 double prevXPos = 0, prevYPos = 0;
-bool botonIzquierdoPulsado;
+bool botonDerechoPulsado;
 std::string colores[3] = {"Rojo", "Verde", "Azul"};
 float deltaTime = 0.1f;
 float ultimoFrame = 0.0f;
@@ -113,17 +113,19 @@ void callbackBotonRaton(GLFWwindow *window, int button, int action, int mods) {
 			          << colores[colorSeleccionado]
 			          << std::endl;
 		} else if (button == 1) {
-			botonIzquierdoPulsado = true;
+			botonDerechoPulsado = true;
+			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 		}
 	} else if (action == GLFW_RELEASE) {
 		if (button == 1) {
-			botonIzquierdoPulsado = false;
+			botonDerechoPulsado = false;
+			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 		}
 	}
 }
 
 void callbackMovimientoRaton(GLFWwindow *window, double xpos, double ypos) {
-	if (botonIzquierdoPulsado) {
+	if (botonDerechoPulsado) {
 		PAG::Renderer::getInstancia()->getCamara().pan((xpos - prevXPos) * deltaTime * 10);
 		PAG::Renderer::getInstancia()->getCamara().tilt((ypos - prevYPos) * deltaTime * 10);
 		callbackRefrescoVentana(window);
@@ -236,7 +238,7 @@ int main() {
 	glfwSetMouseButtonCallback(window, callbackBotonRaton);
 	glfwSetScrollCallback(window, callbackScroll);
 	glfwSetCursorPosCallback(window, callbackMovimientoRaton);
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 	glDebugMessageCallback(MessageCallback, 0);
 
 

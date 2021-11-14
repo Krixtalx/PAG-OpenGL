@@ -2,6 +2,8 @@
 // Created by Niskp on 18/10/2021.
 //
 
+#define GLM_ENABLE_EXPERIMENTAL
+
 #include "cmath"
 #include "Camara.h"
 #include "RenderOptions.h"
@@ -9,8 +11,6 @@
 #include <glm/ext/vector_relational.hpp>
 #include <iostream>
 #include "glm/gtx/string_cast.hpp"
-
-#define GLM_ENABLE_EXPERIMENTAL
 
 
 /**
@@ -54,6 +54,14 @@ glm::mat4 PAG::Camara::matrizMVP() const {
 	glm::mat4 proyeccion = glm::perspective(fovY, aspecto(), zNear, zFar);
 	//Multiplicamos de manera inversa: Modelado-Vision-Proyeccion -> Proyeccion-Vision-Modelado
 	return proyeccion * vision; //Devuelve solo proyección*vision. El modelado lo aplicará el modelo
+}
+
+/**
+ * Calcula la matriz de modelado y visión y la devuelve.
+ * @return matrizMV
+ */
+glm::mat4 PAG::Camara::matrizMV() const {
+	return glm::lookAt(posicion, puntoMira, up); //Devuelve solo vision. El modelado lo aplicará el modelo
 }
 
 /**
