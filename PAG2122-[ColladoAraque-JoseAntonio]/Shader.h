@@ -26,10 +26,10 @@ namespace PAG {
 
 	protected:
 		Shader(std::string nombreShader, GLenum tipoShader, const std::string &ruta);
-		
+
 	public:
 
-		Shader(const Shader &orig)=delete;
+		Shader(const Shader &orig) = delete;
 
 		~Shader();
 

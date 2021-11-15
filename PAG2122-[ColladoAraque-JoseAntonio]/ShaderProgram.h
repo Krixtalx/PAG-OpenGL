@@ -28,7 +28,7 @@ namespace PAG {
 
 	public:
 
-		ShaderProgram(const ShaderProgram &orig)=delete;
+		ShaderProgram(const ShaderProgram &orig) = delete;
 
 		~ShaderProgram();
 

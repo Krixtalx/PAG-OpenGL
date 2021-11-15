@@ -22,13 +22,19 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
-		                                                    new Material({0.5, 0.2, 1}, {0, 0, 0}, {0, 0, 0}, 1));
+		                                                    new Material({0.5, 0.2, 1}, {1, 1, 1}, {0.5, 0.5, 0.5},
+		                                                                 1));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
 	modelos.resize(2);
 	creaModeloTriangulo();
 	creaModeloTetraedro();
+
+	luces.emplace_back(glm::vec3(0.3, 0.3, 0.3));
+	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(2, 2, 2), true);
+	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(1, 0, 0), false);
+	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(0, 0, -1), glm::vec3(0, 0, 1), 60.0f, 10);
 }
 
 /**
@@ -75,15 +81,24 @@ void PAG::Renderer::inicializaOpenGL() {
  */
 void PAG::Renderer::refrescar() const {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 	glm::mat4 matrizMVP = camara.matrizMVP();
-	for (Modelo *modelo: modelos) {
-		if (modelo)
-			try {
-				modelo->dibujarModelo(modo, matrizMVP);
-			} catch (std::runtime_error &e) {
-				throw e;
-			}
+	glm::mat4 matrizMV = camara.matrizMV();
+	for (int i = 0; i < luces.size(); i++) {
+		if (i == 0) {
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		} else {
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+		}
+		luces[i].aplicarLuz("DefaultSP");
+		for (Modelo *modelo: modelos) {
+			if (modelo)
+				try {
+					//luces[i].aplicarLuz(modelo->getShaderProgram());
+					modelo->dibujarModelo(modo, matrizMVP, matrizMV);
+				} catch (std::runtime_error &e) {
+					throw e;
+				}
+		}
 	}
 }
 

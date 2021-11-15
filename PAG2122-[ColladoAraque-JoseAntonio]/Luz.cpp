@@ -41,11 +41,35 @@ PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicio
  */
 PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicion, const glm::vec3 &direccion,
               float gamma, float exponenteBordes) : id(id), is(is), posicion(posicion), direccion(direccion),
-                                                    gamma(gamma), exponenteBordes(exponenteBordes),
-                                                    tipoLuz(PAG::tipoLuz::foco) {}
+                                                    exponenteBordes(exponenteBordes),
+                                                    tipoLuz(PAG::tipoLuz::foco) {
+	this->gamma = glm::radians(gamma);
+}
 
-void PAG::Luz::aplicarLuz(std::string shader) {
+void PAG::Luz::aplicarLuz(const std::string &shader) const {
 	if (this->tipoLuz == PAG::tipoLuz::ambiente) {
-		//PAG::ShaderManager::getInstancia()->
+		PAG::ShaderManager::getInstancia()->activarSP(shader);
+		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzAmbiente");
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Ia", ia);
+	} else if (this->tipoLuz == PAG::tipoLuz::puntual) {
+		PAG::ShaderManager::getInstancia()->activarSP(shader);
+		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzPuntual");
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "posLuz", posicion);
+	} else if (this->tipoLuz == PAG::tipoLuz::direccional) {
+		PAG::ShaderManager::getInstancia()->activarSP(shader);
+		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzDireccional");
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "dirLuz", direccion);
+	} else {
+		PAG::ShaderManager::getInstancia()->activarSP(shader);
+		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzFoco");
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "posLuz", posicion);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "dirLuz", direccion);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "spotAngle", gamma);
 	}
 }

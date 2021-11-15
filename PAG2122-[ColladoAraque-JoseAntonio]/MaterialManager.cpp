@@ -41,7 +41,6 @@ void PAG::MaterialManager::nuevoMaterial(const std::string &nombreMaterial, PAG:
 }
 
 
-
 PAG::Material *PAG::MaterialManager::getMaterial(const std::string &nombreMaterial) {
 	auto mat = materiales.find(nombreMaterial);
 	if (mat != materiales.end()) {

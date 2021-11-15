@@ -18,8 +18,10 @@ namespace PAG {
 
 		ShaderManager() = default;
 
-		std::map<std::string, PAG::ShaderProgram*> shaderPrograms;
-		std::map<std::string, PAG::Shader*> shaders;
+		std::map<std::string, PAG::ShaderProgram *> shaderPrograms;
+		std::map<std::string, PAG::Shader *> shaders;
+
+		std::string SPActivado;
 	public:
 		static ShaderManager *getInstancia();
 
@@ -35,13 +37,16 @@ namespace PAG {
 
 		void activarSP(const std::string &nombreSP);
 
-		void setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matrizMVP);
+		void setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matriz);
 
 		void setUniform(const std::string &nombreSP, const std::string &variable, glm::vec3 vec);
+
+		void setUniform(const std::string &nombreSP, const std::string &variable, GLuint valor);
 
 		void setUniform(const std::string &nombreSP, const std::string &variable, float valor);
 
 		void activarSubrutina(const std::string &nombreSP, GLenum tipoShader, const std::string &nombreSubrutina);
+
 	};
 }
 

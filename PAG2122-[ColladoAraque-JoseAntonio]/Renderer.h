@@ -10,6 +10,7 @@
 #include <vector>
 #include "Modelo.h"
 #include "Camara.h"
+#include "Luz.h"
 
 namespace PAG {
 	/**
@@ -32,6 +33,7 @@ namespace PAG {
 
 		bool triangulo = false, tetraedro = false;
 		std::vector<PAG::Modelo *> modelos;
+		std::vector<PAG::Luz> luces;
 
 		PAG::modoDibujado modo = PAG::mallaTriangulos;
 		PAG::Camara camara;

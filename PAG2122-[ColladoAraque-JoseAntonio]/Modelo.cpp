@@ -119,29 +119,29 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GL
  * Función a la que se llama cuando se debe de dibujar el modelo
  * @param modo modo de dibujado a usar
  */
-void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP) {
+void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV) {
 	try {
 		matrizMVP = matrizMVP * glm::translate(posicion);
+		matrizMV = glm::transpose(glm::inverse(matrizMV * glm::translate(posicion))); //Transpuesta de la inversa
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
+		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
 		if (modo == PAG::wireframe) {
 			PAG::ShaderManager::getInstancia()->activarSubrutina(this->shaderProgram, GL_FRAGMENT_SHADER,
 			                                                     "colorDefecto");
 		} else {
-			PAG::ShaderManager::getInstancia()->activarSubrutina(this->shaderProgram, GL_FRAGMENT_SHADER,
-			                                                     "colorMaterial");
 			glm::vec3 ambiente = PAG::MaterialManager::getInstancia()->getMaterial(
 					this->material)->getAmbiente();
 			glm::vec3 difusa = PAG::MaterialManager::getInstancia()->getMaterial(
 					this->material)->getDifuso();
 			glm::vec3 especular = PAG::MaterialManager::getInstancia()->getMaterial(
 					this->material)->getEspecular();
-			float phong = PAG::MaterialManager::getInstancia()->getMaterial(
+			GLuint phong = PAG::MaterialManager::getInstancia()->getMaterial(
 					this->material)->getPhong();
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ka", ambiente);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Kd", difusa);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ks", especular);
-			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Phong", phong);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "phong", phong);
 		}
 
 		glBindVertexArray(idVAO);
@@ -204,10 +204,14 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	                                   {0,      -1,     0},
 	                                   {0,      0,      -1}};
 
-	std::vector<GLuint> indices = {0, 9, 3,
+	/*std::vector<GLuint> indices = {0, 9, 3,
 	                               1, 6, 11,
 	                               4, 10, 7,
-	                               2, 5, 8};
+	                               2, 5, 8};*/
+	std::vector<GLuint> indices = {0, 3, 9,
+	                               1, 11, 6,
+	                               4, 7, 10,
+	                               2, 8, 5};
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::normal, normales, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
@@ -237,4 +241,8 @@ GLenum PAG::Modelo::getGLDrawMode(PAG::modoDibujado modo) {
 
 void PAG::Modelo::setMaterial(const std::string &material) {
 	Modelo::material = material;
+}
+
+const std::string &PAG::Modelo::getShaderProgram() const {
+	return shaderProgram;
 }

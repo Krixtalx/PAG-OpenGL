@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.h
+GL/glew.h
+-
+glm/glm.hpp
+-
+
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.h
+glm/vec3.hpp
+-
+string
+-
+glm/ext/matrix_float4x4.hpp
+-
+RenderOptions.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
+
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Material.h
 GL/glew.h
 -
@@ -20,22 +36,6 @@ map
 Material.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Material.h
 
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.cpp
-Modelo.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
-ShaderManager.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
-MaterialManager.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/MaterialManager.h
-utility
--
-stdexcept
--
-climits
--
-glm/gtx/transform.hpp
--
-
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
 GL/glew.h
 -
@@ -49,6 +49,30 @@ RenderOptions.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
 
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
+
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.cpp
+Renderer.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+ShaderManager.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
+MaterialManager.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/MaterialManager.h
+stdexcept
+-
+
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Renderer.h
+GL/glew.h
+-
+string
+-
+vector
+-
+Modelo.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
+Camara.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Camara.h
+Luz.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.h
 
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
 GL/glew.h
@@ -1233,16 +1257,6 @@ C:/vcpkg/installed/x86-windows/include/glm/ext/vector_int1_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/vector_uint1.hpp
 ../ext/vector_uint1_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/vector_uint1_sized.hpp
-
-C:/vcpkg/installed/x86-windows/include/glm/gtx/transform.hpp
-../glm.hpp
-C:/vcpkg/installed/x86-windows/include/glm/glm.hpp
-../gtc/matrix_transform.hpp
-C:/vcpkg/installed/x86-windows/include/glm/gtc/matrix_transform.hpp
-transform.inl
-C:/vcpkg/installed/x86-windows/include/glm/gtx/transform.inl
-
-C:/vcpkg/installed/x86-windows/include/glm/gtx/transform.inl
 
 C:/vcpkg/installed/x86-windows/include/glm/integer.hpp
 detail/qualifier.hpp

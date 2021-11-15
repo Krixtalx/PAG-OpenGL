@@ -71,12 +71,15 @@ void PAG::ShaderManager::addShaderToSP(const std::string &nombreShader, const st
  * @param nombreSP a activar
  */
 void PAG::ShaderManager::activarSP(const std::string &nombreSP) {
-	auto SP = shaderPrograms.find(nombreSP);
-	if (SP != shaderPrograms.end()) {
-		SP->second->activateShaderProgram();
-	} else {
-		throw std::runtime_error(
-				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+	if (nombreSP != SPActivado) {
+		auto SP = shaderPrograms.find(nombreSP);
+		if (SP != shaderPrograms.end()) {
+			SP->second->activateShaderProgram();
+			SPActivado = nombreSP;
+		} else {
+			throw std::runtime_error(
+					"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+		}
 	}
 }
 
@@ -85,12 +88,12 @@ void PAG::ShaderManager::activarSP(const std::string &nombreSP) {
  * @param nombreSP nombre del ShaderProgram en el que establecer el uniform
  * @param variable nombre de la variable a establecer
  */
-void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matrizMVP) {
+void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, glm::mat4 matriz) {
 	auto SP = shaderPrograms.find(nombreSP);
 	if (SP != shaderPrograms.end()) {
 		GLint location = glGetUniformLocation(SP->second->getIdSP(), variable.c_str());
 		if (location >= 0) {
-			glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrizMVP));
+			glUniformMatrix4fv(location, 1, false, glm::value_ptr(matriz));
 		} else
 			throw std::runtime_error(
 					"[ShaderManager]: No se ha encontrado ninguna variable con el nombre " + variable +
@@ -128,6 +131,22 @@ void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::stri
  * @param nombreSP nombre del ShaderProgram en el que establecer el uniform
  * @param variable nombre de la variable a establecer
  */
+void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, GLuint valor) {
+	auto SP = shaderPrograms.find(nombreSP);
+	if (SP != shaderPrograms.end()) {
+		GLint location = glGetUniformLocation(SP->second->getIdSP(), variable.c_str());
+		if (location >= 0) {
+			glUniform1ui(location, valor);
+		} else
+			throw std::runtime_error(
+					"[ShaderManager]: No se ha encontrado ninguna variable con el nombre " + variable +
+					" en el shaderProgram " + nombreSP);
+	} else {
+		throw std::runtime_error(
+				"[ShaderManager]: No se ha encontrado ningun shader program con el nombre " + nombreSP);
+	}
+}
+
 void PAG::ShaderManager::setUniform(const std::string &nombreSP, const std::string &variable, float valor) {
 	auto SP = shaderPrograms.find(nombreSP);
 	if (SP != shaderPrograms.end()) {

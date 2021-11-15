@@ -40,11 +40,13 @@ namespace PAG {
 
 		void setMaterial(const std::string &material);
 
-		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP);
+		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV);
 
 		void cargaModeloTriangulo();
 
 		void cargaModeloTetraedro();
+
+		const std::string &getShaderProgram() const;
 	};
 }
 

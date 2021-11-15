@@ -7,6 +7,7 @@
 
 #include <glm/vec3.hpp>
 #include <string>
+#include <glm/ext/matrix_float4x4.hpp>
 #include "RenderOptions.h"
 
 namespace PAG {
@@ -30,7 +31,7 @@ namespace PAG {
 		Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicion, const glm::vec3 &direccion,
 		    float gamma, float exponenteBordes);
 
-		void aplicarLuz(std::string shader);
+		void aplicarLuz(const std::string &shader) const;
 	};
 }
 
