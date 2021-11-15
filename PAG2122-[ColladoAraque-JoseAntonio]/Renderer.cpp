@@ -31,8 +31,8 @@ PAG::Renderer::Renderer() {
 	creaModeloTriangulo();
 	creaModeloTetraedro();
 
-	luces.emplace_back(glm::vec3(0.3, 0.3, 0.3));
-	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(2, 2, 2), true);
+	//luces.emplace_back(glm::vec3(0.3, 0.3, 0.3));
+	//luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(2, 2, 2), true);
 	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(1, 0, 0), false);
 	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(0, 0, -1), glm::vec3(0, 0, 1), 60.0f, 10);
 }
@@ -89,11 +89,11 @@ void PAG::Renderer::refrescar() const {
 		} else {
 			glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 		}
-		luces[i].aplicarLuz("DefaultSP");
+		//luces[i].aplicarLuz("DefaultSP");
 		for (Modelo *modelo: modelos) {
 			if (modelo)
 				try {
-					//luces[i].aplicarLuz(modelo->getShaderProgram());
+					luces[i].aplicarLuz(modelo->getShaderProgram(), matrizMV);
 					modelo->dibujarModelo(modo, matrizMVP, matrizMV);
 				} catch (std::runtime_error &e) {
 					throw e;

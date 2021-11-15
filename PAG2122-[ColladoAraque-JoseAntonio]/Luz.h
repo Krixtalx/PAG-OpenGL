@@ -31,7 +31,7 @@ namespace PAG {
 		Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicion, const glm::vec3 &direccion,
 		    float gamma, float exponenteBordes);
 
-		void aplicarLuz(const std::string &shader) const;
+		void aplicarLuz(const std::string &shader, const glm::mat4 &matriz) const;
 	};
 }
 
