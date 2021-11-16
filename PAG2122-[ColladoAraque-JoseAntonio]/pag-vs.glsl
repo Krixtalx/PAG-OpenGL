@@ -15,5 +15,5 @@ void main ()
 {
     gl_Position = matrizMVP * vec4 (posicion, 1);
     salida.posicionV = vec3(matrizMV * vec4(posicion, 1));
-    salida.normalV = vec3(matrizMV * vec4(normal, 0));
+    salida.normalV = vec3(transpose(inverse(matrizMV)) * vec4(normal, 0));
 }

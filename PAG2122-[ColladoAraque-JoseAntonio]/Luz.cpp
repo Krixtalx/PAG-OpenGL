@@ -40,7 +40,7 @@ PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicio
  * @param exponenteBordes exponente para el calculo de los bordes suaves en el cono de luz
  */
 PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicion, const glm::vec3 &direccion,
-              float gamma, float exponenteBordes) : id(id), is(is), posicion(posicion), direccion(direccion),
+              float gamma, GLuint exponenteBordes) : id(id), is(is), posicion(posicion), direccion(direccion),
                                                     exponenteBordes(exponenteBordes),
                                                     tipoLuz(PAG::tipoLuz::foco) {
 	this->gamma = glm::radians(gamma);
@@ -70,5 +70,6 @@ void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) co
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "dirLuz", glm::vec3(
 				glm::transpose(glm::inverse(matriz)) * glm::vec4(direccion, 0)));
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "spotAngle", gamma);
+		PAG::ShaderManager::getInstancia()->setUniform(shader, "expBordes", exponenteBordes);
 	}
 }

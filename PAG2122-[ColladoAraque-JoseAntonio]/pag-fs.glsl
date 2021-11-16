@@ -16,6 +16,7 @@ uniform vec3 Ia;
 uniform vec3 Id;
 uniform vec3 Is;
 uniform float spotAngle;
+uniform uint expBordes;
 
 uniform vec3 posLuz;
 uniform vec3 dirLuz;
@@ -72,7 +73,7 @@ vec3 luzFoco ()
     vec3 l = normalize(posLuz-entrada.posicionV);
     vec3 d = dirLuz;
     float cosGamma = cos(spotAngle);
-    float spotFactor = 1.0;
+    float spotFactor = pow(cos(dot(-l, d)), expBordes);
     if (cos(dot(-l, d)) < cosGamma) { spotFactor = 0.0; }
     vec3 n = normalize(entrada.normalV);
     vec3 v = normalize(-entrada.posicionV);

@@ -23,7 +23,7 @@ PAG::Renderer::Renderer() {
 
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
 		                                                    new Material({0.5, 0.5, 0.5}, {1, 1, 1}, {0.8, 0.8, 0.8},
-		                                                                 16));
+		                                                                 32));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
@@ -31,10 +31,10 @@ PAG::Renderer::Renderer() {
 	//creaModeloTriangulo();
 	creaModeloTetraedro();
 
-	luces.emplace_back(glm::vec3(0.3, 0.3, 0.5));
+	luces.emplace_back(glm::vec3(0.35, 0.35, 0.35));
 	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
 	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0, 0, -1), glm::vec3(0, 0, 0), 1.0f, 10);
+	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.25, 0.25, -0.15), glm::vec3(0, 0, 0), 60.0f, 256);
 
 }
 
