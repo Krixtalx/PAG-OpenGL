@@ -22,19 +22,20 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
-		                                                    new Material({0.5, 0.2, 1}, {1, 1, 1}, {0.5, 0.5, 0.5},
-		                                                                 1));
+		                                                    new Material({0.5, 0.5, 0.5}, {1, 1, 1}, {0.8, 0.8, 0.8},
+		                                                                 16));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
 	modelos.resize(2);
-	creaModeloTriangulo();
+	//creaModeloTriangulo();
 	creaModeloTetraedro();
 
-	//luces.emplace_back(glm::vec3(0.3, 0.3, 0.3));
-	//luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(2, 2, 2), true);
-	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), glm::vec3(0, 0, -1), glm::vec3(0, 0, 1), 60.0f, 10);
+	luces.emplace_back(glm::vec3(0.3, 0.3, 0.5));
+	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
+	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
+	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0, 0, -1), glm::vec3(0, 0, 0), 1.0f, 10);
+
 }
 
 /**
@@ -84,12 +85,7 @@ void PAG::Renderer::refrescar() const {
 	glm::mat4 matrizMVP = camara.matrizMVP();
 	glm::mat4 matrizMV = camara.matrizMV();
 	for (int i = 0; i < luces.size(); i++) {
-		if (i == 0) {
-			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		} else {
-			glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-		}
-		//luces[i].aplicarLuz("DefaultSP");
+		glBlendFunc(GL_SRC_ALPHA, i == 0 ? GL_ONE_MINUS_SRC_ALPHA : GL_ONE);
 		for (Modelo *modelo: modelos) {
 			if (modelo)
 				try {

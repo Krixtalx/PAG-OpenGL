@@ -122,7 +122,7 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GL
 void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV) {
 	try {
 		matrizMVP = matrizMVP * glm::translate(posicion);
-		matrizMV = glm::transpose(glm::inverse(matrizMV * glm::translate(posicion))); //Transpuesta de la inversa
+		matrizMV = matrizMV * glm::translate(posicion);
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);

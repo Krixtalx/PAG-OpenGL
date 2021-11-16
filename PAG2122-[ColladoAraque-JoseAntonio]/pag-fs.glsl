@@ -39,12 +39,7 @@ vec3 luzAmbiente()
 subroutine (calcularLuz)
 vec3 luzPuntual()
 {
-    vec3 n;
-    if (gl_FrontFacing){
-        n = normalize(entrada.normalV);
-    } else {
-        n = normalize(-entrada.normalV);
-    }
+    vec3 n = normalize(entrada.normalV);
 
     vec3 l = normalize(posLuz-entrada.posicionV);
     vec3 v = normalize(-entrada.posicionV);
