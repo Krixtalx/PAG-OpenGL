@@ -27,9 +27,9 @@ namespace PAG {
 		static Renderer *instancia; ///< Puntero al único objeto de la clase
 		Renderer();
 
-		float rojoFondo = 0.15;
-		float verdeFondo = 0.15;
-		float azulFondo = 0.2;
+		float rojoFondo = 0.05;
+		float verdeFondo = 0.05;
+		float azulFondo = 0.1;
 
 		bool triangulo = false, tetraedro = false;
 		std::vector<PAG::Modelo *> modelos;

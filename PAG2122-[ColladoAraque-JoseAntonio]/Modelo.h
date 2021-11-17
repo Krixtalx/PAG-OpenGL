@@ -22,7 +22,7 @@ namespace PAG {
 		std::vector<std::vector<GLuint>> ibos;
 		std::string shaderProgram;
 		std::string material;
-		glm::vec3 posicion;
+		glm::vec3 posicion{};
 		GLuint numVertices;
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);

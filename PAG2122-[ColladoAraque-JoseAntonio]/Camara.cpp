@@ -61,9 +61,7 @@ glm::mat4 PAG::Camara::matrizMVP() const {
  * @return matrizMV
  */
 glm::mat4 PAG::Camara::matrizMV() const {
-	return //glm::transpose(glm::inverse(
-			glm::lookAt(posicion, puntoMira, up); //Devuelve solo vision. El modelado lo aplicará el modelo
-	//Transpuesta de la inversa
+	return glm::lookAt(posicion, puntoMira, up); //Devuelve solo vision. El modelado lo aplicará el modelo
 }
 
 /**

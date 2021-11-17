@@ -22,7 +22,7 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
-		                                                    new Material({0.5, 0.5, 0.5}, {1, 1, 1}, {0.8, 0.8, 0.8},
+		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
 		                                                                 32));
 	} catch (std::runtime_error &e) {
 		throw e;
@@ -31,10 +31,10 @@ PAG::Renderer::Renderer() {
 	//creaModeloTriangulo();
 	creaModeloTetraedro();
 
-	luces.emplace_back(glm::vec3(0.35, 0.35, 0.35));
+	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
 	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
 	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.25, 0.25, -0.15), glm::vec3(0, 0, 0), 60.0f, 256);
+	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.5, 0.5, -1), glm::vec3(0, 0, 1), 50.0f, 1);
 
 }
 
@@ -75,6 +75,7 @@ void PAG::Renderer::inicializaOpenGL() {
 	activarUtilidadGL(GL_MULTISAMPLE);
 	activarUtilidadGL(GL_DEBUG_OUTPUT);
 	activarUtilidadGL(GL_BLEND);
+	glDepthFunc(GL_LEQUAL);
 }
 
 /**
