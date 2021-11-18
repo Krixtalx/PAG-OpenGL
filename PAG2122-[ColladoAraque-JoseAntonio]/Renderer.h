@@ -65,6 +65,8 @@ namespace PAG {
 
 		void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
+		void movimientoCamara(const std::string& movimiento, float mov);
+
 		void limpiarGL(GLbitfield mascara);
 
 		float getRojoFondo() const;

@@ -72,31 +72,31 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 	} else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->setModo(PAG::mallaTriangulos);
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().truck(-1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("truck", -1.0f * deltaTime);
 	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().truck(1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("truck", 1.0f * deltaTime);
 	} else if (key == GLFW_KEY_A && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().dolly(-1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("dolly", -1.0f * deltaTime);
 	} else if (key == GLFW_KEY_D && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().dolly(1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("dolly", 1.0f * deltaTime);
 	} else if (key == GLFW_KEY_Z && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().boom(1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("boom", 1.0f * deltaTime);
 	} else if (key == GLFW_KEY_X && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().crane(1.0f * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("crane", 1.0f * deltaTime);
 	} else if (key == GLFW_KEY_I && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().zoom(-4 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("zoom", -4 * deltaTime);
 	} else if (key == GLFW_KEY_O && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().zoom(4 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("zoom", 4 * deltaTime);
 	} else if (key == GLFW_KEY_Q && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitX(50 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("orbitX", 50 * deltaTime);
 	} else if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitX(-50 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("orbitX", -50 * deltaTime);
 	} else if (key == GLFW_KEY_T && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitY(50 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("orbitY", 50 * deltaTime);
 	} else if (key == GLFW_KEY_G && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().orbitY(-50 * deltaTime);
+		PAG::Renderer::getInstancia()->movimientoCamara("orbitY", -50 * deltaTime);
 	} else if (key == GLFW_KEY_R && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-		PAG::Renderer::getInstancia()->getCamara().reset();
+		PAG::Renderer::getInstancia()->movimientoCamara("reset", 0);
 	}
 
 	callbackRefrescoVentana(window);

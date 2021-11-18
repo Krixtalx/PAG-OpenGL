@@ -34,7 +34,8 @@ PAG::Renderer::Renderer() {
 	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
 	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
 	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.5, 0.5, -1), glm::vec3(0, 0, 1), 50.0f, 1);
+	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.25, 0.25, -1), glm::vec3(0, 0, 1), 40.0f,
+	                   16);
 
 }
 
@@ -238,4 +239,24 @@ PAG::Camara &PAG::Renderer::getCamara() {
 
 void PAG::Renderer::setModo(PAG::modoDibujado modo) {
 	Renderer::modo = modo;
+}
+
+void PAG::Renderer::movimientoCamara(const std::string& movimiento, float mov) {
+	if (movimiento == "truck") {
+		camara.truck(mov);
+	} else if (movimiento == "dolly") {
+		camara.dolly(mov);
+	} else if (movimiento == "boom") {
+		camara.boom(mov);
+	} else if (movimiento == "crane") {
+		camara.crane(mov);
+	}else if (movimiento == "zoom") {
+		camara.zoom(mov);
+	}else if (movimiento == "orbitX") {
+		camara.orbitX(mov);
+	}else if (movimiento == "orbitY") {
+		camara.orbitY(mov);
+	}else if (movimiento == "reset") {
+		camara.reset();
+	}
 }

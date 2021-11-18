@@ -97,9 +97,8 @@ void PAG::Camara::calcularFovY() {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::truck(float mov) {
-	glm::mat4 translacion = glm::translate(n * mov);
-	posicion = glm::vec3(translacion * glm::vec4(posicion, 1));
-	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
+	posicion[2]+=mov;
+	puntoMira[2]+=mov;
 }
 
 /**
@@ -107,9 +106,8 @@ void PAG::Camara::truck(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::dolly(float mov) {
-	glm::mat4 translacion = glm::translate(u * mov);
-	posicion = glm::vec3(translacion * glm::vec4(posicion, 1));
-	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
+	posicion[0]+=mov;
+	puntoMira[0]+=mov;
 }
 
 /**
@@ -117,9 +115,8 @@ void PAG::Camara::dolly(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::boom(float mov) {
-	glm::mat4 translacion = glm::translate(v * mov);
-	posicion = glm::vec3(translacion * glm::vec4(posicion, 1));
-	puntoMira = glm::vec3(translacion * glm::vec4(puntoMira, 1));
+	posicion[1]+=mov;
+	puntoMira[1]+=mov;
 }
 
 /**

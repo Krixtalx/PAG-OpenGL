@@ -73,9 +73,9 @@ vec3 luzFoco ()
     vec3 l = normalize(posLuz-entrada.posicionV);
     vec3 d = dirLuz;
     float cosGamma = cos(spotAngle);
-    float cosDelta = cos(dot(-l, d));
+    float cosDelta = dot(-l, d);
     float spotFactor = pow(cosDelta, expBordes);
-    if (dot(-l, d) < cosGamma) { spotFactor = 0.0; }
+    if (cosDelta < cosGamma) { spotFactor = 0.0; }
     vec3 n = normalize(entrada.normalV);
     vec3 v = normalize(-entrada.posicionV);
     vec3 r = reflect(-l, n);
