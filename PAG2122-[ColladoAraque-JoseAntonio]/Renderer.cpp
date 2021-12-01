@@ -169,7 +169,7 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  */
 void PAG::Renderer::creaModeloTriangulo() {
 	if (!triangulo) {
-		auto *modelo = new PAG::Modelo("DefaultSP", 3, {-2, 0, 2});
+		auto *modelo = new PAG::Modelo("DefaultSP", 3, {0, 1, -1});
 		modelo->cargaModeloTriangulo();
 		modelos[0] = modelo;
 		triangulo = true;
