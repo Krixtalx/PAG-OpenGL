@@ -18,11 +18,12 @@ namespace PAG {
 
 	enum paramShader {
 		posicion,
-		normal
+		normal,
+		textura
 	};
 
 	static unsigned numParamShader() {
-		return normal + 1;
+		return textura + 1;
 	};
 
 	enum class tipoLuz {

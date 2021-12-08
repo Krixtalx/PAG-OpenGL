@@ -29,7 +29,10 @@ PAG::Renderer::Renderer() {
 	}
 	modelos.resize(2);
 	//creaModeloTriangulo();
-	creaModeloTetraedro();
+	//creaModeloTetraedro();
+	auto *modelo = new Modelo("DefaultSP", "../vaca.obj", {0, 0, 0}, {-90, 0, 180});
+	modelo->setMaterial("DefaultMat");
+	modelos.push_back(modelo);
 
 	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
 	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
@@ -169,7 +172,7 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  */
 void PAG::Renderer::creaModeloTriangulo() {
 	if (!triangulo) {
-		auto *modelo = new PAG::Modelo("DefaultSP", 3, {0, 1, -1});
+		auto *modelo = new PAG::Modelo("DefaultSP", {0, 1, -1});
 		modelo->cargaModeloTriangulo();
 		modelos[0] = modelo;
 		triangulo = true;
@@ -181,7 +184,7 @@ void PAG::Renderer::creaModeloTriangulo() {
  */
 void PAG::Renderer::creaModeloTetraedro() {
 	if (!tetraedro) {
-		auto *modelo = new PAG::Modelo("DefaultSP", 4);
+		auto *modelo = new PAG::Modelo("DefaultSP");
 		modelo->cargaModeloTetraedro();
 		modelos[1] = modelo;
 		tetraedro = true;
@@ -241,7 +244,7 @@ void PAG::Renderer::setModo(PAG::modoDibujado modo) {
 	Renderer::modo = modo;
 }
 
-void PAG::Renderer::movimientoCamara(const std::string& movimiento, float mov) {
+void PAG::Renderer::movimientoCamara(const std::string &movimiento, float mov) {
 	if (movimiento == "truck") {
 		camara.truck(mov);
 	} else if (movimiento == "dolly") {
@@ -250,13 +253,13 @@ void PAG::Renderer::movimientoCamara(const std::string& movimiento, float mov) {
 		camara.boom(mov);
 	} else if (movimiento == "crane") {
 		camara.crane(mov);
-	}else if (movimiento == "zoom") {
+	} else if (movimiento == "zoom") {
 		camara.zoom(mov);
-	}else if (movimiento == "orbitX") {
+	} else if (movimiento == "orbitX") {
 		camara.orbitX(mov);
-	}else if (movimiento == "orbitY") {
+	} else if (movimiento == "orbitY") {
 		camara.orbitY(mov);
-	}else if (movimiento == "reset") {
+	} else if (movimiento == "reset") {
 		camara.reset();
 	}
 }

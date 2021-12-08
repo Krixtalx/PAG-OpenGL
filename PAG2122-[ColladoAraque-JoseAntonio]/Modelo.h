@@ -10,6 +10,7 @@
 #include <glm/glm.hpp>
 #include <vector>
 #include <string>
+#include <assimp/scene.h>
 #include "RenderOptions.h"
 
 namespace PAG {
@@ -19,24 +20,34 @@ namespace PAG {
 		std::vector<GLuint> idVBO;
 		std::vector<GLuint> idIBO;
 		std::vector<std::vector<glm::vec3>> vbos;
+		std::vector<glm::vec2> textura;
 		std::vector<std::vector<GLuint>> ibos;
 		std::string shaderProgram;
 		std::string material;
-		glm::vec3 posicion{};
-		GLuint numVertices;
+		glm::mat4 mModelado{};
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);
 
+		void cargaModelo(const std::string &path);
+
+		void procesarNodo(aiNode *node, const aiScene *scene);
+
+		void procesarMalla(aiMesh *mesh, const aiScene *scene);
+
 	public:
-		Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos = {0, 0, 0});
+
+		Modelo(std::string shaderProgram, const std::string &path = "NULL", glm::vec3 pos = {0, 0, 0},
+		       glm::vec3 rot = {0, 0, 0});
 
 		Modelo(Modelo &orig);
 
 		~Modelo();
 
-		void nuevoVBO(PAG::paramShader tipoDato, std::vector<glm::vec3> datos, GLenum freqAct);
+		void nuevoVBO(PAG::paramShader tipoDato, const std::vector<glm::vec3> &datos, GLenum freqAct);
 
-		void nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GLenum freqAct);
+		void nuevoVBO(PAG::paramShader tipoDato, const std::vector<glm::vec2> &datos, GLenum freqAct);
+
+		void nuevoIBO(PAG::modoDibujado modo, const std::vector<GLuint> &datos, GLenum freqAct);
 
 		void setMaterial(const std::string &material);
 

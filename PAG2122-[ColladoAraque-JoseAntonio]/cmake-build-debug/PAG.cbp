@@ -5,7 +5,7 @@
 		<Option title="PAG"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\vcpkg\;CMake Files\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\vcpkg\installed\;CMake Files\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\vcpkg\;CMake Files\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\vcpkg\installed\;CMake Files\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glew\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\assimp\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\irrlicht\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\polyclipping\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\poly2tri\;CMake Files\..\..\..\vcpkg\installed\x86-windows\share\utf8cpp\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/cmake-build-debug"/>
@@ -26,13 +26,17 @@
 				<Compiler>
 					<Add option="-DGLFW_DLL"/>
 					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/utf8cpp"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/irrlicht"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/kubazip"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/poly2tri"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 PAG"/>
@@ -50,13 +54,17 @@
 				<Compiler>
 					<Add option="-DGLFW_DLL"/>
 					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/utf8cpp"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/irrlicht"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/kubazip"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/poly2tri"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="nmake /NOLOGO /f C:\Github\PAG\PAG2122-[ColladoAraque-JoseAntonio]\cmake-build-debug\Makefile VERBOSE=1 PAG/fast"/>
@@ -143,6 +151,12 @@
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h">
 			<Option target="PAG"/>
 		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/lodepng.cpp">
+			<Option target="PAG"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/lodepng.h">
+			<Option target="PAG"/>
+		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/main.cpp">
 			<Option target="PAG"/>
 		</Unit>
@@ -184,6 +198,81 @@
 		</Unit>
 		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/assimp/assimpConfig-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\assimp\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/assimp/assimpConfig-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\assimp\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/assimp/assimpConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\assimp\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/assimp/assimpConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\assimp\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/irrlicht/irrlicht-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\irrlicht\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/irrlicht/irrlicht-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\irrlicht\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/irrlicht/irrlicht-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\irrlicht\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/irrlicht/irrlicht-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\irrlicht\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/polyclipping/polyclippingConfig-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\polyclipping\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/polyclipping/polyclippingConfig-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\polyclipping\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/polyclipping/polyclippingConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\polyclipping\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/minizip/minizipConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/minizip/minizipConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/minizip/minizipTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/minizip/minizipTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/minizip/minizipTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\minizip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/kubazip/kubazipConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/kubazip/kubazipConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/kubazip/kubazipTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/kubazip/kubazipTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/kubazip/kubazipTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\kubazip\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/poly2tri/poly2triConfig-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\poly2tri\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/poly2tri/poly2triConfig-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\poly2tri\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/poly2tri/poly2triConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\poly2tri\"/>
+		</Unit>
+		<Unit filename="C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/../../../vcpkg/installed/x86-windows/share/utf8cpp/utf8cppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\vcpkg\installed\x86-windows\share\utf8cpp\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

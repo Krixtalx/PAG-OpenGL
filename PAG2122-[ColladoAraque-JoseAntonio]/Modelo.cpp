@@ -5,6 +5,9 @@
 #include "Modelo.h"
 #include "ShaderManager.h"
 #include "MaterialManager.h"
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 
 #include <utility>
 #include <stdexcept>
@@ -14,12 +17,15 @@
 /**
  * Constructor parametrizado
  * @param shaderProgram que se usará para renderizar el modelo
- * @param numVertices que contiene el modelo
+ * @param path ruta de la que se cargará el modelo
  */
-PAG::Modelo::Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos) : numVertices(numVertices),
-                                                                                    shaderProgram(
-		                                                                                    std::move(shaderProgram)),
-                                                                                    posicion(pos) {
+PAG::Modelo::Modelo(std::string shaderProgram, const std::string &path, glm::vec3 pos, glm::vec3 rot) :
+		shaderProgram(std::move(shaderProgram)) {
+
+	mModelado = glm::rotate(glm::translate(pos), glm::radians(rot.x), {1, 0, 0});
+	mModelado = glm::rotate(mModelado, glm::radians(rot.y), {0, 1, 0});
+	mModelado = glm::rotate(mModelado, glm::radians(rot.z), {0, 0, 1});
+
 	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
@@ -36,14 +42,18 @@ PAG::Modelo::Modelo(std::string shaderProgram, GLuint numVertices, glm::vec3 pos
 	for (unsigned int &i: idIBO) {
 		i = UINT_MAX;
 	}
+
+	if (path != "NULL")
+		cargaModelo(path);
 }
 
 /**
  * Constructor copia. Copia el numVertices y el shaderProgram y realiza una nueva instanciacion de los vbos e ibos
  * @param orig
  */
-PAG::Modelo::Modelo(PAG::Modelo &orig) : numVertices(orig.numVertices), shaderProgram(orig.shaderProgram),
-                                         vbos(orig.vbos), ibos(orig.ibos), material(orig.material) {
+PAG::Modelo::Modelo(PAG::Modelo &orig) : shaderProgram(orig.shaderProgram),
+                                         vbos(orig.vbos), ibos(orig.ibos), material(orig.material),
+                                         mModelado(orig.mModelado) {
 	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);
@@ -82,7 +92,7 @@ PAG::Modelo::~Modelo() {
  * @param datos a instanciar
  * @param freqAct GLenum que indica con que frecuencia se van a modificar los vertices. GL_STATIC_DRAW siempre por ahora
  */
-void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, std::vector<glm::vec3> datos, GLenum freqAct) {
+void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, const std::vector<glm::vec3> &datos, GLenum freqAct) {
 	//Si hay un buffer de este tipo instanciado, lo eliminamos
 	if (idVBO[tipoDato] != UINT_MAX) {
 		glDeleteBuffers(1, &idVBO[tipoDato]);
@@ -98,12 +108,33 @@ void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, std::vector<glm::vec3> dat
 }
 
 /**
+ * Instancia un VBO en el contexto OpenGL y lo guarda en textura
+ * @param tipoDato parametro del shader que representa el vbo
+ * @param datos a instanciar
+ * @param freqAct GLenum que indica con que frecuencia se van a modificar los vertices. GL_STATIC_DRAW siempre por ahora
+ */
+void PAG::Modelo::nuevoVBO(PAG::paramShader tipoDato, const std::vector<glm::vec2> &datos, GLenum freqAct) {
+	//Si hay un buffer de este tipo instanciado, lo eliminamos
+	if (idVBO[tipoDato] != UINT_MAX) {
+		glDeleteBuffers(1, &idVBO[tipoDato]);
+	}
+	textura = datos;
+	glBindVertexArray(idVAO);
+	glGenBuffers(1, &idVBO[tipoDato]);
+	glBindBuffer(GL_ARRAY_BUFFER, idVBO[tipoDato]);
+	glBufferData(GL_ARRAY_BUFFER, datos.size() * sizeof(glm::vec2), datos.data(), freqAct);
+	glVertexAttribPointer(tipoDato, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2),
+	                      nullptr);
+	glEnableVertexAttribArray(tipoDato);
+}
+
+/**
  * Instancia un IBO en el contexto OpenGL y lo guarda en ibos
  * @param modo modo de dibujado que representa el ibo
  * @param datos a instanciar
  * @param freqAct GLenum que indica con que frecuencia se van a modificar los vertices. GL_STATIC_DRAW siempre por ahora
  */
-void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GLenum freqAct) {
+void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, const std::vector<GLuint> &datos, GLenum freqAct) {
 	//Si hay un buffer de este tipo instanciado, lo eliminamos
 	if (idIBO[modo] != UINT_MAX) {
 		glDeleteBuffers(1, &idIBO[modo]);
@@ -121,8 +152,8 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, std::vector<GLuint> datos, GL
  */
 void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV) {
 	try {
-		matrizMVP = matrizMVP * glm::translate(posicion);
-		matrizMV = matrizMV * glm::translate(posicion);
+		matrizMVP = matrizMVP * mModelado;
+		matrizMV = matrizMV * mModelado;
 		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
 		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
@@ -205,9 +236,9 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	                                   {0,      0,      -1}};
 
 	/*std::vector<GLuint> indices = {0, 9, 3,
-	                               1, 6, 11,
-	                               4, 10, 7,
-	                               2, 5, 8};*/
+								   1, 6, 11,
+								   4, 10, 7,
+								   2, 5, 8};*/
 	std::vector<GLuint> indices = {0, 3, 9,
 	                               1, 11, 6,
 	                               4, 7, 10,
@@ -246,3 +277,63 @@ void PAG::Modelo::setMaterial(const std::string &material) {
 const std::string &PAG::Modelo::getShaderProgram() const {
 	return shaderProgram;
 }
+
+void PAG::Modelo::cargaModelo(const std::string &path) {
+	Assimp::Importer import;
+	const aiScene *scene = import.ReadFile(path, aiProcess_JoinIdenticalVertices | aiProcess_Triangulate |
+	                                             aiProcess_GenSmoothNormals);
+
+	if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) {
+		throw std::runtime_error("[Modelo::cargaModelo]: Error en la carga del modelo con Assimp");
+	}
+
+	procesarNodo(scene->mRootNode, scene);
+}
+
+void PAG::Modelo::procesarNodo(aiNode *node, const aiScene *scene) {
+	// process all the node's meshes (if any)
+	for (unsigned int i = 0; i < node->mNumMeshes; i++) {
+		aiMesh *mesh = scene->mMeshes[node->mMeshes[i]];
+		procesarMalla(mesh, scene);
+	}
+	// then do the same for each of its children
+	for (unsigned int i = 0; i < node->mNumChildren; i++) {
+		procesarNodo(node->mChildren[i], scene);
+	}
+}
+
+void PAG::Modelo::procesarMalla(aiMesh *mesh, const aiScene *scene) {
+	glm::vec3 vec;
+	glm::vec2 vecTex;
+	for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
+		vec.x = mesh->mVertices[i].x;
+		vec.y = mesh->mVertices[i].y;
+		vec.z = mesh->mVertices[i].z;
+		vbos[PAG::posicion].push_back(vec);
+
+		vec.x = mesh->mNormals[i].x;
+		vec.y = mesh->mNormals[i].y;
+		vec.z = mesh->mNormals[i].z;
+		vbos[PAG::normal].push_back(vec);
+
+		if (mesh->mTextureCoords[0]) {
+			vecTex.x = mesh->mTextureCoords[0][i].x;
+			vecTex.y = mesh->mTextureCoords[0][i].y;
+		} else {
+			vecTex = {0, 0};
+		}
+		textura.push_back(vecTex);
+	}
+	this->nuevoVBO(PAG::posicion, vbos[PAG::posicion], GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::normal, vbos[PAG::normal], GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::textura, textura, GL_STATIC_DRAW);
+
+	for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
+		aiFace face = mesh->mFaces[i];
+		for (unsigned int j = 0; j < face.mNumIndices; j++)
+			ibos[PAG::mallaTriangulos].push_back(face.mIndices[j]);
+	}
+
+	this->nuevoIBO(PAG::mallaTriangulos, ibos[mallaTriangulos], GL_STATIC_DRAW);
+}
+

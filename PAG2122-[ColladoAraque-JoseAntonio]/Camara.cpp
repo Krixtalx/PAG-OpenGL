@@ -17,7 +17,7 @@
  * Constructor por defecto. Inicializa la cámara con unos parametros predeterminados
  */
 PAG::Camara::Camara() : posicion(0, 0, 2.5f), puntoMira(0, 0, 0),
-                        up(0, 1, 0), zNear(0.1f), zFar(10), alto(PAG::altoVentanaPorDefecto),
+                        up(0, 1, 0), zNear(0.1f), zFar(200), alto(PAG::altoVentanaPorDefecto),
                         ancho(PAG::anchoVentanaPorDefecto) {
 
 	fovX = glm::radians(80.0);
@@ -97,8 +97,8 @@ void PAG::Camara::calcularFovY() {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::truck(float mov) {
-	posicion[2]+=mov;
-	puntoMira[2]+=mov;
+	posicion[2] += mov;
+	puntoMira[2] += mov;
 }
 
 /**
@@ -106,8 +106,8 @@ void PAG::Camara::truck(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::dolly(float mov) {
-	posicion[0]+=mov;
-	puntoMira[0]+=mov;
+	posicion[0] += mov;
+	puntoMira[0] += mov;
 }
 
 /**
@@ -115,8 +115,8 @@ void PAG::Camara::dolly(float mov) {
  * @param mov magnitud del movimiento
  */
 void PAG::Camara::boom(float mov) {
-	posicion[1]+=mov;
-	puntoMira[1]+=mov;
+	posicion[1] += mov;
+	puntoMira[1] += mov;
 }
 
 /**
