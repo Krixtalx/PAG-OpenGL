@@ -41,29 +41,25 @@ PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicio
  */
 PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicion, const glm::vec3 &direccion,
               float gamma, GLuint exponenteBordes) : id(id), is(is), posicion(posicion), direccion(direccion),
-                                                    exponenteBordes(exponenteBordes),
-                                                    tipoLuz(PAG::tipoLuz::foco) {
+                                                     exponenteBordes(exponenteBordes),
+                                                     tipoLuz(PAG::tipoLuz::foco) {
 	this->gamma = glm::radians(gamma);
 }
 
 void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) const {
 	PAG::ShaderManager::getInstancia()->activarSP(shader);
 	if (this->tipoLuz == PAG::tipoLuz::ambiente) {
-		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzAmbiente");
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Ia", ia);
 	} else if (this->tipoLuz == PAG::tipoLuz::puntual) {
-		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzPuntual");
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "posLuz", glm::vec3(matriz * glm::vec4(posicion, 1)));
 	} else if (this->tipoLuz == PAG::tipoLuz::direccional) {
-		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzDireccional");
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "dirLuz", glm::normalize(glm::vec3(
 				glm::transpose(glm::inverse(matriz)) * glm::vec4(direccion, 0))));
 	} else {
-		PAG::ShaderManager::getInstancia()->activarSubrutina(shader, GL_FRAGMENT_SHADER, "luzFoco");
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "posLuz", glm::vec3(matriz * glm::vec4(posicion, 1)));
@@ -72,4 +68,8 @@ void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) co
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "spotAngle", gamma);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "expBordes", exponenteBordes);
 	}
+}
+
+PAG::tipoLuz PAG::Luz::getTipoLuz() const {
+	return tipoLuz;
 }

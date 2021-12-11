@@ -25,6 +25,9 @@ namespace PAG {
 		std::string shaderProgram;
 		std::string material;
 		glm::mat4 mModelado{};
+		PAG::modoDibujado modo = PAG::mallaTriangulos;
+		bool usarTexturas = true;
+		bool visible = true;
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);
 
@@ -51,13 +54,21 @@ namespace PAG {
 
 		void setMaterial(const std::string &material);
 
-		void dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV);
+		void dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::tipoLuz tipoLuz);
 
 		void cargaModeloTriangulo();
 
 		void cargaModeloTetraedro();
 
 		const std::string &getShaderProgram() const;
+
+		void cambiarModoDibujado();
+
+		void cambiarUsoTextura();
+
+		void cambiarVisibilidad();
+
+		PAG::modoDibujado getModo() const;
 	};
 }
 

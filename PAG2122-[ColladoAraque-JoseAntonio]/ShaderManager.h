@@ -43,9 +43,16 @@ namespace PAG {
 
 		void setUniform(const std::string &nombreSP, const std::string &variable, GLuint valor);
 
+		void setUniform(const std::string &nombreSP, const std::string &variable, GLint valor);
+
 		void setUniform(const std::string &nombreSP, const std::string &variable, float valor);
 
 		void activarSubrutina(const std::string &nombreSP, GLenum tipoShader, const std::string &nombreSubrutina);
+
+		void activarMultiplesSubrutinas(const std::string &nombreSP, GLenum tipoShader,
+		                                const std::vector<std::string> &nombreUniform,
+		                                const std::vector<std::string> &nombreSubrutina);
+
 
 	};
 }

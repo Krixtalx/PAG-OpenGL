@@ -24,22 +24,32 @@ PAG::Renderer::Renderer() {
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
 		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
 		                                                                 32));
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("Vaca",
+		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
+		                                                                 32, "../spot_texture.png"));
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("Dado",
+		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
+		                                                                 32, "../dado.png"));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
-	modelos.resize(2);
-	//creaModeloTriangulo();
-	//creaModeloTetraedro();
+
 	auto *modelo = new Modelo("DefaultSP", "../vaca.obj", {0, 0, 0}, {-90, 0, 180});
-	modelo->setMaterial("DefaultMat");
+	modelo->setMaterial("Vaca");
 	modelos.push_back(modelo);
+
+	modelo = new Modelo("DefaultSP", "../dado.obj", {2, 0, 0}, {0, 0, 0});
+	modelo->setMaterial("Dado");
+	modelos.push_back(modelo);
+
+	creaModeloTetraedro();
+	creaModeloTriangulo();
 
 	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
 	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
 	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
 	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.25, 0.25, -1), glm::vec3(0, 0, 1), 40.0f,
 	                   16);
-
 }
 
 /**
@@ -94,8 +104,9 @@ void PAG::Renderer::refrescar() const {
 		for (Modelo *modelo: modelos) {
 			if (modelo)
 				try {
-					luces[i].aplicarLuz(modelo->getShaderProgram(), matrizMV);
-					modelo->dibujarModelo(modo, matrizMVP, matrizMV);
+					if (modelo->getModo() != PAG::wireframe)
+						luces[i].aplicarLuz(modelo->getShaderProgram(), matrizMV);
+					modelo->dibujarModelo(matrizMVP, matrizMV, luces[i].getTipoLuz());
 				} catch (std::runtime_error &e) {
 					throw e;
 				}
@@ -171,40 +182,21 @@ void PAG::Renderer::limpiarGL(GLbitfield mascara) {
  * Método encargado de crear un modelo. Actualmente solo crea un triangulo.
  */
 void PAG::Renderer::creaModeloTriangulo() {
-	if (!triangulo) {
-		auto *modelo = new PAG::Modelo("DefaultSP", {0, 1, -1});
-		modelo->cargaModeloTriangulo();
-		modelos[0] = modelo;
-		triangulo = true;
-	}
+	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1, 1, -1}, {0, 0, 0});
+	modelo->cargaModeloTriangulo();
+	modelo->setMaterial("DefaultMat");
+	modelos.push_back(modelo);
+
 }
 
 /**
  * Método encargado de crear un modelo. Actualmente solo crea un tetraedro.
  */
 void PAG::Renderer::creaModeloTetraedro() {
-	if (!tetraedro) {
-		auto *modelo = new PAG::Modelo("DefaultSP");
-		modelo->cargaModeloTetraedro();
-		modelos[1] = modelo;
-		tetraedro = true;
-	}
-}
-
-void PAG::Renderer::eliminaModeloTriangulo() {
-	if (triangulo) {
-		delete modelos[0];
-		modelos[0] = 0;
-		triangulo = false;
-	}
-}
-
-void PAG::Renderer::eliminaModeloTetraedro() {
-	if (tetraedro) {
-		delete modelos[1];
-		modelos[1] = 0;
-		tetraedro = false;
-	}
+	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1.1f, 0.5f, 0}, {0, 0, 0});
+	modelo->cargaModeloTetraedro();
+	modelo->setMaterial("DefaultMat");
+	modelos.push_back(modelo);
 }
 
 
@@ -240,8 +232,8 @@ PAG::Camara &PAG::Renderer::getCamara() {
 	return camara;
 }
 
-void PAG::Renderer::setModo(PAG::modoDibujado modo) {
-	Renderer::modo = modo;
+void PAG::Renderer::cambiarModo() {
+	modelos[modeloActivo]->cambiarModoDibujado();
 }
 
 void PAG::Renderer::movimientoCamara(const std::string &movimiento, float mov) {
@@ -262,4 +254,17 @@ void PAG::Renderer::movimientoCamara(const std::string &movimiento, float mov) {
 	} else if (movimiento == "reset") {
 		camara.reset();
 	}
+}
+
+unsigned PAG::Renderer::cambiarModeloActivo() {
+	modeloActivo = ++modeloActivo % modelos.size();
+	return modeloActivo;
+}
+
+void PAG::Renderer::cambiarModoTextura() {
+	modelos[modeloActivo]->cambiarUsoTextura();
+}
+
+void PAG::Renderer::cambiarVisibilidad() {
+	modelos[modeloActivo]->cambiarVisibilidad();
 }

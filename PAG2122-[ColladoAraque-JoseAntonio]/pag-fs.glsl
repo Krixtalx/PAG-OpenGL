@@ -4,6 +4,7 @@ in salidaVS
 {
     vec3 posicionV;
     vec3 normalV;
+    vec2 texturaV;
 } entrada;
 
 
@@ -21,9 +22,28 @@ uniform uint expBordes;
 uniform vec3 posLuz;
 uniform vec3 dirLuz;
 
+uniform sampler2D muestreador;
+
+vec3 usableKa;
+vec3 usableKd;
+
+subroutine void colorMoT();
+subroutine uniform colorMoT colorElegido;
 
 subroutine vec3 calcularLuz();
 subroutine uniform calcularLuz luzElegida;
+
+subroutine (colorMoT)
+void colorTextura(){
+    usableKa = texture(muestreador, entrada.texturaV).rgb;
+    usableKd = usableKa;
+}
+
+subroutine (colorMoT)
+void colorMaterial(){
+    usableKa = Ka;
+    usableKd = Kd;
+}
 
 subroutine (calcularLuz)
 vec3 colorDefecto ()
@@ -34,7 +54,7 @@ vec3 colorDefecto ()
 subroutine (calcularLuz)
 vec3 luzAmbiente()
 {
-    return Ka*Ia;
+    return usableKa*Ia;
 }
 
 subroutine (calcularLuz)
@@ -46,7 +66,7 @@ vec3 luzPuntual()
     vec3 v = normalize(-entrada.posicionV);
     vec3 r = reflect(-l, n);
 
-    vec3 difusa = (Id * Kd * max(dot(l, n), 0.0));
+    vec3 difusa = (Id * usableKd * max(dot(l, n), 0.0));
     vec3 especular = (Is * Ks * pow(max(dot(r, v), 0.0), phong));
 
     return difusa + especular;
@@ -61,7 +81,7 @@ vec3 luzDireccional ()
     vec3 v = normalize(-entrada.posicionV);
     vec3 r = reflect(-l, n);
 
-    vec3 difusa = (Id * Kd * max(dot(l, n), 0.0));
+    vec3 difusa = (Id * usableKd * max(dot(l, n), 0.0));
     vec3 especular = (Is * Ks * pow(max(dot(r, v), 0.0), phong));
 
     return difusa + especular;
@@ -80,7 +100,7 @@ vec3 luzFoco ()
     vec3 v = normalize(-entrada.posicionV);
     vec3 r = reflect(-l, n);
 
-    vec3 difusa = (Id * Kd * max(dot(l, n), 0.0));
+    vec3 difusa = (Id * usableKd * max(dot(l, n), 0.0));
     vec3 especular = (Is * Ks * pow(max(dot(r, v), 0.0), phong));
 
     return spotFactor * (difusa + especular);
@@ -88,5 +108,6 @@ vec3 luzFoco ()
 
 void main ()
 {
+    colorElegido();
     colorFragmento = vec4(luzElegida(), 1);
 }

@@ -31,11 +31,11 @@ namespace PAG {
 		float verdeFondo = 0.05;
 		float azulFondo = 0.1;
 
-		bool triangulo = false, tetraedro = false;
+		unsigned modeloActivo = 0;
+
 		std::vector<PAG::Modelo *> modelos;
 		std::vector<PAG::Luz> luces;
 
-		PAG::modoDibujado modo = PAG::mallaTriangulos;
 		PAG::Camara camara;
 
 	public:
@@ -55,17 +55,13 @@ namespace PAG {
 
 		void creaModeloTetraedro();
 
-		void eliminaModeloTriangulo();
-
-		void eliminaModeloTetraedro();
-
 		const GLubyte *getPropiedadGL(GLenum propiedad);
 
 		void activarUtilidadGL(GLenum utility);
 
 		void setViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
-		void movimientoCamara(const std::string& movimiento, float mov);
+		void movimientoCamara(const std::string &movimiento, float mov);
 
 		void limpiarGL(GLbitfield mascara);
 
@@ -83,8 +79,13 @@ namespace PAG {
 
 		Camara &getCamara();
 
-		void setModo(modoDibujado modo);
+		void cambiarModo();
 
+		unsigned cambiarModeloActivo();
+
+		void cambiarModoTextura();
+
+		void cambiarVisibilidad();
 	};
 }
 

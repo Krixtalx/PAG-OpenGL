@@ -628,46 +628,26 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\t
 
 
 CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.cpp
-CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.h
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glew.h
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glu.h
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals_core.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sal.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\concurrencysal.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xkeycheck.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstddef"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stddef.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtr1common"
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdint"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdint.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdlib"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_math.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stdlib.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_malloc.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_search.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stddef.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstdlib.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits.h"
-CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list"
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cfloat"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\float.h"
@@ -694,6 +674,54 @@ CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\inc
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.inl.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\isa_availability.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstddef"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtr1common"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\new"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\exception"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\crtdbg.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new_debug.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\crtdefs.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\use_ansi.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\malloc.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\eh.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_terminate.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstring"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\string.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_memory.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\concepts"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\compare"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\bit"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xpolymorphic_allocator.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdexcept"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iosfwd"
+CMakeFiles\PAG.dir\Material.cpp.obj: ..\Material.h
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glew.h
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glu.h
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
@@ -707,6 +735,10 @@ CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: ..\lodepng.h
 
 
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: ..\MaterialManager.cpp
@@ -3145,6 +3177,8 @@ C:\vcpkg\installed\x86-windows\include\glm\gtc\type_ptr.inl:
 
 ..\Material.h:
 
+..\lodepng.h:
+
 ..\MaterialManager.h:
 
 ..\Modelo.cpp:
@@ -3196,7 +3230,5 @@ C:\vcpkg\installed\x86-windows\include\assimp\postprocess.h:
 ..\ShaderProgram.cpp:
 
 ..\lodepng.cpp:
-
-..\lodepng.h:
 
 ..\main.cpp:

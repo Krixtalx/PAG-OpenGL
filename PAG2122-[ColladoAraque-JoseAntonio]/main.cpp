@@ -59,18 +59,15 @@ void callbackFramebufferSize(GLFWwindow *window, int width, int height) {
 void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mods) {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
-	} else if (key == GLFW_KEY_C && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->creaModeloTriangulo();
 	} else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->eliminaModeloTriangulo();
-	} else if (key == GLFW_KEY_K && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->creaModeloTetraedro();
-	} else if (key == GLFW_KEY_L && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->eliminaModeloTetraedro();
+		PAG::Renderer::getInstancia()->cambiarVisibilidad();
 	} else if (key == GLFW_KEY_N && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->setModo(PAG::wireframe);
+		PAG::Renderer::getInstancia()->cambiarModo();
 	} else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->setModo(PAG::mallaTriangulos);
+		PAG::Renderer::getInstancia()->cambiarModoTextura();
+	} else if (key == GLFW_KEY_TAB && action == GLFW_PRESS) {
+		std::cout << "Modelo activo: " + std::to_string(PAG::Renderer::getInstancia()->cambiarModeloActivo())
+		          << std::endl;
 	} else if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
 		PAG::Renderer::getInstancia()->movimientoCamara("truck", -1.0f * deltaTime);
 	} else if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
@@ -247,12 +244,10 @@ int main() {
 	std::cout
 			<< "Con el clic izquierdo del raton se selecciona el color a cambiar. Por defecto se encuentra el color rojo seleccionado."
 			<< std::endl;
-	std::cout << "Con la tecla C se crea un nuevo modelo triangulo si no hay ninguno creado" << std::endl;
-	std::cout << "Con la tecla B se borra el modelo triangulo que se encuentre creado" << std::endl;
-	std::cout << "Con la tecla K se crea un nuevo modelo tetraedro si no hay ninguno creado" << std::endl;
-	std::cout << "Con la tecla L se borra el modelo tetraedro que se encuentre creado" << std::endl;
-	std::cout << "Con la tecla N establece el modo de dibujado Wireframe" << std::endl;
-	std::cout << "Con la tecla M establece el modo de dibujado Malla de Triangulos" << std::endl;
+	std::cout << "Con la tecla B se alterna al visibilidad del modelo activo" << std::endl;
+	std::cout << "Con la tecla N se alterna el modo de dibujado" << std::endl;
+	std::cout << "Con la tecla M se alterna el uso de texturas" << std::endl;
+	std::cout << "Con la tecla TAB se cambia el modelo activo" << std::endl;
 	std::cout << "Con la tecla W/S se realiza el movimiento truck" << std::endl;
 	std::cout << "Con la tecla A/D se realiza el movimiento dolly" << std::endl;
 	std::cout << "Con la tecla Z/X se realiza el movimiento boom/crane" << std::endl;

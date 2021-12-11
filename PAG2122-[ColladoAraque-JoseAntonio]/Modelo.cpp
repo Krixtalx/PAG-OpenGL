@@ -148,41 +148,67 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, const std::vector<GLuint> &da
 
 /**
  * Función a la que se llama cuando se debe de dibujar el modelo
- * @param modo modo de dibujado a usar
+ * @param tipoLuz Tipo de luz que se esta renderizando actualmente. Es necesario para la activación de las subrutinas del shader
  */
-void PAG::Modelo::dibujarModelo(PAG::modoDibujado modo, glm::mat4 matrizMVP, glm::mat4 matrizMV) {
-	try {
-		matrizMVP = matrizMVP * mModelado;
-		matrizMV = matrizMV * mModelado;
-		PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
-		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
-		PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
-		if (modo == PAG::wireframe) {
-			PAG::ShaderManager::getInstancia()->activarSubrutina(this->shaderProgram, GL_FRAGMENT_SHADER,
-			                                                     "colorDefecto");
-		} else {
-			glm::vec3 ambiente = PAG::MaterialManager::getInstancia()->getMaterial(
-					this->material)->getAmbiente();
-			glm::vec3 difusa = PAG::MaterialManager::getInstancia()->getMaterial(
-					this->material)->getDifuso();
-			glm::vec3 especular = PAG::MaterialManager::getInstancia()->getMaterial(
-					this->material)->getEspecular();
-			GLuint phong = PAG::MaterialManager::getInstancia()->getMaterial(
-					this->material)->getPhong();
-			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ka", ambiente);
-			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Kd", difusa);
-			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ks", especular);
-			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "phong", phong);
+void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::tipoLuz tipoLuz) {
+	if (visible)
+		try {
+			matrizMVP = matrizMVP * mModelado;
+			matrizMV = matrizMV * mModelado;
+			PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
+			std::vector<std::string> nombreUniforms = {"luzElegida", "colorElegido"};
+			if (modo == PAG::wireframe) {
+				std::vector<std::string> nombreSubrutinas = {"colorDefecto", "colorMaterial"};
+				PAG::ShaderManager::getInstancia()->activarMultiplesSubrutinas(this->shaderProgram, GL_FRAGMENT_SHADER,
+				                                                               nombreUniforms, nombreSubrutinas);
+			} else {
+				glm::vec3 ambiente = PAG::MaterialManager::getInstancia()->getMaterial(
+						this->material)->getAmbiente();
+				glm::vec3 difusa = PAG::MaterialManager::getInstancia()->getMaterial(
+						this->material)->getDifuso();
+				glm::vec3 especular = PAG::MaterialManager::getInstancia()->getMaterial(
+						this->material)->getEspecular();
+				GLuint phong = PAG::MaterialManager::getInstancia()->getMaterial(
+						this->material)->getPhong();
+				PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ka", ambiente);
+				PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Kd", difusa);
+				PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "Ks", especular);
+				PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "phong", phong);
+
+				std::vector<std::string> nombreSubrutinas;
+				if (tipoLuz == PAG::tipoLuz::ambiente) {
+					nombreSubrutinas.emplace_back("luzAmbiente");
+				} else if (tipoLuz == PAG::tipoLuz::puntual) {
+					nombreSubrutinas.emplace_back("luzPuntual");
+				} else if (tipoLuz == PAG::tipoLuz::direccional) {
+					nombreSubrutinas.emplace_back("luzDireccional");
+				} else {
+					nombreSubrutinas.emplace_back("luzFoco");
+				}
+				if (usarTexturas &&
+				    MaterialManager::getInstancia()->getMaterial(material)->getIdTextura() != UINT_MAX) {
+					nombreSubrutinas.emplace_back("colorTextura");
+					ShaderManager::getInstancia()->setUniform(shaderProgram, "muestreador", (GLint) 0);
+					glActiveTexture(GL_TEXTURE0);
+					glBindTexture(GL_TEXTURE_2D,
+					              MaterialManager::getInstancia()->getMaterial(material)->getIdTextura());
+				} else
+					nombreSubrutinas.emplace_back("colorMaterial");
+
+				PAG::ShaderManager::getInstancia()->activarMultiplesSubrutinas(this->shaderProgram, GL_FRAGMENT_SHADER,
+				                                                               nombreUniforms, nombreSubrutinas);
+			}
+
+			glBindVertexArray(idVAO);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
+			glPolygonMode(GL_FRONT_AND_BACK, getGLDrawMode(modo));
+			glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
+
+		} catch (std::runtime_error &e) {
+			throw e;
 		}
-
-		glBindVertexArray(idVAO);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
-		glPolygonMode(GL_FRONT_AND_BACK, getGLDrawMode(modo));
-		glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
-
-	} catch (std::runtime_error &e) {
-		throw e;
-	}
 }
 
 /**
@@ -235,10 +261,6 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	                                   {0,      -1,     0},
 	                                   {0,      0,      -1}};
 
-	/*std::vector<GLuint> indices = {0, 9, 3,
-								   1, 6, 11,
-								   4, 10, 7,
-								   2, 5, 8};*/
 	std::vector<GLuint> indices = {0, 3, 9,
 	                               1, 11, 6,
 	                               4, 7, 10,
@@ -335,5 +357,25 @@ void PAG::Modelo::procesarMalla(aiMesh *mesh, const aiScene *scene) {
 	}
 
 	this->nuevoIBO(PAG::mallaTriangulos, ibos[mallaTriangulos], GL_STATIC_DRAW);
+	this->nuevoIBO(PAG::wireframe, ibos[mallaTriangulos], GL_STATIC_DRAW);
+}
+
+void PAG::Modelo::cambiarUsoTextura() {
+	usarTexturas = !usarTexturas;
+}
+
+void PAG::Modelo::cambiarModoDibujado() {
+	if (modo == PAG::mallaTriangulos)
+		modo = PAG::wireframe;
+	else
+		modo = PAG::mallaTriangulos;
+}
+
+PAG::modoDibujado PAG::Modelo::getModo() const {
+	return modo;
+}
+
+void PAG::Modelo::cambiarVisibilidad() {
+	visible = !visible;
 }
 

@@ -33,6 +33,8 @@ namespace PAG {
 		    float gamma, GLuint exponenteBordes);
 
 		void aplicarLuz(const std::string &shader, const glm::mat4 &matriz) const;
+
+		PAG::tipoLuz getTipoLuz() const;
 	};
 }
 
