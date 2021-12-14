@@ -34,7 +34,7 @@ PAG::Renderer::Renderer() {
 		throw e;
 	}
 
-	auto *modelo = new Modelo("DefaultSP", "../vaca.obj", {0, 0, 0}, {-90, 0, 180});
+	auto *modelo = new Modelo("DefaultSP", "../vaca.obj", {0, 0, 0}, {-90, 0, 180}, {1, 1, 1});
 	modelo->setMaterial("Vaca");
 	modelos.push_back(modelo);
 

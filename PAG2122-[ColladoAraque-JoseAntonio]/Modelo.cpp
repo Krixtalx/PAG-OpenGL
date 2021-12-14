@@ -19,13 +19,13 @@
  * @param shaderProgram que se usará para renderizar el modelo
  * @param path ruta de la que se cargará el modelo
  */
-PAG::Modelo::Modelo(std::string shaderProgram, const std::string &path, glm::vec3 pos, glm::vec3 rot) :
+PAG::Modelo::Modelo(std::string shaderProgram, const std::string &path, glm::vec3 pos, glm::vec3 rot, glm::vec3 sca) :
 		shaderProgram(std::move(shaderProgram)) {
-
-	mModelado = glm::rotate(glm::translate(pos), glm::radians(rot.x), {1, 0, 0});
+	mModelado = glm::scale(glm::identity<glm::mat4>(), sca);
+	mModelado = glm::rotate(mModelado, glm::radians(rot.x), {1, 0, 0});
 	mModelado = glm::rotate(mModelado, glm::radians(rot.y), {0, 1, 0});
 	mModelado = glm::rotate(mModelado, glm::radians(rot.z), {0, 0, 1});
-
+	mModelado = glm::translate(mModelado, pos);
 	//Creamos nuestro VAO
 	glGenVertexArrays(1, &idVAO);
 	glBindVertexArray(idVAO);

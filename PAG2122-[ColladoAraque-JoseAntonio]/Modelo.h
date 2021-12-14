@@ -40,7 +40,7 @@ namespace PAG {
 	public:
 
 		Modelo(std::string shaderProgram, const std::string &path = "NULL", glm::vec3 pos = {0, 0, 0},
-		       glm::vec3 rot = {0, 0, 0});
+		       glm::vec3 rot = {0, 0, 0}, glm::vec3 sca = {1, 1, 1});
 
 		Modelo(Modelo &orig);
 
