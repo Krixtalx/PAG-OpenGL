@@ -6,6 +6,8 @@
 #include "ShaderManager.h"
 #include "MaterialManager.h"
 #include <stdexcept>
+#include <glm/gtx/transform.hpp>
+#include <iostream>
 
 
 PAG::Renderer *PAG::Renderer::instancia = nullptr;
@@ -21,6 +23,12 @@ PAG::Renderer::Renderer() {
 		PAG::ShaderManager::getInstancia()->addShaderToSP("VertexShader", "DefaultSP");
 		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShader", "DefaultSP");
 
+		PAG::ShaderManager::getInstancia()->nuevoShader("VertexShaderMS", GL_VERTEX_SHADER, "../pag-vs-ms.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShader("FragmentShaderMS", GL_FRAGMENT_SHADER, "../pag-fs-ms.glsl");
+		PAG::ShaderManager::getInstancia()->nuevoShaderProgram("MapaSombrasSP");
+		PAG::ShaderManager::getInstancia()->addShaderToSP("VertexShaderMS", "MapaSombrasSP");
+		PAG::ShaderManager::getInstancia()->addShaderToSP("FragmentShaderMS", "MapaSombrasSP");
+
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("DefaultMat",
 		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
 		                                                                 32));
@@ -29,7 +37,7 @@ PAG::Renderer::Renderer() {
 		                                                                 32, "../spot_texture.png"));
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("Dado",
 		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
-		                                                                 32, "../dado.png"));
+		                                                                 32, "../dado.png", "../NormalMap.png"));
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
@@ -38,7 +46,7 @@ PAG::Renderer::Renderer() {
 	modelo->setMaterial("Vaca");
 	modelos.push_back(modelo);
 
-	modelo = new Modelo("DefaultSP", "../dado.obj", {2, 0, 0}, {0, 0, 0});
+	modelo = new Modelo("DefaultSP", "../dado.obj", {0, 1, -1}, {0, 0, 0});
 	modelo->setMaterial("Dado");
 	modelos.push_back(modelo);
 
@@ -46,10 +54,10 @@ PAG::Renderer::Renderer() {
 	creaModeloTriangulo();
 
 	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
-	luces.emplace_back(glm::vec3(0, 0.3, 0), glm::vec3(0, 0.5, 0), glm::vec3(1, 1, 1), true);
-	luces.emplace_back(glm::vec3(0.3, 0, 0), glm::vec3(0.5, 0, 0), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 0, 0.3), glm::vec3(0, 0, 0.5), glm::vec3(0.25, 0.25, -1), glm::vec3(0, 0, 1), 40.0f,
-	                   16);
+	luces.emplace_back(glm::vec3(0, 0.45, 0), glm::vec3(0, 0.8, 0), glm::vec3(3, 1, 1), true);
+	luces.emplace_back(glm::vec3(0.45, 0, 0), glm::vec3(0.8, 0, 0), glm::vec3(1, 0, 0), false);
+	luces.emplace_back(glm::vec3(0, 0, 0.65), glm::vec3(0, 0, 1), glm::vec3(0, 0.5, -2), glm::vec3(0, 0, 1),
+	                   40.0f, 32);
 }
 
 /**
@@ -83,19 +91,78 @@ PAG::Renderer *PAG::Renderer::getInstancia() {
  * Activa el Antialiasing MultiSampling (MSAA)
  */
 void PAG::Renderer::inicializaOpenGL() {
-
 	glClearColor(rojoFondo, verdeFondo, azulFondo, 1);
 	activarUtilidadGL(GL_DEPTH_TEST);
 	activarUtilidadGL(GL_MULTISAMPLE);
 	activarUtilidadGL(GL_DEBUG_OUTPUT);
 	activarUtilidadGL(GL_BLEND);
 	glDepthFunc(GL_LEQUAL);
+	glGenFramebuffers(1, &fboSombras);
 }
 
 /**
  * Método para hacer el refresco de la escena
  */
-void PAG::Renderer::refrescar() const {
+void PAG::Renderer::refrescar() {
+	//Shadowmap
+	if (actualizarSombras) {
+		for (const auto &luz: luces) {
+			if (luz.emiteSombras()) {
+				GLuint idMapaSombras = luz.getIdMapaSombras();
+				glBindFramebuffer(GL_FRAMEBUFFER, fboSombras);
+				glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D,
+				                       idMapaSombras, 0);
+				glReadBuffer(GL_NONE); // NO necesitamos información de color; sólo la
+				glDrawBuffer(GL_NONE); // profundidad
+				GLenum estado = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+				if (estado != GL_FRAMEBUFFER_COMPLETE) {
+					throw std::runtime_error(
+							"[Renderer::refrescar]: Se ha intentado usar fboSombras antes de que este listo -> " +
+							std::to_string(estado));
+				}
+
+				glActiveTexture(GL_TEXTURE0); // Activamos unidad de textura
+				glBindTexture(GL_TEXTURE_2D, idMapaSombras); // Asociamos la textura del FBO
+
+				// Sólo borramos profundidad. Ignoramos color
+				glClear(GL_DEPTH_BUFFER_BIT);
+				glViewport(0, 0, PAG::anchoMS, PAG::altoMS);
+				glEnable(GL_DEPTH_TEST);
+				glDepthFunc(GL_LESS);
+
+				// Para evitar el “shadow acne”, eliminamos caras delanteras
+				glEnable(GL_CULL_FACE);
+				glCullFace(GL_FRONT);
+
+				glm::mat4 matrizVP = luz.generarMatrizVPMS();
+
+				for (Modelo *modelo: modelos) {
+					if (modelo)
+						try {
+							glm::mat4 matrizMVP = matrizVP * modelo->getMModelado();
+							PAG::ShaderManager::getInstancia()->activarSP("MapaSombrasSP");
+							PAG::ShaderManager::getInstancia()->setUniform("MapaSombrasSP", "matrizModVisProy",
+							                                               matrizMVP);
+							modelo->dibujarModeloParaSombras();
+						} catch (std::runtime_error &e) {
+							throw e;
+						}
+				}
+			}
+		}
+		actualizarSombras = false;
+
+		//Lo dejamos todo como estaba antes
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		glViewport(0, 0, PAG::anchoVentanaPorDefecto, PAG::altoVentanaPorDefecto);
+		glDepthFunc(GL_LEQUAL);
+		glCullFace(GL_BACK);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+	}
+
+
+	//Multipasada con luces
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glm::mat4 matrizMVP = camara.matrizMVP();
 	glm::mat4 matrizMV = camara.matrizMV();
@@ -104,9 +171,16 @@ void PAG::Renderer::refrescar() const {
 		for (Modelo *modelo: modelos) {
 			if (modelo)
 				try {
+					auto matrizMS = glm::scale(glm::vec3(.5, .5, .5));
+					matrizMS[3][0] = matrizMS[3][1] = matrizMS[3][2] = 0.5;
+
+					if (luces[i].emiteSombras())
+						matrizMS *= luces[i].generarMatrizVPMS();
+
 					if (modelo->getModo() != PAG::wireframe)
 						luces[i].aplicarLuz(modelo->getShaderProgram(), matrizMV);
-					modelo->dibujarModelo(matrizMVP, matrizMV, luces[i].getTipoLuz());
+
+					modelo->dibujarModelo(matrizMVP, matrizMV, matrizMS, luces[i].getTipoLuz());
 				} catch (std::runtime_error &e) {
 					throw e;
 				}
@@ -163,6 +237,8 @@ void PAG::Renderer::setViewport(GLint x, GLint y, GLsizei width, GLsizei height)
 	glViewport(x, y, width, height);
 	camara.setAlto(height);
 	camara.setAncho(width);
+	PAG::anchoVentanaPorDefecto = width;
+	PAG::altoVentanaPorDefecto = height;
 }
 
 /**
@@ -193,7 +269,7 @@ void PAG::Renderer::creaModeloTriangulo() {
  * Método encargado de crear un modelo. Actualmente solo crea un tetraedro.
  */
 void PAG::Renderer::creaModeloTetraedro() {
-	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1.1f, 0.5f, 0}, {0, 0, 0});
+	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1.3f, 0.3f, 0}, {0, 0, 0});
 	modelo->cargaModeloTetraedro();
 	modelo->setMaterial("DefaultMat");
 	modelos.push_back(modelo);
@@ -232,7 +308,7 @@ PAG::Camara &PAG::Renderer::getCamara() {
 	return camara;
 }
 
-void PAG::Renderer::cambiarModo() {
+void PAG::Renderer::cambiarModoDibujado() {
 	modelos[modeloActivo]->cambiarModoDibujado();
 }
 
@@ -267,4 +343,9 @@ void PAG::Renderer::cambiarModoTextura() {
 
 void PAG::Renderer::cambiarVisibilidad() {
 	modelos[modeloActivo]->cambiarVisibilidad();
+	actualizarSombras = true;
+}
+
+void PAG::Renderer::cambiarNormalMap() {
+	modelos[modeloActivo]->cambiarUsoNormalMap();
 }

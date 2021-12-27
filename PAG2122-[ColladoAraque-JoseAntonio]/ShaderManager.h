@@ -10,6 +10,7 @@
 #include "ShaderProgram.h"
 
 #include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/string_cast.hpp>
 
 namespace PAG {
 	class ShaderManager {

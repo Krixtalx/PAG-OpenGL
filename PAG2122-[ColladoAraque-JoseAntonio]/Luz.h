@@ -24,6 +24,8 @@ namespace PAG {
 		GLuint exponenteBordes{};
 		PAG::tipoLuz tipoLuz;
 
+		GLuint idMapaSombras = UINT_MAX;
+
 	public:
 		Luz(const glm::vec3 &ia);
 
@@ -35,6 +37,14 @@ namespace PAG {
 		void aplicarLuz(const std::string &shader, const glm::mat4 &matriz) const;
 
 		PAG::tipoLuz getTipoLuz() const;
+
+		void crearMapaSombras();
+
+		bool emiteSombras() const;
+
+		glm::mat4 generarMatrizVPMS() const;
+
+		GLuint getIdMapaSombras() const;
 	};
 }
 

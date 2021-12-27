@@ -6,9 +6,14 @@
 #include <stdexcept>
 #include "Material.h"
 #include "lodepng.h"
+#include "RenderOptions.h"
 
 PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong)
-		: ambiente(ambiente), difuso(difuso), especular(especular), phong(phong), idTextura(UINT_MAX) {}
+		: ambiente(ambiente), difuso(difuso), especular(especular), phong(phong) {
+	for (unsigned i = 0; i < PAG::numTiposTextura(); ++i) {
+		idTextura.push_back(UINT_MAX);
+	}
+}
 
 /**
  * Constructor parametrizado de Material.
@@ -16,11 +21,57 @@ PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, cons
  * @param difuso valor difuso del material
  * @param especular valor especular del material
  * @param phong exponente especular del material
- * @param path ruta en la que se encuentra la textura a cargar
+ * @param rutaTextura ruta en la que se encuentra la textura a cargar
  */
 PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong,
-                        std::string path) : ambiente(ambiente), difuso(difuso), especular(especular), phong(phong),
-                                            idTextura(UINT_MAX) {
+                        const std::string &rutaTextura) : ambiente(ambiente),
+                                                          difuso(difuso),
+                                                          especular(especular),
+                                                          phong(phong) {
+	for (unsigned i = 0; i < PAG::numTiposTextura(); ++i) {
+		idTextura.push_back(UINT_MAX);
+	}
+
+	idTextura[PAG::texturaColor] = cargarTextura(rutaTextura);
+}
+
+
+/**
+ * Constructor parametrizado de Material.
+ * @param ambiente valor ambiente del material
+ * @param difuso valor difuso del material
+ * @param especular valor especular del material
+ * @param phong exponente especular del material
+ * @param rutaTextura ruta en la que se encuentra la imagen que utilizaremos como textura
+ * @param rutaNormalMap ruta en la que se encuentra la imagen que utilizaremos como normalMap
+ */
+PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong,
+                        const std::string &rutaTextura, const std::string &rutaNormalMap) : ambiente(ambiente),
+                                                                                            difuso(difuso),
+                                                                                            especular(especular),
+                                                                                            phong(phong) {
+
+	for (unsigned i = 0; i < PAG::numTiposTextura(); ++i) {
+		idTextura.push_back(UINT_MAX);
+	}
+
+	idTextura[PAG::texturaColor] = cargarTextura(rutaTextura);
+	idTextura[PAG::normalMap] = cargarTextura(rutaNormalMap);
+
+}
+
+PAG::Material::~Material() {
+	for (unsigned i = 0; i < PAG::numTiposTextura(); ++i) {
+		glDeleteTextures(1, &idTextura[i]);
+	}
+}
+
+/**
+ * Carga la imagen que se encuentre en el path pasado como parámetro y la incluye como textura en el contexto de OpenGL
+ * @param path Ruta de la imagen
+ * @return Id asignado por OpenGL a la textura
+ */
+unsigned int PAG::Material::cargarTextura(const std::string &path) {
 	std::vector<unsigned char> imagen; // Los píxeles de la imagen
 	unsigned ancho, alto;
 	unsigned error = lodepng::decode(imagen, ancho, alto, path);
@@ -46,8 +97,9 @@ PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, cons
 			++bot;
 		}
 	}
-	glGenTextures(1, &idTextura);
-	glBindTexture(GL_TEXTURE_2D, idTextura);
+	GLuint tmpIdTextura;
+	glGenTextures(1, &tmpIdTextura);
+	glBindTexture(GL_TEXTURE_2D, tmpIdTextura);
 	// Cómo resolver la minificación. En este caso, le decimos que utilice mipmaps, y que aplique interpolación lineal
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	// Cómo resolver la magnificación. En este caso, le decimos que utilice mipmaps, y que aplique interpolación lineal
@@ -59,11 +111,9 @@ PAG::Material::Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, cons
 	// Finalmente, pasamos la textura a OpenGL
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ancho, alto, 0, GL_RGBA,
 	             GL_UNSIGNED_BYTE, imagen.data());
-	glGenerateTextureMipmap(idTextura);
-}
+	glGenerateTextureMipmap(tmpIdTextura);
 
-PAG::Material::~Material() {
-	glDeleteTextures(1, &idTextura);
+	return tmpIdTextura;
 }
 
 const glm::vec3 &PAG::Material::getAmbiente() const {
@@ -82,6 +132,11 @@ GLuint PAG::Material::getPhong() const {
 	return phong;
 }
 
-GLuint PAG::Material::getIdTextura() const {
-	return idTextura;
+/**
+ * Devuelve el id de OpenGL del tipo de textura que se requiera
+ * @param tipo tipo de textura
+ * @return id de OpenGL de la textura. Puede ser UINT_MAX en caso de que no este cargada.
+ */
+GLuint PAG::Material::getIdTextura(PAG::tipoTextura tipo) const {
+	return idTextura[tipo];
 }

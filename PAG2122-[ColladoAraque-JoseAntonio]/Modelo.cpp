@@ -13,6 +13,7 @@
 #include <stdexcept>
 #include <climits>
 #include <glm/gtx/transform.hpp>
+#include <iostream>
 
 /**
  * Constructor parametrizado
@@ -150,17 +151,21 @@ void PAG::Modelo::nuevoIBO(PAG::modoDibujado modo, const std::vector<GLuint> &da
  * Función a la que se llama cuando se debe de dibujar el modelo
  * @param tipoLuz Tipo de luz que se esta renderizando actualmente. Es necesario para la activación de las subrutinas del shader
  */
-void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::tipoLuz tipoLuz) {
+void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::mat4 matrizMS, PAG::tipoLuz tipoLuz) {
 	if (visible)
 		try {
 			matrizMVP = matrizMVP * mModelado;
 			matrizMV = matrizMV * mModelado;
+			matrizMS = matrizMS * mModelado;
+			
 			PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
-			std::vector<std::string> nombreUniforms = {"luzElegida", "colorElegido"};
+			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMS", matrizMS);
+			std::vector<std::string> nombreUniforms = {"luzElegida", "colorElegido", "normalMap"};
+
 			if (modo == PAG::wireframe) {
-				std::vector<std::string> nombreSubrutinas = {"colorDefecto", "colorMaterial"};
+				std::vector<std::string> nombreSubrutinas = {"colorDefecto", "colorMaterial", "noUsarNormalMap"};
 				PAG::ShaderManager::getInstancia()->activarMultiplesSubrutinas(this->shaderProgram, GL_FRAGMENT_SHADER,
 				                                                               nombreUniforms, nombreSubrutinas);
 			} else {
@@ -187,15 +192,31 @@ void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::ti
 				} else {
 					nombreSubrutinas.emplace_back("luzFoco");
 				}
-				if (usarTexturas &&
-				    MaterialManager::getInstancia()->getMaterial(material)->getIdTextura() != UINT_MAX) {
+
+				GLuint idTextura = MaterialManager::getInstancia()->getMaterial(material)->getIdTextura(
+						PAG::texturaColor);
+				GLuint idNormalMap = MaterialManager::getInstancia()->getMaterial(material)->getIdTextura(
+						PAG::normalMap);
+				if (usarTexturas && usarNormalMap && idTextura != UINT_MAX && idNormalMap != UINT_MAX) {
 					nombreSubrutinas.emplace_back("colorTextura");
+					nombreSubrutinas.emplace_back("siUsarNormalMap");
 					ShaderManager::getInstancia()->setUniform(shaderProgram, "muestreador", (GLint) 0);
 					glActiveTexture(GL_TEXTURE0);
-					glBindTexture(GL_TEXTURE_2D,
-					              MaterialManager::getInstancia()->getMaterial(material)->getIdTextura());
-				} else
+					glBindTexture(GL_TEXTURE_2D, idTextura);
+
+					ShaderManager::getInstancia()->setUniform(shaderProgram, "muestreadorNormalMap", (GLint) 1);
+					glActiveTexture(GL_TEXTURE1);
+					glBindTexture(GL_TEXTURE_2D, idNormalMap);
+				} else if (usarTexturas && idTextura != UINT_MAX) {
+					nombreSubrutinas.emplace_back("colorTextura");
+					nombreSubrutinas.emplace_back("noUsarNormalMap");
+					ShaderManager::getInstancia()->setUniform(shaderProgram, "muestreador", (GLint) 0);
+					glActiveTexture(GL_TEXTURE0);
+					glBindTexture(GL_TEXTURE_2D, idTextura);
+				} else {
 					nombreSubrutinas.emplace_back("colorMaterial");
+					nombreSubrutinas.emplace_back("noUsarNormalMap");
+				}
 
 				PAG::ShaderManager::getInstancia()->activarMultiplesSubrutinas(this->shaderProgram, GL_FRAGMENT_SHADER,
 				                                                               nombreUniforms, nombreSubrutinas);
@@ -210,6 +231,19 @@ void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::ti
 			throw e;
 		}
 }
+
+/**
+ * Dibuja el modelo tal y como se requiere para el calculo del mapa de sombras
+ */
+void PAG::Modelo::dibujarModeloParaSombras() {
+	if (visible) {
+		glBindVertexArray(idVAO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
+		glPolygonMode(GL_FRONT_AND_BACK, getGLDrawMode(modo));
+		glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
+	}
+}
+
 
 /**
  * Crea el modelo de un triangulo
@@ -261,10 +295,10 @@ void PAG::Modelo::cargaModeloTetraedro() {
 	                                   {0,      -1,     0},
 	                                   {0,      0,      -1}};
 
-	std::vector<GLuint> indices = {0, 3, 9,
-	                               1, 11, 6,
-	                               4, 7, 10,
-	                               2, 8, 5};
+	std::vector<GLuint> indices = {0, 9, 3,
+	                               1, 6, 11,
+	                               4, 10, 7,
+	                               2, 5, 8};
 	this->nuevoVBO(PAG::posicion, vertices, GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::normal, normales, GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::mallaTriangulos, indices, GL_STATIC_DRAW);
@@ -300,10 +334,14 @@ const std::string &PAG::Modelo::getShaderProgram() const {
 	return shaderProgram;
 }
 
+/**
+ * Método para cargar un modelo 3D
+ * @param path ruta en la que se encuentra el modelo
+ */
 void PAG::Modelo::cargaModelo(const std::string &path) {
 	Assimp::Importer import;
 	const aiScene *scene = import.ReadFile(path, aiProcess_JoinIdenticalVertices | aiProcess_Triangulate |
-	                                             aiProcess_GenSmoothNormals);
+	                                             aiProcess_GenSmoothNormals | aiProcess_CalcTangentSpace);
 
 	if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) {
 		throw std::runtime_error("[Modelo::cargaModelo]: Error en la carga del modelo con Assimp");
@@ -312,6 +350,11 @@ void PAG::Modelo::cargaModelo(const std::string &path) {
 	procesarNodo(scene->mRootNode, scene);
 }
 
+/**
+ * Método que procesa los distintos nodos del modelo que carga ASIMP
+ * @param node nodo de ASIMP
+ * @param scene escena de ASIMP
+ */
 void PAG::Modelo::procesarNodo(aiNode *node, const aiScene *scene) {
 	// process all the node's meshes (if any)
 	for (unsigned int i = 0; i < node->mNumMeshes; i++) {
@@ -324,38 +367,69 @@ void PAG::Modelo::procesarNodo(aiNode *node, const aiScene *scene) {
 	}
 }
 
+/**
+ * Método que procesa la malla cargada
+ * @param mesh malla de ASIMP
+ * @param scene escena de ASIMP
+ */
 void PAG::Modelo::procesarMalla(aiMesh *mesh, const aiScene *scene) {
 	glm::vec3 vec;
 	glm::vec2 vecTex;
 	for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
+		//Vertices
 		vec.x = mesh->mVertices[i].x;
 		vec.y = mesh->mVertices[i].y;
 		vec.z = mesh->mVertices[i].z;
 		vbos[PAG::posicion].push_back(vec);
 
+		//Normales
 		vec.x = mesh->mNormals[i].x;
 		vec.y = mesh->mNormals[i].y;
 		vec.z = mesh->mNormals[i].z;
 		vbos[PAG::normal].push_back(vec);
 
 		if (mesh->mTextureCoords[0]) {
+			//Coordenadas de textura
 			vecTex.x = mesh->mTextureCoords[0][i].x;
 			vecTex.y = mesh->mTextureCoords[0][i].y;
 		} else {
 			vecTex = {0, 0};
 		}
 		textura.push_back(vecTex);
+
+		if (mesh->mTangents) // Si hay tangentes, también habrá bitangentes
+		{
+			//Tangentes
+			glm::vec3 t;
+			t.x = mesh->mTangents[i].x;
+			t.y = mesh->mTangents[i].y;
+			t.z = mesh->mTangents[i].z;
+			vbos[PAG::tangente].push_back(t);
+
+			//Bitangentes
+			glm::vec3 bt;
+			bt.x = mesh->mBitangents[i].x;
+			bt.y = mesh->mBitangents[i].y;
+			bt.z = mesh->mBitangents[i].z;
+			vbos[PAG::bitangente].push_back(bt);
+		}
+
 	}
+	//Creamos los VBOs
 	this->nuevoVBO(PAG::posicion, vbos[PAG::posicion], GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::normal, vbos[PAG::normal], GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::tangente, vbos[PAG::tangente], GL_STATIC_DRAW);
+	this->nuevoVBO(PAG::bitangente, vbos[PAG::bitangente], GL_STATIC_DRAW);
 	this->nuevoVBO(PAG::textura, textura, GL_STATIC_DRAW);
 
+	//Cargamos las caras del modelo
 	for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
 		aiFace face = mesh->mFaces[i];
 		for (unsigned int j = 0; j < face.mNumIndices; j++)
 			ibos[PAG::mallaTriangulos].push_back(face.mIndices[j]);
 	}
 
+	//Creamos los IBOs
 	this->nuevoIBO(PAG::mallaTriangulos, ibos[mallaTriangulos], GL_STATIC_DRAW);
 	this->nuevoIBO(PAG::wireframe, ibos[mallaTriangulos], GL_STATIC_DRAW);
 }
@@ -379,3 +453,10 @@ void PAG::Modelo::cambiarVisibilidad() {
 	visible = !visible;
 }
 
+void PAG::Modelo::cambiarUsoNormalMap() {
+	usarNormalMap = !usarNormalMap;
+}
+
+const glm::mat4 &PAG::Modelo::getMModelado() const {
+	return mModelado;
+}

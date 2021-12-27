@@ -19,12 +19,24 @@ namespace PAG {
 	enum paramShader {
 		posicion,
 		normal,
-		textura
+		tangente,
+		bitangente,
+		textura,
+		mapaNormal
 	};
 
 	static unsigned numParamShader() {
-		return textura + 1;
+		return mapaNormal + 1;
 	};
+
+	enum tipoTextura {
+		texturaColor,
+		normalMap
+	};
+
+	static unsigned numTiposTextura() {
+		return normalMap + 1;
+	}
 
 	enum class tipoLuz {
 		ambiente,
@@ -35,6 +47,9 @@ namespace PAG {
 
 	static unsigned anchoVentanaPorDefecto = 1024;
 	static unsigned altoVentanaPorDefecto = 576;
+
+	static unsigned anchoMS = 1024;
+	static unsigned altoMS = 1024;
 
 };
 

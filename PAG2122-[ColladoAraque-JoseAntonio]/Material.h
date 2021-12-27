@@ -8,6 +8,8 @@
 #include <GL/glew.h>
 #include <glm/vec3.hpp>
 #include <string>
+#include "RenderOptions.h"
+#include <vector>
 
 namespace PAG {
 	class Material {
@@ -16,12 +18,18 @@ namespace PAG {
 		glm::vec3 difuso;
 		glm::vec3 especular;
 		GLuint phong;
-		GLuint idTextura;
+		std::vector<GLuint> idTextura;
+
+		GLuint cargarTextura(const std::string &path);
+
 	public:
 		Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong);
 
 		Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong,
-		         std::string path);
+		         const std::string &rutaTextura);
+
+		Material(const glm::vec3 &ambiente, const glm::vec3 &difuso, const glm::vec3 &especular, GLuint phong,
+		         const std::string &rutaTextura, const std::string &rutaNormalMap);
 
 		~Material();
 
@@ -33,7 +41,7 @@ namespace PAG {
 
 		GLuint getPhong() const;
 
-		GLuint getIdTextura() const;
+		GLuint getIdTextura(PAG::tipoTextura tipo) const;
 	};
 }
 

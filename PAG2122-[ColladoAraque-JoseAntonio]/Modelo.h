@@ -26,6 +26,7 @@ namespace PAG {
 		std::string material;
 		glm::mat4 mModelado{};
 		PAG::modoDibujado modo = PAG::mallaTriangulos;
+		bool usarNormalMap = true;
 		bool usarTexturas = true;
 		bool visible = true;
 
@@ -54,7 +55,9 @@ namespace PAG {
 
 		void setMaterial(const std::string &material);
 
-		void dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, PAG::tipoLuz tipoLuz);
+		void dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::mat4 matrizMS, PAG::tipoLuz tipoLuz);
+
+		void dibujarModeloParaSombras();
 
 		void cargaModeloTriangulo();
 
@@ -64,11 +67,15 @@ namespace PAG {
 
 		void cambiarModoDibujado();
 
+		void cambiarUsoNormalMap();
+
 		void cambiarUsoTextura();
 
 		void cambiarVisibilidad();
 
 		PAG::modoDibujado getModo() const;
+
+		const glm::mat4 &getMModelado() const;
 	};
 }
 

@@ -38,6 +38,9 @@ namespace PAG {
 
 		PAG::Camara camara;
 
+		GLuint fboSombras = UINT_MAX;
+		bool actualizarSombras = true;
+
 	public:
 		virtual ~Renderer();
 
@@ -45,7 +48,7 @@ namespace PAG {
 
 		void inicializaOpenGL();
 
-		void refrescar() const;
+		void refrescar();
 
 		void setColorFondo(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
@@ -79,11 +82,13 @@ namespace PAG {
 
 		Camara &getCamara();
 
-		void cambiarModo();
+		void cambiarModoDibujado();
 
 		unsigned cambiarModeloActivo();
 
 		void cambiarModoTextura();
+
+		void cambiarNormalMap();
 
 		void cambiarVisibilidad();
 	};

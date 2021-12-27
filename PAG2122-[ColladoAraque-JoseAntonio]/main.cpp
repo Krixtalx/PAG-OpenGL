@@ -62,9 +62,11 @@ void callbackTecla(GLFWwindow *window, int key, int scancode, int action, int mo
 	} else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->cambiarVisibilidad();
 	} else if (key == GLFW_KEY_N && action == GLFW_PRESS) {
-		PAG::Renderer::getInstancia()->cambiarModo();
+		PAG::Renderer::getInstancia()->cambiarModoDibujado();
 	} else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
 		PAG::Renderer::getInstancia()->cambiarModoTextura();
+	} else if (key == GLFW_KEY_V && action == GLFW_PRESS) {
+		PAG::Renderer::getInstancia()->cambiarNormalMap();
 	} else if (key == GLFW_KEY_TAB && action == GLFW_PRESS) {
 		std::cout << "Modelo activo: " + std::to_string(PAG::Renderer::getInstancia()->cambiarModeloActivo())
 		          << std::endl;
@@ -247,6 +249,7 @@ int main() {
 	std::cout << "Con la tecla B se alterna al visibilidad del modelo activo" << std::endl;
 	std::cout << "Con la tecla N se alterna el modo de dibujado" << std::endl;
 	std::cout << "Con la tecla M se alterna el uso de texturas" << std::endl;
+	std::cout << "Con la tecla V se alterna el uso de normal map" << std::endl;
 	std::cout << "Con la tecla TAB se cambia el modelo activo" << std::endl;
 	std::cout << "Con la tecla W/S se realiza el movimiento truck" << std::endl;
 	std::cout << "Con la tecla A/D se realiza el movimiento dolly" << std::endl;

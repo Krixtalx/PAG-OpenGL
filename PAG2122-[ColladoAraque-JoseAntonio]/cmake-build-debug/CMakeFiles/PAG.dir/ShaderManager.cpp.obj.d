@@ -278,3 +278,38 @@ C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/vector_int1_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/vector_uint1.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/vector_uint1_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/type_ptr.inl
+C:/vcpkg/installed/x86-windows/include/glm/gtx/string_cast.hpp
+C:/vcpkg/installed/x86-windows/include/glm/gtx/../glm.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/_fixes.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cassert
+C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/assert.h
+C:/vcpkg/installed/x86-windows/include/glm/fwd.hpp
+C:/vcpkg/installed/x86-windows/include/glm/packing.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/func_packing.inl
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.inl
+C:/vcpkg/installed/x86-windows/include/glm/integer.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/func_integer.inl
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/intrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/setjmp.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/immintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/wmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/nmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/smmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/tmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/pmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/emmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/xmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/zmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/ammintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mm3dnow.h
+C:/vcpkg/installed/x86-windows/include/glm/gtx/../gtc/type_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/gtc/type_precision.inl
+C:/vcpkg/installed/x86-windows/include/glm/gtx/../gtx/dual_quaternion.hpp
+C:/vcpkg/installed/x86-windows/include/glm/gtx/dual_quaternion.inl
+C:/vcpkg/installed/x86-windows/include/glm/gtx/string_cast.inl
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cstdarg
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/stdarg.h
