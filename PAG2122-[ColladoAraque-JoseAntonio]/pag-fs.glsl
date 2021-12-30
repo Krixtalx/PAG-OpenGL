@@ -44,6 +44,13 @@ subroutine uniform usarNormalMap normalMap;
 subroutine vec3 calcularLuz();
 subroutine uniform calcularLuz luzElegida;
 
+float atenuacionDistancia(){
+    float distancia = distance(usablePosLuz, usablePos);
+    float distanciaCuadrado = pow(distancia, 2);
+    float factor = min(1/(0.01f + 0.1f * distancia + 0.2f * distanciaCuadrado), 1);
+    return factor;
+}
+
 //----- Subrutinas color material o textura --------
 subroutine (colorMoT)
 void colorTextura(){
@@ -100,7 +107,7 @@ vec3 luzPuntual()
     vec3 difusa = (Id * usableKd * max(dot(l, n), 0.0));
     vec3 especular = (Is * Ks * pow(max(dot(r, v), 0.0), phong));
 
-    return difusa + especular;
+    return atenuacionDistancia() * (difusa + especular);
 }
 
 subroutine (calcularLuz)
@@ -138,7 +145,7 @@ vec3 luzFoco ()
 
     float sombra = textureProj(muestreadorSombra, entrada.coordenadasSombra);
 
-    return sombra * spotFactor * (difusa + especular);
+    return atenuacionDistancia() * sombra * spotFactor * (difusa + especular);
 }
 
 void main ()

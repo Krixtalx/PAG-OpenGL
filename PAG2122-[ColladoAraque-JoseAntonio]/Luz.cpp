@@ -3,7 +3,6 @@
 //
 
 #include <stdexcept>
-#include <iostream>
 #include "Luz.h"
 #include "ShaderManager.h"
 
@@ -11,7 +10,7 @@
  * Constructor parametrizado para una luz ambiente
  * @param ia color ambiente de la luz
  */
-PAG::Luz::Luz(const glm::vec3 &ia) : ia(ia), tipoLuz(PAG::tipoLuz::ambiente) {}
+PAG::Luz::Luz(const glm::vec3 &ia) : ia(ia), tipoLuz(PAG::tipoLuz::ambiente) { inicializarMapaSombras(); }
 
 
 /**
@@ -29,8 +28,9 @@ PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicio
 	} else {
 		direccion = posicionOdireccion;
 		tipoLuz = PAG::tipoLuz::direccional;
-		crearMapaSombras();
+
 	}
+	inicializarMapaSombras();
 }
 
 /**
@@ -47,7 +47,7 @@ PAG::Luz::Luz(const glm::vec3 &id, const glm::vec3 &is, const glm::vec3 &posicio
                                                      exponenteBordes(exponenteBordes),
                                                      tipoLuz(PAG::tipoLuz::foco) {
 	this->gamma = glm::radians(gamma);
-	crearMapaSombras();
+	inicializarMapaSombras();
 }
 
 void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) const {
@@ -63,9 +63,6 @@ void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) co
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "dirLuz", glm::normalize(glm::vec3(
 				glm::transpose(glm::inverse(matriz)) * glm::vec4(direccion, 0))));
-		ShaderManager::getInstancia()->setUniform(shader, "muestreadorSombra", (GLint) 2);
-		glActiveTexture(GL_TEXTURE2);
-		glBindTexture(GL_TEXTURE_2D, idMapaSombras);
 	} else if (this->tipoLuz == PAG::tipoLuz::foco) {
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Id", id);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "Is", is);
@@ -74,22 +71,32 @@ void PAG::Luz::aplicarLuz(const std::string &shader, const glm::mat4 &matriz) co
 				glm::transpose(glm::inverse(matriz)) * glm::vec4(direccion, 0))));
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "spotAngle", gamma);
 		PAG::ShaderManager::getInstancia()->setUniform(shader, "expBordes", exponenteBordes);
-		ShaderManager::getInstancia()->setUniform(shader, "muestreadorSombra", (GLint) 2);
-		glActiveTexture(GL_TEXTURE2);
-		glBindTexture(GL_TEXTURE_2D, idMapaSombras);
 	}
+	//Activamos el muestrador aunque no se use mapa de sombras para evitar undefined behaviours de OpenGL.
+	//https://stackoverflow.com/a/45203667
+	ShaderManager::getInstancia()->setUniform(shader, "muestreadorSombra", (GLint) 2);
+	glActiveTexture(GL_TEXTURE2);
+	glBindTexture(GL_TEXTURE_2D, idMapaSombras);
 }
 
 /**
  * Inicializa los elementos propios de la luz para crear el mapa de sombras (Generar el id de textura y configurarla)
  */
-void PAG::Luz::crearMapaSombras() {
+void PAG::Luz::inicializarMapaSombras() {
 	glGenTextures(1, &idMapaSombras);
 	GLfloat borde[] = {1.0, 1.0, 1.0, 1.0};
 
+	//Generamos un mapa de sombras para cada luz, aunque realmente no lo use.
+	// Esto se hace para evitar undefined behaviours de OpenGL por no asignar una textura al muestreador de sombras
+	//https://stackoverflow.com/a/45203667
 	glBindTexture(GL_TEXTURE_2D, idMapaSombras);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32, PAG::anchoMS, PAG::altoMS, 0,
-	             GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, nullptr);
+	if (tipoLuz == tipoLuz::direccional || tipoLuz == tipoLuz::foco)
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32, PAG::anchoMS, PAG::altoMS, 0,
+		             GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, nullptr);
+	else //Hacemos que la textura no usada sea 1x1 para evitar consumo excesivo de VRAM
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32, 1, 1, 0,
+		             GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, nullptr);
+
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);

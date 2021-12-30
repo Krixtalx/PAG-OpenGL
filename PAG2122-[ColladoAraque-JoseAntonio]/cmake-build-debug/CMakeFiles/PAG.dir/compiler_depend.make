@@ -420,38 +420,6 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\bit"
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple"
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xpolymorphic_allocator.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ios"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocnum"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iterator"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\streambuf"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xiosbase"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\share.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\system_error"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\__msvc_system_error_abi.hpp"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cerrno"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xcall_once.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xerrc.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic_wait.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xthreads.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtimec.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ctime"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\time.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocale"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\typeinfo"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_typeinfo.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xfacet"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\clocale"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: ..\Luz.h
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
@@ -478,6 +446,8 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_float4x4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.hpp
@@ -576,6 +546,7 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detai
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\exponential.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_exponential.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\vector_relational.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
@@ -1311,6 +1282,360 @@ CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Stud
 CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h"
 
 
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\ModeloRevolucion.cpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdexcept"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals_core.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sal.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\concurrencysal.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xkeycheck.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\exception"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\crtdbg.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new_debug.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\crtdefs.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\use_ansi.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdint"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdint.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstddef"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stddef.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtr1common"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdlib"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_math.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stdlib.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_malloc.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_search.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstdlib.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\malloc.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\eh.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_terminate.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iosfwd"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdio"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\stdio.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstdio.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_stdio_config.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstring"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\string.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_memory.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_memcpy_s.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\errno.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_string.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstring.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cwchar"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\wchar.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wconio.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wctype.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wdirect.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wio.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_share.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wprocess.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wtime.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\sys\stat.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\sys\types.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cfloat"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\float.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\climits"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.inl.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\isa_availability.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\new"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\concepts"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\compare"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\bit"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xpolymorphic_allocator.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\ModeloRevolucion.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\Modelo.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glew.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glu.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\glm.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\fwd.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec2.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\.\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x2.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\matrix.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x2.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x2.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_matrix.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\geometric.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_geometric.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\exponential.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_exponential.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\vector_relational.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_vector_relational.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_vectorize.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\common.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_common.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_common.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\trigonometric.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_trigonometric.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\packing.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_packing.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\integer.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_integer.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\setjmp.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\immintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\wmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\nmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\smmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\emmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\zmmintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ammintrin.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mm3dnow.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\scene.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\types.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\defs.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\config.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\vector3.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\vector2.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\color4.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\matrix3x3.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\matrix4x4.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\quaternion.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\vector2.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\vector3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\color4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\quaternion.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\matrix3x3.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\matrix4x4.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\MathFunctions.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\texture.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\.\Compiler\pushpack1.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\.\Compiler\poppack1.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\mesh.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\aabb.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\light.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\camera.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\material.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\.\Compiler\pushpack1.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\.\Compiler\poppack1.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\material.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\anim.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\metadata.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\RenderOptions.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\ShaderManager.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\map"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xnode_handle.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\ShaderProgram.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\Shader.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\type_ptr.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\quaternion.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\constants.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\scalar_constants.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\scalar_constants.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\constants.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\matrix_transform.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\matrix_projection.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_projection.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\matrix_clip_space.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_clip_space.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\matrix_transform.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_transform.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\matrix_transform.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_relational.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\vector_relational.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_float.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_common.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\quaternion_geometric.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\quaternion_geometric.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\quaternion_common.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_float.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_quat.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\ext\quaternion_relational.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\quaternion_relational.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_quat.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_float_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_double.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_double_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_trigonometric.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\quaternion_trigonometric.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\quaternion_transform.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\quaternion_transform.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\quaternion.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\epsilon.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\detail\setup.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\epsilon.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\vec1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_bool1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_bool1_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_float1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_float1_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_double1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_double1_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_int1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_int1_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_uint1.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_uint1_sized.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\type_ptr.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\string_cast.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\..\gtc\type_precision.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\type_precision.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\..\gtx\dual_quaternion.hpp
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\dual_quaternion.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\string_cast.inl
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdarg"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdarg.h"
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\MaterialManager.h
+CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\Material.h
+
+
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Renderer.cpp
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Renderer.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glew.h
@@ -1664,38 +1989,10 @@ CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual St
 CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdarg.h"
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\MaterialManager.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\Material.h
+CMakeFiles\PAG.dir\Renderer.cpp.obj: ..\ModeloRevolucion.h
 CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdexcept"
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\transform.hpp
 CMakeFiles\PAG.dir\Renderer.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\transform.inl
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ios"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocnum"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iterator"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\streambuf"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xiosbase"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\share.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\system_error"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\__msvc_system_error_abi.hpp"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cerrno"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xcall_once.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xerrc.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic_wait.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xthreads.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtimec.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ctime"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\time.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocale"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\typeinfo"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_typeinfo.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xfacet"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo.h"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\clocale"
-CMakeFiles\PAG.dir\Renderer.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h"
 
 
 CMakeFiles\PAG.dir\Shader.cpp.obj: ..\Shader.cpp
@@ -3168,6 +3465,8 @@ C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl:
 
 ..\RenderOptions.h:
 
+..\ModeloRevolucion.cpp:
+
 C:\vcpkg\installed\x86-windows\include\glm\gtx\transform.hpp:
 
 C:\vcpkg\installed\x86-windows\include\glm\gtx\..\gtc\matrix_transform.hpp:
@@ -3401,6 +3700,8 @@ C:\vcpkg\installed\x86-windows\include\assimp\anim.h:
 C:\vcpkg\installed\x86-windows\include\assimp\Importer.hpp:
 
 C:\vcpkg\installed\x86-windows\include\assimp\postprocess.h:
+
+..\ModeloRevolucion.h:
 
 ..\Renderer.h:
 

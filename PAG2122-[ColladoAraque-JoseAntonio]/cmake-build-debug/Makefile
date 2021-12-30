@@ -238,6 +238,30 @@ Modelo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\Modelo.cpp.s
 .PHONY : Modelo.cpp.s
 
+ModeloRevolucion.obj: ModeloRevolucion.cpp.obj
+.PHONY : ModeloRevolucion.obj
+
+# target to build an object file
+ModeloRevolucion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj
+.PHONY : ModeloRevolucion.cpp.obj
+
+ModeloRevolucion.i: ModeloRevolucion.cpp.i
+.PHONY : ModeloRevolucion.i
+
+# target to preprocess a source file
+ModeloRevolucion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ModeloRevolucion.cpp.i
+.PHONY : ModeloRevolucion.cpp.i
+
+ModeloRevolucion.s: ModeloRevolucion.cpp.s
+.PHONY : ModeloRevolucion.s
+
+# target to generate assembly for a file
+ModeloRevolucion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PAG.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PAG.dir\ModeloRevolucion.cpp.s
+.PHONY : ModeloRevolucion.cpp.s
+
 Renderer.obj: Renderer.cpp.obj
 .PHONY : Renderer.obj
 
@@ -406,6 +430,9 @@ help:
 	@echo ... Modelo.obj
 	@echo ... Modelo.i
 	@echo ... Modelo.s
+	@echo ... ModeloRevolucion.obj
+	@echo ... ModeloRevolucion.i
+	@echo ... ModeloRevolucion.s
 	@echo ... Renderer.obj
 	@echo ... Renderer.i
 	@echo ... Renderer.s

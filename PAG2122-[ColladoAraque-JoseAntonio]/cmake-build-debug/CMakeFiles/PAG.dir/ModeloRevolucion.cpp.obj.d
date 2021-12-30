@@ -74,45 +74,31 @@ C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.2
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/bit
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/tuple
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/xpolymorphic_allocator.h
-C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Luz.h
-C:/vcpkg/installed/x86-windows/include/glm/vec3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_vec3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/qualifier.hpp
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ModeloRevolucion.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Modelo.h
+C:/vcpkg/installed/x86-windows/include/GL/glew.h
+C:/vcpkg/installed/x86-windows/include/GL/glu.h
+C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/shared/winapifamily.h
+C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/shared/winpackagefamily.h
+C:/vcpkg/installed/x86-windows/include/GL/gl.h
+C:/vcpkg/installed/x86-windows/include/glm/glm.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/_fixes.hpp
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cmath
 C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cassert
 C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/assert.h
 C:/vcpkg/installed/x86-windows/include/glm/detail/../simd/platform.h
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec3.inl
-C:/vcpkg/installed/x86-windows/include/glm/detail/compute_vector_relational.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool3_precision.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float3_precision.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double3_precision.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int3_sized.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../ext/scalar_int_sized.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/setup.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint3.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint3_sized.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../ext/scalar_uint_sized.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/setup.hpp
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/string
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cctype
-C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/ctype.h
-C:/vcpkg/installed/x86-windows/include/glm/ext/matrix_float4x4.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_mat4x4.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec4.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec4.inl
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_mat4x4.inl
-C:/vcpkg/installed/x86-windows/include/glm/detail/../matrix.hpp
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cassert
+C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/assert.h
+C:/vcpkg/installed/x86-windows/include/glm/fwd.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/qualifier.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
 C:/vcpkg/installed/x86-windows/include/glm/vec2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_vec2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec2.inl
+C:/vcpkg/installed/x86-windows/include/glm/detail/./compute_vector_relational.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool2_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float2_precision.hpp
@@ -120,10 +106,29 @@ C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double2_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int2_sized.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../ext/scalar_int_sized.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/setup.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint2_sized.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../ext/scalar_uint_sized.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/setup.hpp
+C:/vcpkg/installed/x86-windows/include/glm/vec3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_vec3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec3.inl
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool3_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float3_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_double3_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_int3_sized.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint3.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_uint3_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/vec4.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool4.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_vec4.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec4.inl
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_bool4_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float4.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/vector_float4_precision.hpp
@@ -138,9 +143,8 @@ C:/vcpkg/installed/x86-windows/include/glm/mat2x2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double2x2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_mat2x2.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/type_mat2x2.inl
-C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double2x2_precision.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float2x2.hpp
-C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float2x2_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/../matrix.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
 C:/vcpkg/installed/x86-windows/include/glm/mat2x3.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double2x3.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_mat2x3.hpp
@@ -192,7 +196,10 @@ C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float4x3.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float4x3_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/mat4x4.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double4x4.hpp
+C:/vcpkg/installed/x86-windows/include/glm/ext/../detail/type_mat4x4.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_mat4x4.inl
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double4x4_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float4x4.hpp
 C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float4x4_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/func_matrix.inl
 C:/vcpkg/installed/x86-windows/include/glm/detail/../geometric.hpp
@@ -200,7 +207,6 @@ C:/vcpkg/installed/x86-windows/include/glm/detail/func_geometric.inl
 C:/vcpkg/installed/x86-windows/include/glm/detail/../exponential.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec1.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/type_vec1.inl
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cmath
 C:/vcpkg/installed/x86-windows/include/glm/detail/func_exponential.inl
 C:/vcpkg/installed/x86-windows/include/glm/detail/../vector_relational.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
@@ -213,11 +219,68 @@ C:/vcpkg/installed/x86-windows/include/glm/detail/_fixes.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/func_common.inl
 C:/vcpkg/installed/x86-windows/include/glm/detail/compute_common.hpp
 C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
-C:/vcpkg/installed/x86-windows/include/gl/glew.h
-C:/vcpkg/installed/x86-windows/include/GL/glu.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/shared/winapifamily.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/shared/winpackagefamily.h
-C:/vcpkg/installed/x86-windows/include/GL/gl.h
+C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_double2x2_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float2x2.hpp
+C:/vcpkg/installed/x86-windows/include/glm/./ext/matrix_float2x2_precision.hpp
+C:/vcpkg/installed/x86-windows/include/glm/trigonometric.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/func_trigonometric.inl
+C:/vcpkg/installed/x86-windows/include/glm/packing.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/func_packing.inl
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.inl
+C:/vcpkg/installed/x86-windows/include/glm/integer.hpp
+C:/vcpkg/installed/x86-windows/include/glm/detail/func_integer.inl
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/intrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/setjmp.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/immintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/wmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/nmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/smmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/tmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/pmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/emmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/xmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/zmmintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/ammintrin.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mm3dnow.h
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/vector
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/string
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cctype
+C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/ctype.h
+C:/vcpkg/installed/x86-windows/include/assimp/scene.h
+C:/vcpkg/installed/x86-windows/include/assimp/types.h
+C:/vcpkg/installed/x86-windows/include/assimp/defs.h
+C:/vcpkg/installed/x86-windows/include/assimp/config.h
+C:/vcpkg/installed/x86-windows/include/assimp/vector3.h
+C:/vcpkg/installed/x86-windows/include/assimp/vector2.h
+C:/vcpkg/installed/x86-windows/include/assimp/color4.h
+C:/vcpkg/installed/x86-windows/include/assimp/matrix3x3.h
+C:/vcpkg/installed/x86-windows/include/assimp/matrix4x4.h
+C:/vcpkg/installed/x86-windows/include/assimp/quaternion.h
+C:/vcpkg/installed/x86-windows/include/assimp/vector2.inl
+C:/vcpkg/installed/x86-windows/include/assimp/vector3.inl
+C:/vcpkg/installed/x86-windows/include/assimp/color4.inl
+C:/vcpkg/installed/x86-windows/include/assimp/quaternion.inl
+C:/vcpkg/installed/x86-windows/include/assimp/matrix3x3.inl
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/algorithm
+C:/vcpkg/installed/x86-windows/include/assimp/matrix4x4.inl
+C:/vcpkg/installed/x86-windows/include/assimp/MathFunctions.h
+C:/vcpkg/installed/x86-windows/include/assimp/texture.h
+C:/vcpkg/installed/x86-windows/include/assimp/./Compiler/pushpack1.h
+C:/vcpkg/installed/x86-windows/include/assimp/./Compiler/poppack1.h
+C:/vcpkg/installed/x86-windows/include/assimp/mesh.h
+C:/vcpkg/installed/x86-windows/include/assimp/aabb.h
+C:/vcpkg/installed/x86-windows/include/assimp/light.h
+C:/vcpkg/installed/x86-windows/include/assimp/camera.h
+C:/vcpkg/installed/x86-windows/include/assimp/material.h
+C:/vcpkg/installed/x86-windows/include/assimp/./Compiler/pushpack1.h
+C:/vcpkg/installed/x86-windows/include/assimp/./Compiler/poppack1.h
+C:/vcpkg/installed/x86-windows/include/assimp/material.inl
+C:/vcpkg/installed/x86-windows/include/assimp/anim.h
+C:/vcpkg/installed/x86-windows/include/assimp/metadata.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/RenderOptions.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderManager.h
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/map
@@ -225,7 +288,6 @@ C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.2
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/xnode_handle.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/ShaderProgram.h
 C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Shader.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/vector
 C:/vcpkg/installed/x86-windows/include/glm/gtc/type_ptr.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../gtc/quaternion.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../gtc/constants.hpp
@@ -235,9 +297,6 @@ C:/vcpkg/installed/x86-windows/include/glm/ext/scalar_constants.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtc/constants.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../gtc/matrix_transform.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/matrix_projection.hpp
-C:/vcpkg/installed/x86-windows/include/glm/ext/../trigonometric.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/func_trigonometric.inl
 C:/vcpkg/installed/x86-windows/include/glm/ext/matrix_projection.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/matrix_clip_space.hpp
 C:/vcpkg/installed/x86-windows/include/glm/ext/matrix_clip_space.inl
@@ -281,33 +340,6 @@ C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/vector_uint1.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/../ext/vector_uint1_sized.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/type_ptr.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtx/string_cast.hpp
-C:/vcpkg/installed/x86-windows/include/glm/gtx/../glm.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/_fixes.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cassert
-C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt/assert.h
-C:/vcpkg/installed/x86-windows/include/glm/fwd.hpp
-C:/vcpkg/installed/x86-windows/include/glm/packing.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/func_packing.inl
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/setup.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/type_half.inl
-C:/vcpkg/installed/x86-windows/include/glm/integer.hpp
-C:/vcpkg/installed/x86-windows/include/glm/detail/func_integer.inl
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/intrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/setjmp.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/immintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/wmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/nmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/smmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/tmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/pmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/emmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/xmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/zmmintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/ammintrin.h
-C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/mm3dnow.h
 C:/vcpkg/installed/x86-windows/include/glm/gtx/../gtc/type_precision.hpp
 C:/vcpkg/installed/x86-windows/include/glm/gtc/type_precision.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtx/../gtx/dual_quaternion.hpp
@@ -315,3 +347,5 @@ C:/vcpkg/installed/x86-windows/include/glm/gtx/dual_quaternion.inl
 C:/vcpkg/installed/x86-windows/include/glm/gtx/string_cast.inl
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/cstdarg
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/include/stdarg.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/MaterialManager.h
+C:/Github/PAG/PAG2122-[ColladoAraque-JoseAntonio]/Material.h

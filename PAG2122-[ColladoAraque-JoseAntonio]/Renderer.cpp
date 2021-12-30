@@ -5,9 +5,9 @@
 #include "Renderer.h"
 #include "ShaderManager.h"
 #include "MaterialManager.h"
+#include "ModeloRevolucion.h"
 #include <stdexcept>
 #include <glm/gtx/transform.hpp>
-#include <iostream>
 
 
 PAG::Renderer *PAG::Renderer::instancia = nullptr;
@@ -38,6 +38,19 @@ PAG::Renderer::Renderer() {
 		PAG::MaterialManager::getInstancia()->nuevoMaterial("Dado",
 		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
 		                                                                 32, "../dado.png", "../NormalMap.png"));
+
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("Cilindro1",
+		                                                    new Material({0.25, 0.25, 0.25}, {0.4, 0.4, 0.4},
+		                                                                 {0.774597, 0.774597, 0.774597},
+		                                                                 76, "../Metal_Plate_015_basecolor.png",
+		                                                                 "../Metal_Plate_015_normal.png"));
+
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("Cilindro2",
+		                                                    new Material({0.25, 0.25, 0.25}, {0.4, 0.4, 0.4},
+		                                                                 {0.774597, 0.774597, 0.774597},
+		                                                                 76, "../Sci_fi_Metal_Panel_002_basecolor.png",
+		                                                                 "../Sci_fi_Metal_Panel_002_normal.png"));
+
 	} catch (std::runtime_error &e) {
 		throw e;
 	}
@@ -51,13 +64,18 @@ PAG::Renderer::Renderer() {
 	modelos.push_back(modelo);
 
 	creaModeloTetraedro();
+
+	modelo = new ModeloRevolucion("DefaultSP");
+	modelo->setMaterial("Cilindro2");
+	modelos.push_back(modelo);
+
 	creaModeloTriangulo();
 
-	luces.emplace_back(glm::vec3(0.25, 0.25, 0.25));
-	luces.emplace_back(glm::vec3(0, 0.45, 0), glm::vec3(0, 0.8, 0), glm::vec3(3, 1, 1), true);
+	luces.emplace_back(glm::vec3(0.45, 0.45, 0.45));
+	luces.emplace_back(glm::vec3(0, 0.5, 0), glm::vec3(0, 0.8, 0), glm::vec3(2, 2, 2), true);
 	luces.emplace_back(glm::vec3(0.45, 0, 0), glm::vec3(0.8, 0, 0), glm::vec3(1, 0, 0), false);
-	luces.emplace_back(glm::vec3(0, 0, 0.65), glm::vec3(0, 0, 1), glm::vec3(0, 0.5, -2), glm::vec3(0, 0, 1),
-	                   40.0f, 32);
+	luces.emplace_back(glm::vec3(0, 0, 0.75), glm::vec3(0, 0, 1), glm::vec3(0, 0.5, -3), glm::vec3(0, 0, 1),
+	                   40.0f, 64);
 }
 
 /**
@@ -96,8 +114,11 @@ void PAG::Renderer::inicializaOpenGL() {
 	activarUtilidadGL(GL_MULTISAMPLE);
 	activarUtilidadGL(GL_DEBUG_OUTPUT);
 	activarUtilidadGL(GL_BLEND);
+	activarUtilidadGL(GL_PRIMITIVE_RESTART);
+	glPrimitiveRestartIndex(0xFFFF);
 	glDepthFunc(GL_LEQUAL);
 	glGenFramebuffers(1, &fboSombras);
+	glFrontFace(GL_CCW);
 }
 
 /**
@@ -121,7 +142,7 @@ void PAG::Renderer::refrescar() {
 							std::to_string(estado));
 				}
 
-				glActiveTexture(GL_TEXTURE0); // Activamos unidad de textura
+				glActiveTexture(GL_TEXTURE2); // Activamos unidad de textura
 				glBindTexture(GL_TEXTURE_2D, idMapaSombras); // Asociamos la textura del FBO
 
 				// Sólo borramos profundidad. Ignoramos color
@@ -152,15 +173,15 @@ void PAG::Renderer::refrescar() {
 		}
 		actualizarSombras = false;
 
-		//Lo dejamos todo como estaba antes
+		//Lo dejamos como estaba antes
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		glViewport(0, 0, PAG::anchoVentanaPorDefecto, PAG::altoVentanaPorDefecto);
 		glDepthFunc(GL_LEQUAL);
 		glCullFace(GL_BACK);
+		//glDisable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	}
-
 
 	//Multipasada con luces
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -269,7 +290,7 @@ void PAG::Renderer::creaModeloTriangulo() {
  * Método encargado de crear un modelo. Actualmente solo crea un tetraedro.
  */
 void PAG::Renderer::creaModeloTetraedro() {
-	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1.3f, 0.3f, 0}, {0, 0, 0});
+	auto *modelo = new PAG::Modelo("DefaultSP", "NULL", {-1.5f, -0.2f, -0.5f}, {0, 0, 0});
 	modelo->cargaModeloTetraedro();
 	modelo->setMaterial("DefaultMat");
 	modelos.push_back(modelo);

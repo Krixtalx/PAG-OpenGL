@@ -15,13 +15,13 @@
 
 namespace PAG {
 	class Modelo {
-	private:
+	protected:
 		GLuint idVAO{};
 		std::vector<GLuint> idVBO;
 		std::vector<GLuint> idIBO;
 		std::vector<std::vector<glm::vec3>> vbos;
-		std::vector<glm::vec2> textura;
 		std::vector<std::vector<GLuint>> ibos;
+		std::vector<glm::vec2> textura;
 		std::string shaderProgram;
 		std::string material;
 		glm::mat4 mModelado{};
@@ -31,6 +31,8 @@ namespace PAG {
 		bool visible = true;
 
 		GLenum getGLDrawMode(PAG::modoDibujado modo);
+
+	private:
 
 		void cargaModelo(const std::string &path);
 
@@ -55,9 +57,9 @@ namespace PAG {
 
 		void setMaterial(const std::string &material);
 
-		void dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::mat4 matrizMS, PAG::tipoLuz tipoLuz);
+		virtual void dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::mat4 matrizMS, PAG::tipoLuz tipoLuz);
 
-		void dibujarModeloParaSombras();
+		virtual void dibujarModeloParaSombras();
 
 		void cargaModeloTriangulo();
 

@@ -157,7 +157,7 @@ void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::ma
 			matrizMVP = matrizMVP * mModelado;
 			matrizMV = matrizMV * mModelado;
 			matrizMS = matrizMS * mModelado;
-			
+
 			PAG::ShaderManager::getInstancia()->activarSP(shaderProgram);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMVP", matrizMVP);
 			PAG::ShaderManager::getInstancia()->setUniform(this->shaderProgram, "matrizMV", matrizMV);
@@ -221,11 +221,11 @@ void PAG::Modelo::dibujarModelo(glm::mat4 matrizMVP, glm::mat4 matrizMV, glm::ma
 				PAG::ShaderManager::getInstancia()->activarMultiplesSubrutinas(this->shaderProgram, GL_FRAGMENT_SHADER,
 				                                                               nombreUniforms, nombreSubrutinas);
 			}
-
 			glBindVertexArray(idVAO);
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idIBO[modo]);
 			glPolygonMode(GL_FRONT_AND_BACK, getGLDrawMode(modo));
 			glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
+
 
 		} catch (std::runtime_error &e) {
 			throw e;
@@ -243,7 +243,6 @@ void PAG::Modelo::dibujarModeloParaSombras() {
 		glDrawElements(GL_TRIANGLES, ibos[modo].size(), GL_UNSIGNED_INT, nullptr);
 	}
 }
-
 
 /**
  * Crea el modelo de un triangulo

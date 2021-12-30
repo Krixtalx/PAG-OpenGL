@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PAG.dir/MaterialManager.cpp.obj.d"
   "CMakeFiles/PAG.dir/Modelo.cpp.obj"
   "CMakeFiles/PAG.dir/Modelo.cpp.obj.d"
+  "CMakeFiles/PAG.dir/ModeloRevolucion.cpp.obj"
+  "CMakeFiles/PAG.dir/ModeloRevolucion.cpp.obj.d"
   "CMakeFiles/PAG.dir/Renderer.cpp.obj"
   "CMakeFiles/PAG.dir/Renderer.cpp.obj.d"
   "CMakeFiles/PAG.dir/Shader.cpp.obj"
