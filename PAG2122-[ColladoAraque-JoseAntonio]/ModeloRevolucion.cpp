@@ -10,7 +10,7 @@
 
 PAG::ModeloRevolucion::ModeloRevolucion(const std::string &shaderProgram, glm::vec3 pos, glm::vec3 rot, glm::vec3 sca)
 		: Modelo(shaderProgram, "NULL", pos, rot, sca) {
-	cargaModeloRevolucion();
+	cargaModeloCilindro();
 }
 
 
@@ -254,12 +254,12 @@ void PAG::ModeloRevolucion::generarModeloRevolucion() {
 /**
  * Crea un modelo de revolución básico (Cilindro)
  */
-void PAG::ModeloRevolucion::cargaModeloRevolucion() {
+void PAG::ModeloRevolucion::cargaModeloCilindro() {
 	generatriz.emplace_back(.4, 1, 0);
 	generatriz.emplace_back(.4, .5, 0);
 	generatriz.emplace_back(.4, 0, 0);
 	divLaterales = 15;
 	generarModeloRevolucion();
 
-	mModelado = glm::translate(glm::identity<glm::mat4>(), {1, 0, 0});
+	mModelado = glm::translate(glm::mat4(1.0f), {1, 0, 0});
 }

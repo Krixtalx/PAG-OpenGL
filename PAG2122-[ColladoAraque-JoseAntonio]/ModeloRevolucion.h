@@ -17,7 +17,7 @@ namespace PAG {
 
 		void dibujarModeloRevolucion();
 
-		void cargaModeloRevolucion();
+		void cargaModeloCilindro();
 
 	public:
 		ModeloRevolucion(const std::string &shaderProgram, glm::vec3 pos = {0, 0, 0},

@@ -8,6 +8,7 @@
 #include "ModeloRevolucion.h"
 #include <stdexcept>
 #include <glm/gtx/transform.hpp>
+#include <glm/glm.hpp>
 
 
 PAG::Renderer *PAG::Renderer::instancia = nullptr;
@@ -39,13 +40,7 @@ PAG::Renderer::Renderer() {
 		                                                    new Material({0.7, 0.15, 0.7}, {1, 1, 1}, {0.8, 0.8, 0.8},
 		                                                                 32, "../dado.png", "../NormalMap.png"));
 
-		PAG::MaterialManager::getInstancia()->nuevoMaterial("Cilindro1",
-		                                                    new Material({0.25, 0.25, 0.25}, {0.4, 0.4, 0.4},
-		                                                                 {0.774597, 0.774597, 0.774597},
-		                                                                 76, "../Metal_Plate_015_basecolor.png",
-		                                                                 "../Metal_Plate_015_normal.png"));
-
-		PAG::MaterialManager::getInstancia()->nuevoMaterial("Cilindro2",
+		PAG::MaterialManager::getInstancia()->nuevoMaterial("Cilindro",
 		                                                    new Material({0.25, 0.25, 0.25}, {0.4, 0.4, 0.4},
 		                                                                 {0.774597, 0.774597, 0.774597},
 		                                                                 76, "../Sci_fi_Metal_Panel_002_basecolor.png",
@@ -66,7 +61,7 @@ PAG::Renderer::Renderer() {
 	creaModeloTetraedro();
 
 	modelo = new ModeloRevolucion("DefaultSP");
-	modelo->setMaterial("Cilindro2");
+	modelo->setMaterial("Cilindro");
 	modelos.push_back(modelo);
 
 	creaModeloTriangulo();

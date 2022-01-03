@@ -6,7 +6,7 @@
 #define PAG_MATERIAL_H
 
 #include <GL/glew.h>
-#include <glm/vec3.hpp>
+#include <glm/glm.hpp>
 #include <string>
 #include "RenderOptions.h"
 #include <vector>

@@ -12,8 +12,6 @@
 #include <utility>
 #include <stdexcept>
 #include <climits>
-#include <glm/gtx/transform.hpp>
-#include <iostream>
 
 /**
  * Constructor parametrizado
@@ -22,7 +20,7 @@
  */
 PAG::Modelo::Modelo(std::string shaderProgram, const std::string &path, glm::vec3 pos, glm::vec3 rot, glm::vec3 sca) :
 		shaderProgram(std::move(shaderProgram)) {
-	mModelado = glm::scale(glm::identity<glm::mat4>(), sca);
+	mModelado = glm::scale(glm::mat4(1.0f), sca);
 	mModelado = glm::rotate(mModelado, glm::radians(rot.x), {1, 0, 0});
 	mModelado = glm::rotate(mModelado, glm::radians(rot.y), {0, 1, 0});
 	mModelado = glm::rotate(mModelado, glm::radians(rot.z), {0, 0, 1});

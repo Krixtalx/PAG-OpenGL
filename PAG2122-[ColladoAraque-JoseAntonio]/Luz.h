@@ -5,10 +5,9 @@
 #ifndef PAG_LUZ_H
 #define PAG_LUZ_H
 
-#include <glm/vec3.hpp>
+#include <GL/glew.h>
+#include <glm/glm.hpp>
 #include <string>
-#include <glm/ext/matrix_float4x4.hpp>
-#include <gl/glew.h>
 #include "RenderOptions.h"
 
 namespace PAG {

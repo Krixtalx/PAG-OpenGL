@@ -421,44 +421,29 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple"
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xpolymorphic_allocator.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: ..\Luz.h
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glew.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glu.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\glm.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3_precision.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3_sized.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_float4x4.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x4.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\matrix.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\fwd.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec2.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\.\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2_precision.hpp
@@ -466,10 +451,29 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3_sized.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec4.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4_precision.hpp
@@ -484,9 +488,8 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x2.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x2.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2_precision.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\matrix.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x3.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x3.hpp
@@ -538,7 +541,10 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x4.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_matrix.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\geometric.hpp
@@ -546,7 +552,6 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detai
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\exponential.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_exponential.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\vector_relational.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
@@ -559,11 +564,36 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detai
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_common.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_common.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\gl\glew.h
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\glu.h
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2_precision.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\trigonometric.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_trigonometric.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\packing.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_packing.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\integer.hpp
+CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_integer.inl
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\setjmp.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\immintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\wmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\nmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\smmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\emmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\zmmintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ammintrin.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mm3dnow.h"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
+CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: ..\RenderOptions.h
 CMakeFiles\PAG.dir\Luz.cpp.obj: ..\ShaderManager.h
 CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\map"
@@ -581,9 +611,6 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\s
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\constants.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\matrix_transform.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\matrix_projection.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\trigonometric.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_trigonometric.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_projection.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\matrix_clip_space.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_clip_space.inl
@@ -627,33 +654,6 @@ CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\.
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\..\ext\vector_uint1_sized.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\type_ptr.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\string_cast.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\..\glm.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\fwd.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\packing.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_packing.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\integer.hpp
-CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_integer.inl
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\setjmp.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\immintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\wmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\nmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\smmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\emmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\zmmintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ammintrin.h"
-CMakeFiles\PAG.dir\Luz.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mm3dnow.h"
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\..\gtc\type_precision.hpp
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtc\type_precision.inl
 CMakeFiles\PAG.dir\Luz.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\..\gtx\dual_quaternion.hpp
@@ -747,17 +747,41 @@ CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\g
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\glm.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\fwd.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec2.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\.\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
@@ -765,12 +789,129 @@ CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3_precision.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3_sized.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
-CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4_precision.hpp
 CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4_sized.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x2.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\matrix.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x3.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x4.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x2.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x3.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x4.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x2.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x3.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x4.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_matrix.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\geometric.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_geometric.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\exponential.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_exponential.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\vector_relational.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_vector_relational.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_vectorize.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\common.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_common.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_common.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2_precision.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\trigonometric.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_trigonometric.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\packing.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_packing.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\integer.hpp
+CMakeFiles\PAG.dir\Material.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_integer.inl
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\setjmp.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\immintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\wmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\nmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\smmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\emmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\zmmintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ammintrin.h"
+CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mm3dnow.h"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cctype"
 CMakeFiles\PAG.dir\Material.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\ctype.h"
@@ -868,17 +1009,41 @@ CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\inclu
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winapifamily.h"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winpackagefamily.h"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\GL\gl.h
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\glm.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cmath"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\simd\platform.h
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\fwd.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\qualifier.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec2.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\.\compute_vector_relational.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int2_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint2_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec3.inl
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool3_precision.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float3_precision.hpp
@@ -886,12 +1051,129 @@ CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\inclu
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double3_precision.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int3_sized.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_int_sized.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint3_sized.hpp
-CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\ext\scalar_uint_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\vec4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_vec4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_bool4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_float4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_double4_precision.hpp
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_int4_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\vector_uint4_sized.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x2.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\matrix.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x3.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat2x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat2x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat2x4.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x2.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x3.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat3x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat3x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat3x4.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double3x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float3x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x2.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x3.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x3_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\mat4x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\ext\..\detail\type_mat4x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_mat4x4.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double4x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float4x4_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_matrix.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\geometric.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_geometric.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\exponential.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec1.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_exponential.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\vector_relational.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_vector_relational.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_vectorize.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cassert"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\..\common.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\_fixes.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_common.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\compute_common.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_double2x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\.\ext\matrix_float2x2_precision.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\trigonometric.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_trigonometric.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\packing.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_packing.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\setup.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\type_half.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\integer.hpp
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\detail\func_integer.inl
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\setjmp.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\immintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\wmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\nmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\smmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\emmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\zmmintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ammintrin.h"
+CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mm3dnow.h"
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: ..\RenderOptions.h
 CMakeFiles\PAG.dir\MaterialManager.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector"
 
@@ -1249,37 +1531,6 @@ CMakeFiles\PAG.dir\Modelo.cpp.obj: ..\Material.h
 CMakeFiles\PAG.dir\Modelo.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\Importer.hpp
 CMakeFiles\PAG.dir\Modelo.cpp.obj: C:\vcpkg\installed\x86-windows\include\assimp\postprocess.h
 CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdexcept"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\transform.hpp
-CMakeFiles\PAG.dir\Modelo.cpp.obj: C:\vcpkg\installed\x86-windows\include\glm\gtx\transform.inl
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ios"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocnum"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iterator"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\streambuf"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xiosbase"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\share.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\system_error"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\__msvc_system_error_abi.hpp"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cerrno"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xcall_once.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xerrc.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic_wait.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xthreads.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtimec.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ctime"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\time.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocale"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\typeinfo"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_typeinfo.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xfacet"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xlocinfo.h"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\clocale"
-CMakeFiles\PAG.dir\Modelo.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h"
 
 
 CMakeFiles\PAG.dir\ModeloRevolucion.cpp.obj: ..\ModeloRevolucion.cpp
@@ -3627,12 +3878,6 @@ C:\vcpkg\installed\x86-windows\include\glm\gtc\..\gtc\matrix_transform.hpp:
 
 ..\Luz.cpp:
 
-C:\vcpkg\installed\x86-windows\include\glm\ext\matrix_float4x4.hpp:
-
-C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.hpp:
-
-C:\vcpkg\installed\x86-windows\include\gl\glew.h:
-
 ..\ShaderManager.h:
 
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\map":
@@ -3708,6 +3953,8 @@ C:\vcpkg\installed\x86-windows\include\assimp\postprocess.h:
 ..\Shader.cpp:
 
 ..\ShaderManager.cpp:
+
+C:\vcpkg\installed\x86-windows\include\glm\detail\type_vec4.hpp:
 
 ..\ShaderProgram.cpp:
 
